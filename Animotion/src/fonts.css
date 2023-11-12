@@ -1,0 +1,28 @@
+.Mont400{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;}
+
+.Mont500{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;}
+
+.Mont600{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.Mont800{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: 'Another Danger';
+    src: url('./assets/Fonts/AnotherDanger.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.AnoDanger{
+    font-family: 'Another Danger';
+}

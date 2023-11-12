@@ -1,0 +1,196 @@
+.welDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.welcomeBG{
+    position: relative;
+}
+
+.welcomeBG::before{
+    content: "";
+    background-color: var(--bgColor);
+    background-image: linear-gradient(transparent, rgb(3, 3, 3)), url("https://imgtr.ee/images/2023/11/12/b336f1246f21c9a939e2b2544bbcddf9.png") ;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.welcSection{
+    height: 85vh;
+}
+
+.welLgo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    padding: 2rem 0rem 0rem 8rem;
+    color: white;
+    font-size: 25px;
+}
+
+.lgoStyle{
+    font-family: 'Another Danger';
+    font-size: 35px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(123, 255, 121);
+    text-shadow: 2px 3px var(--primary-color);
+}
+
+.lgoStyle:hover{
+    transition: all 0.3s ease-in-out;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: transparent;
+    text-shadow: 2px 3px transparent;
+}
+
+.welSectCont{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 10rem 34rem 0rem 34rem;
+    gap: 15px;
+    /* border: 1px solid var(--secondary-color); */
+}
+
+.welContent{
+    background-color: var(--bgColor);
+    background-size: cover;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+
+.Signbtn {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin: auto;
+    padding: 1em 2.5em 1em 2.5em;
+    border: none;
+    background: #fff;
+    transition: all 0.1s linear;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    border-radius: 2em;
+   }
+
+    .Signbtn:hover {
+     background: var(--secondary-color);
+     color: var(--primary-color);
+    }
+
+.GSInput-grp {
+    display: flex;
+    align-items: center;
+  }
+  
+  .GSInput {
+    font-family: "Montserrat", sans-serif;
+    min-height: 50px;
+    width: 18rem;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+    background-color: rgba(0, 0, 0, 0.349);
+  }
+
+  .GSInput::placeholder{
+    color: #ffffffb7;
+  }
+  
+  .GSInputButton {
+    font-family: "Montserrat", sans-serif;
+    min-height: 52px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #5e4dcd;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .GSInputButton:hover {
+    background-color: #3c3a85;
+    color: #ffffff91;
+  }
+  
+  .GSInput:focus, .input:focus-visible {
+    border-color: #f7f7f7;
+    outline: none;
+  }
+
+  .errMsg{
+    font-family: "Montserrat", sans-serif;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+.sectSide1{
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectContent{
+  display: flex;
+  flex-direction: row;
+  gap: 30rem;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0rem 5rem 0rem;
+  border: 1px;
+}
+
+.horizontalLine{
+  border: 5px solid #232323;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+
+}
+
+.Faq{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+
+}
+
+.AccordMargin{
+  margin: 0rem 15rem 0rem 15rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
