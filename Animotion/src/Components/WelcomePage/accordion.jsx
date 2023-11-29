@@ -59,7 +59,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
-            Netflix is a streaming service that offers a wide variety of anime, movies 
+            Animotion is a streaming service that offers a wide variety of anime, movies 
             and more – on thousands of internet-connected devices.
             <br/><br/>
             You can watch as much as you want, whenever you want, without a single ad 
@@ -74,7 +74,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
-            Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device,
+            Watch Animotion on your smartphone, tablet, laptop, or streaming device,
             all for one fixed monthly fee. Plans range from ₹79 to ₹99 a month. No extra
             costs, no contracts.
           </Typography>
@@ -86,9 +86,8 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
-            Netflix has an extensive library of feature films, documentaries, TV shows, anime,
-            award-winning Netflix originals, and more. Watch as much as you want, anytime you 
-            want.
+            Animotion has an extensive library of documentaries, TV shows, anime,
+            and more. Watch as much as you want, anytime you want.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -98,14 +97,13 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
-            Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the 
-            web at netflix.com from your personal computer or on any internet-connected device that
-            offers the Netflix app, including smart TVs, smartphones, tablets, streaming media 
-            players and game consoles.
+            Watch anywhere, anytime. Sign in with your Animotion account to watch instantly on the 
+            web at Animotion.com from your personal computer, 
+            including smart TVs, smartphones, tablets, streaming media players.
             <br/><br/>
-            You can also download your favourite shows with the iOS, Android, or Windows 10 app.
+            You can also download your favourite shows with the iOS, Android, or Windows 11 app.
             Use downloads to watch while you're on the go and without an internet connection.
-            Take Netflix with you anywhere.
+            Take Animotion with you anywhere.
           </Typography>
         </AccordionDetails>
       </Accordion>

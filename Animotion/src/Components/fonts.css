@@ -18,7 +18,7 @@
 
 @font-face{
     font-family: 'Another Danger';
-    src: url('./assets/Fonts/AnotherDanger.otf') format('opentype');
+    src: url('../assets/Fonts/AnotherDanger.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

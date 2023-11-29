@@ -49,8 +49,8 @@ function Welcome() {
           </Grid>
         </Grid>
         <div className="welSectCont">
-          <span className="Mont800" style={{fontSize:"35px"}}>The biggest Anime hits. Ready to watch here from ₹79</span>
-          <span className="Mont500" style={{fontSize:"15px"}}>Join today. Cancel anytime.</span>
+          <span className="Mont800 w3-animate-opacity" style={{fontSize:"35px"}}>The biggest Anime hits. Ready to watch here from ₹79</span>
+          <span className="Mont500 w3-animate-opacity" style={{fontSize:"15px"}}>Join today. Cancel anytime.</span>
           <div>
             <div class="GSInput-grp">
               <input type="text" class="GSInput" style={{borderColor:{color}}} id="Email" name="Email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}/>

@@ -18,7 +18,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" exact to="/">
+      <Link style={{color:"#86FF84"}} exact to="/">
         Animotion
       </Link>{' '}
       {new Date().getFullYear()}
@@ -39,7 +39,7 @@ const defaultTheme = createTheme(
             main: '#86FF84',
         },
         background: {
-            default: '#7000FF',
+            default: '#232323',
         },
         text: {
             primary: '#FFFFFF',
@@ -142,7 +142,7 @@ export default function SignUp() {
             <Grid container justifyContent="center">
               <Grid item>
                 <span>Already have an account? </span>
-                <Link variant="body2"  exact to="/signin">
+                <Link variant="body2" style={{color:"#86FF84"}}  exact to="/signin">
                    Sign in
                 </Link>
               </Grid>

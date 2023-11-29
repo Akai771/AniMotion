@@ -14,7 +14,7 @@
 .welcomeBG::before{
     content: "";
     background-color: var(--bgColor);
-    background-image: linear-gradient(transparent, rgb(3, 3, 3)), url("https://imgtr.ee/images/2023/11/12/b336f1246f21c9a939e2b2544bbcddf9.png") ;
+    background-image: linear-gradient(transparent, rgb(3, 3, 3)), url("https://i.ibb.co/YXpG6Mm/Anime-Collage2.png") ;
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,6 +42,7 @@
 .lgoStyle{
     font-family: 'Another Danger';
     font-size: 35px;
+    font-weight: 100;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(123, 255, 121);
@@ -105,11 +106,12 @@
   
   .GSInput {
     font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
     min-height: 50px;
-    width: 18rem;
+    width: 22rem;
     padding: 0 1rem;
     color: #fff;
-    font-size: 15px;
     border: 1px solid #5e4dcd;
     border-radius: 6px 0 0 6px;
     background-color: rgba(0, 0, 0, 0.349);
@@ -121,13 +123,14 @@
   
   .GSInputButton {
     font-family: "Montserrat", sans-serif;
-    min-height: 52px;
-    padding: .5em 1em;
+    font-weight: 400;
+    min-height: 50px;
+    padding: .4em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
     background-color: #5e4dcd;
     color: #fff;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
     transition: background-color .3s ease-in-out;
   }

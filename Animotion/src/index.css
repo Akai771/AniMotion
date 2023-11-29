@@ -2,11 +2,31 @@
     --primary-color: #7000FF;
     --secondary-color: #86FF84;
     --bgColor: #232323;
+    --textColor: #fff;
 }
 
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --sb-track-color: #232323;
+    --sb-thumb-color: #86ff84;
+    --sb-size: 10px;
+  
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
 }
 
+  body::-webkit-scrollbar {
+    width: var(--sb-size) 
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+    
+    }

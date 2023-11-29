@@ -18,7 +18,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link exact to="/">
+      <Link style={{color:"#86FF84"}} exact to="/">
         Animotion
       </Link>{' '}
       {new Date().getFullYear()}
@@ -39,7 +39,7 @@ const defaultTheme = createTheme(
             main: '#86FF84',
         },
         background: {
-            default: '#7000FF',
+            default: '#232323',
         },
         text: {
             primary: '#FFFFFF',
@@ -59,6 +59,13 @@ export default function SignIn() {
       email: data.get('email'),
       password: data.get('password'),
     });
+    if (data.get('email') === "admin@gmail.com" && data.get('password') === "admin123") {
+        return window.location.href = "/home";
+        alert("Login Successful!");
+    } 
+    else {
+        alert("Login Failed!");
+    }
   };
 
   return (
@@ -88,6 +95,7 @@ export default function SignIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
+              value={localStorage.getItem("email")}
               autoFocus
             />
             <TextField
@@ -98,6 +106,7 @@ export default function SignIn() {
               label="Password"
               type="password"
               id="password"
+              value={localStorage.getItem("password")}
               autoComplete="current-password"
             />
             <FormControlLabel
@@ -114,13 +123,13 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="#" style={{color:"#86FF84"}} variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
                 <span>Don't have an account? </span>
-                <Link exact to="/signup">
+                <Link style={{color:"#86FF84"}} exact to="/signup">
                   Sign Up
                 </Link>
               </Grid>
