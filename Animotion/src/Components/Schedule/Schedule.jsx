@@ -22,7 +22,7 @@ function Schedule() {
         <div>
             <NavBar/>
             <div className="scheduleAlign">
-                <h1 className="scheduleTitle">Schedule</h1>
+                <h1 className="scheduleTitle">SCHEDULE</h1>
                 <div className="scheduleDivideLine"/>
                 <div className="scheduleDayBtnGrp">
                     <button className="scheduleDayBtn" onClick={() => setDay("sunday")}>Sunday</button>
@@ -33,11 +33,14 @@ function Schedule() {
                     <button className="scheduleDayBtn" onClick={() => setDay("friday")}>Friday</button>
                     <button className="scheduleDayBtn" onClick={() => setDay("saturday")}>Saturday</button>
                 </div>
-
-                {defaultSchedule.map((schedule) => (
-                    <ScheduleCard key={schedule.id} title={schedule.title} coverImage={schedule.coverImage} airingEpisode={schedule.airingEpisode}/>
-                    ))
-                }
+                <div className="scheduleDivideLine"/>
+                <span className="scheduleDayTxt">DAY: <span className="scheduleDayTxt2">{day.toUpperCase()}</span></span>
+                <div className="scheduleCardBg">
+                    {defaultSchedule.map((schedule) => (
+                        <ScheduleCard key={schedule.id} title={schedule.title} coverImage={schedule.coverImage} airingEpisode={schedule.airingEpisode}/>
+                        ))
+                    }
+                </div>
                 <br/><br/><br/>
             </div>
             

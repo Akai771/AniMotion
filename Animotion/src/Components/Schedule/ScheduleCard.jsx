@@ -8,7 +8,7 @@ function ScheduleCard({ title, airingEpisode, coverImage }) {
                 <div className="ScheduleCardAlign">
                     <img src={coverImage?coverImage:"https://via.placeholder.com/150x190"} class="ScheduleCardImg" alt="..."/>
                     <div className="ScheduleCardCont">
-                        <span class="scheduleTitleTxt">{title?title.english:title.romaji}</span>
+                        <span class="scheduleTitleTxt">{title?title.english:title.native}</span>
                         <span class="scheduleTimeTxt">EP {airingEpisode}</span>
                     </div>
 
