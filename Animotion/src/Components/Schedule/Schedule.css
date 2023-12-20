@@ -24,22 +24,39 @@
     gap: 3rem;
 }
 
+.alignScheduleRadio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
 .scheduleDayBtn{
     font-family: "Montserrat", sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
     padding: 1rem 2rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .scheduleDayBtn:hover{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(0.95);
+    transition: 0.3s ease-in-out;
+}
+
+.scheduleDayBtn:checked{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .scheduleDivideLine{
@@ -110,7 +127,58 @@
 
 .scheduleDayTxt2{
     font-family: "Montserrat", sans-serif;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.7rem;
     font-weight: 600;
 }
+
+
+
+
+
+
+.radio-inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: var(--bgColor);
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 82rem;
+    font-size: 14px;
+  }
+  
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: var(--secondary-color);
+    transition: all .15s ease-in-out;
+  }
+
+  .radio-inputs .radio .name:hover{
+    color: var(--primary-color);
+  }
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }

@@ -6,7 +6,7 @@ function NavBar() {
 	return (
 		<header>
 			<nav>
-				<Link to="/Browse">Browse</Link>
+				<Link to="/browse">Browse</Link>
                 <Link to="/news">News</Link>
 				<Link to="/home" className="logoLink">
                 	<span className="navLogo">AniMotion</span>

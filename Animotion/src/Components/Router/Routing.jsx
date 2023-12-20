@@ -13,6 +13,7 @@ import Schedule from "../Schedule/Schedule";
 import Dmca from "../Footer/FooterPages/DMCA";
 import Contact from "../Footer/FooterPages/Contact";
 import Terms from "../Footer/FooterPages/Terms";
+import Browse from "../Browse/Browse";
 
 const Routing = () => {
   return (
@@ -28,6 +29,7 @@ const Routing = () => {
           <Route exact path="/premium" element={<Premium/>} />
           <Route exact path="/news" element={<NewsBoard/>} />
           <Route exact path="/schedule" element={<Schedule/>} />
+          <Route exact path="/browse" element={<Browse/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />

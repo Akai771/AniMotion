@@ -17,8 +17,8 @@
 }
 
 .PremiumCardTempPop{
-    width: 20rem;
-    height: 30rem;
+    width: 22rem;
+    height: 32rem;
     background: var(--primary-color);
     display: flex;
     flex-direction: column;

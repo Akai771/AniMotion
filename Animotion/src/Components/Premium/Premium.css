@@ -63,7 +63,7 @@
   }
 
   .compareLink:hover{
-    font-size: 1.47rem;
+    transform: scale(0.95);
     transition: ease-in-out 0.2s;
   }
 

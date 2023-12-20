@@ -10,7 +10,7 @@ const PremiumCard = () => {
                     <span className="PremiumCardPrice">₹79.00/mo</span>
                     <span className="VATTxt">VAT INCLUSIVE</span>
                     <button className="PremiumCardButton">GO SUPER</button>
-                    <p className="PremiumCardText">Stream the entire Crunchyroll library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
+                    <p className="PremiumCardText">Stream the entire Animotion library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
                     <div>
                         <div className="PlusBanner">
                             <div className="horizontalLine"/>
@@ -29,7 +29,7 @@ const PremiumCard = () => {
                         <span className="PremiumCardPrice">₹99.00/mo</span>
                         <span className="VATTxt">VAT INCLUSIVE</span>
                         <button className="PremiumCardButtonPop">GO ULTRA</button>
-                        <p className="PremiumCardText">Stream the entire Crunchyroll library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
+                        <p className="PremiumCardText">Stream the entire Animotion library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
                         <div style={{margin:"1rem"}}>
                             <div className="PlusBanner">
                                 <div className="horizontalLine"/>
@@ -49,7 +49,7 @@ const PremiumCard = () => {
                     <span className="PremiumCardPrice">₹999.00/yr</span>
                     <span className="VATTxt">VAT INCLUSIVE</span>
                     <button className="PremiumCardButton">GO ULTRA</button>
-                    <p className="PremiumCardText">Stream the entire Crunchyroll library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
+                    <p className="PremiumCardText">Stream the entire Animotion library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
                     <div style={{margin:"1rem"}}>
                         <div className="PlusBanner">
                             <div className="horizontalLine"/>

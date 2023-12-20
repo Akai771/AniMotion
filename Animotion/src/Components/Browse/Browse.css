@@ -1,0 +1,63 @@
+.browseContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    background-color: var(--bgColor2);
+}
+
+.browseTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--textColor);
+    padding-bottom: 1rem;
+}
+
+.browse2Section{
+    padding-top: 8rem;
+}
+
+.verticalDivisionLine{
+    border-left: 1px solid var(--textColor);
+    height: 20rem;
+    width: 0;
+}
+
+.genreBtnGrp{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.GenreBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--textColor);
+    padding: 1rem 1rem;
+    border: 1px solid var(--textColor);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.GenreBtn:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    color: var(--secondary-color);
+}
+
+.genreTitle{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--textColor);
+    padding-bottom: 1rem;
+}

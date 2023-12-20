@@ -1,0 +1,119 @@
+.alignContactContent{
+    padding-top: 10rem;
+    background-color: var(--bgColor2);
+    height: 60rem;
+}
+
+.alignContactContent2{
+    padding-top: 10rem;
+    background-color: var(--bgColor2);
+    height: auto;
+}
+
+.contactUsTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--textColor);
+    padding-left: 20rem;
+    padding-bottom: 1rem;
+}
+
+.contactQuestion{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--textColor);
+    padding-left: 20rem;
+}
+
+.contactContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--bgColor);
+    padding: 1rem 1rem 1rem 3rem;
+    margin: 0 20rem;
+}
+
+.alignContact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 3rem;
+}
+
+.infoTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.infoDesc{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.divisionLine{
+    border: 1px solid #232323;
+    width: 98%;
+}
+
+.termsTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.termsSubTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.termsDesc{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.dmcaTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--textColor);
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.dmcaDesc{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.dmcaDesc a{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+

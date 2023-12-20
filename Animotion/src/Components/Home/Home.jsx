@@ -52,7 +52,7 @@ const Home = () =>{
         <div className="alignCardMargin"> 
             <Slider {...settings}>
                 {trending.map((seasonal) => (
-                        <VidCard key={seasonal.id} title={seasonal.title} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
+                        <VidCard key={seasonal.id} title={seasonal.title.english} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
                     ))
                 }
             </Slider>
@@ -63,7 +63,7 @@ const Home = () =>{
         <div className="alignCardMargin">
         <Slider {...settings}>
             {recentEp.map((recentEp) => (
-                <VidCard key={recentEp.id} title={recentEp.title} coverImage={recentEp.coverImage} currentEpisode={recentEp.currentEpisode} duration={recentEp.duration} format={recentEp.format}/>
+                <VidCard key={recentEp.id} title={recentEp.title.english} coverImage={recentEp.coverImage} currentEpisode={recentEp.currentEpisode} duration={recentEp.duration} format={recentEp.format}/>
                 ))
             }
         </Slider>
@@ -74,7 +74,7 @@ const Home = () =>{
         <div className="alignCardMargin">
         <Slider {...settings}>
         {popular.map((popular) => (
-                <VidCard key={popular.id} title={popular.title} coverImage={popular.coverImage} currentEpisode={popular.currentEpisode} duration={popular.duration} format={popular.format}/>
+                <VidCard key={popular.id} title={popular.title.english} coverImage={popular.coverImage} currentEpisode={popular.currentEpisode} duration={popular.duration} format={popular.format}/>
                 ))
             }
         </Slider>
