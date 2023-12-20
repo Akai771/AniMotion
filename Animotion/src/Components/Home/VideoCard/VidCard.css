@@ -1,8 +1,8 @@
 .VidCard {
   display: flex;
   flex-direction: column;
-  width: 12rem;
-  height: 20.5rem;
+  width: 14rem;
+  height: 22rem;
   padding: .8em;
   background: var(--bgColor2);
   color: #ffffff  ;
@@ -41,8 +41,8 @@
 }
 
 .VidImage{
-  width: 10rem;
-  height: 14rem;
+  width: 12rem;
+  height: 16rem;
   object-fit: cover;
 }
     

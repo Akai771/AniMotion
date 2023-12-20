@@ -3,16 +3,19 @@ import NavBar from "../Navbar/Navbar";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import ScheduleCard from "./ScheduleCard";
+import Footer from "../Footer/Footer";
+import axios from "axios";
 import "./Schedule.css";
 
 function Schedule() {
-    // const [schedule, setSchedule] = useState([]);
-    // useEffect(() => {
-    //         let url = `https://api.anify.tv/schedule?type=anime&fields=[id,title,airingAt]`
-    //         fetch(url)
-    //         .then((response) => response.json())
-    //         .then(data => setSchedule(data.schedule))
-    //     }, []);
+    const [schedule, setSchedule] = useState([]);
+    const [day, setDay] = useState("sunday");
+
+    useEffect(()=>{
+        axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,airingEpisode,coverImage]")
+        .then((res) => setSchedule(res.data))
+    },[])
+    const defaultSchedule = schedule[day];
 
     return (
     <>
@@ -22,20 +25,23 @@ function Schedule() {
                 <h1 className="scheduleTitle">Schedule</h1>
                 <div className="scheduleDivideLine"/>
                 <div className="scheduleDayBtnGrp">
-                    <button className="scheduleDayBtn" >Sunday</button>
-                    <button className="scheduleDayBtn" >Monday</button>
-                    <button className="scheduleDayBtn" >Tuesday</button>
-                    <button className="scheduleDayBtn" >Wednesday</button>
-                    <button className="scheduleDayBtn" >Thursday</button>
-                    <button className="scheduleDayBtn" >Friday</button>
-                    <button className="scheduleDayBtn" >Saturday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("sunday")}>Sunday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("monday")}>Monday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("tuesday")}>Tuesday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("wednesday")}>Wednesday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("thursday")}>Thursday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("friday")}>Friday</button>
+                    <button className="scheduleDayBtn" onClick={() => setDay("saturday")}>Saturday</button>
                 </div>
-                <ScheduleCard title="Haikyuu" airingAt="00:00"/>
-                <ScheduleCard title="Haikyuu" airingAt="00:00"/>
-                <ScheduleCard title="Anime Title" airingAt="00:00"/>
-                <ScheduleCard title="Anime Title" airingAt="00:00"/>
-                <ScheduleCard title="Anime Title" airingAt="00:00"/>
+
+                {defaultSchedule.map((schedule) => (
+                    <ScheduleCard key={schedule.id} title={schedule.title} coverImage={schedule.coverImage} airingEpisode={schedule.airingEpisode}/>
+                    ))
+                }
+                <br/><br/><br/>
             </div>
+            
+            <Footer />
             <ChatbotButton/>
             <TopRedirect location="#topCarousel"/>
         </div>

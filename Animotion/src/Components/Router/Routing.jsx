@@ -10,6 +10,9 @@ import Premium from "../Premium/Premium";
 import Chatbot from "../Chatbot/Chatbot";
 import NewsBoard from "../News/NewsBoard";
 import Schedule from "../Schedule/Schedule";
+import Dmca from "../Footer/FooterPages/DMCA";
+import Contact from "../Footer/FooterPages/Contact";
+import Terms from "../Footer/FooterPages/Terms";
 
 const Routing = () => {
   return (
@@ -25,6 +28,10 @@ const Routing = () => {
           <Route exact path="/premium" element={<Premium/>} />
           <Route exact path="/news" element={<NewsBoard/>} />
           <Route exact path="/schedule" element={<Schedule/>} />
+
+          <Route exact path="/dmca" element={<Dmca/>} />
+          <Route exact path="/contact" element={<Contact/>} />
+          <Route exact path="/terms" element={<Terms/>} />
         </Routes>
       </Router>
     </>

@@ -4,6 +4,7 @@ import TopRedirect from "../TopRedirectButton/TopRedirect";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import NewsCard from "./NewsCard";
 import "./NewsBoard.css";
+import Footer from "../Footer/Footer";
 
 function NewsBoard() {
     const [articles, setArticles] = useState([]);
@@ -26,6 +27,8 @@ function NewsBoard() {
                     );
                 })}
             </div>
+            <br/><br/>
+            <Footer />
             <ChatbotButton />
             <TopRedirect location="#AnimeNews"/>
         </div>

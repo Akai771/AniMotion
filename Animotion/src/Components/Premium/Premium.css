@@ -176,3 +176,11 @@
   margin: 10rem;
   padding-left: 4rem;
 }
+
+.PremiumTrendingAlign{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

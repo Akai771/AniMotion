@@ -59,7 +59,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 1rem;
-    margin: 1rem;
+    margin: 1rem 10rem 1rem 10rem;
     background-color: var(--primary-color);
 }
 
@@ -86,7 +86,7 @@
 .scheduleTitleTxt{
     font-family: "Montserrat", sans-serif;
     color: var(--secondary-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 

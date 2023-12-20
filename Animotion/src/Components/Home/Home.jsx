@@ -6,7 +6,11 @@ import "../Fonts.css";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () =>{
     const [recentEp, setRecentEp] = useState([]);
@@ -27,9 +31,14 @@ const Home = () =>{
         axios.get("https://api.anify.tv/seasonal/anime?fields=[id,title,coverImage,currentEpisode,season,duration,format]")
         .then((res) => setTrending(res.data.trending))
     },[])
-
     
-    // console.log(trending)
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 8,
+        slidesToScroll: 2
+    };
     
     return(<>
     <Navbar/>
@@ -40,31 +49,39 @@ const Home = () =>{
         <br/>
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Trending</h3></div>
         <br/>
-        <div className="rowCard">
-        {trending.map((seasonal) => (
-                <VidCard key={seasonal.id} title={seasonal.title.english} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
-                ))
-            }
+        <div className="alignCardMargin"> 
+            <Slider {...settings}>
+                {trending.map((seasonal) => (
+                        <VidCard key={seasonal.id} title={seasonal.title} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
+                    ))
+                }
+            </Slider>
         </div>
         <br/><br/> 
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
         <br/>
-        <div className="rowCard">
+        <div className="alignCardMargin">
+        <Slider {...settings}>
             {recentEp.map((recentEp) => (
-                <VidCard key={recentEp.id} title={recentEp.title.english} coverImage={recentEp.coverImage} currentEpisode={recentEp.currentEpisode} duration={recentEp.duration} format={recentEp.format}/>
+                <VidCard key={recentEp.id} title={recentEp.title} coverImage={recentEp.coverImage} currentEpisode={recentEp.currentEpisode} duration={recentEp.duration} format={recentEp.format}/>
                 ))
             }
+        </Slider>
         </div>
         <br/><br/>
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Popular</h3></div>
         <br/>
-        <div className="rowCard">
+        <div className="alignCardMargin">
+        <Slider {...settings}>
         {popular.map((popular) => (
-                <VidCard key={popular.id} title={popular.title.english} coverImage={popular.coverImage} currentEpisode={popular.currentEpisode} duration={popular.duration} format={popular.format}/>
+                <VidCard key={popular.id} title={popular.title} coverImage={popular.coverImage} currentEpisode={popular.currentEpisode} duration={popular.duration} format={popular.format}/>
                 ))
             }
+        </Slider>
         </div>
+        <br/><br/>
     </section>
+    <Footer/>
     <TopRedirect location="#topCarousel"/>
     <ChatbotButton/>
     </>);

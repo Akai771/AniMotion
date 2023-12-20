@@ -1,0 +1,78 @@
+.social{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.socialIcon:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+    color: var(--secondary-color);
+
+}
+
+.footerNew{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.tline{
+    border-top: 1px solid #c4c4c4a1; 
+    padding: 5px;
+    width: 55%;
+}
+
+.footerDesc{
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footerDescHighlight{
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.footerDisclaimer{
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #C4C4C4;
+    text-align: center;
+}
+
+.footerLinks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
