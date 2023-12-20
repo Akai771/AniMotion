@@ -5,7 +5,7 @@
 .carouselImage::before{
     content: "";
     background-color: var(--bgColor);
-    background-image: linear-gradient(to right, rgba(3, 3, 3) 25%, transparent 70%);
+    background-image: linear-gradient(to right, rgba(15, 15, 15) 25%, transparent 70%);
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,4 +45,10 @@
 
 .carouselContentDir{
     transform: translate(-500px, -200px);
+}
+
+.carouselSeason{
+    color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }

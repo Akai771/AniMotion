@@ -1,18 +1,19 @@
 import React from "react";
 import "./VidCard.css";
 
-const VidCard = ({VidData}) => {
-  const {VidImage, VidTitle, VidTime, VidType, VidEp, VidLang} = VidData;
+const VidCard = ({title, coverImage, currentEpisode, duration, format}) => {
+    var ti = JSON.stringify(title);
     return (
       <>
-        <div class="Prodcard">
-            <img className="VidImage" src={VidImage} alt={VidTitle} />
-            <div class="Prodcard-info">
-              <p class="text-title Mont200" style={{fontSize:16}}>{VidTitle}</p>
-              <p class="Mont200" style={{fontSize:8}}>{VidTime}</p>
-              <button class="vidInfo Mont200" style={{fontSize:8}}>{VidType}</button>
-              <button class="vidInfo Mont200" style={{fontSize:8}}>{VidEp}</button>
-              <button class="vidInfo Mont200" style={{fontSize:8}}>{VidLang}</button>
+        <div class="VidCard">
+            <img className="VidImage" src={coverImage} alt={title} />
+            <div class="VidCard-info">
+              <span class="VidCardTitle">{title?title.slice(0,19):"No Title"}...</span>
+              <div className="vidInfo">
+                <span className="vidInfoCont">{duration}m</span>
+                <span className="vidInfoCont">{format}</span>
+                <span className="vidInfoCont">EP {currentEpisode}</span>
+              </div>
             </div>
         </div>
       </>

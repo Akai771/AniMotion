@@ -62,9 +62,7 @@ function Welcome() {
           </div>
         </div>
       </div>
-      
       <div className="sectSide1" >
-        <hr className="horizontalLine"/>
         <div className="sectContent">
           <div style={{paddingLeft:"5em"}}>
             <h1 className="Mont800" style={{fontSize:"40px"}}>Enjoy anytime</h1>
@@ -77,7 +75,6 @@ function Welcome() {
       </div>
 
       <div className="sectSide1">
-        <hr className="horizontalLine"/>
         <div className="sectContent">
             <div>
               <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="tv"/>
@@ -90,7 +87,6 @@ function Welcome() {
       </div>
 
       <div className="sectSide1" >
-        <hr className="horizontalLine"/>
         <div className="sectContent">
           <div style={{paddingLeft:"10rem"}}>
             <h1 className="Mont800" style={{fontSize:"40px"}}>Download your shows to watch offline</h1>
@@ -103,7 +99,6 @@ function Welcome() {
       </div>
 
       <div className="sectSide1" >
-        <hr className="horizontalLine"/>
         <div className="sectContent">
           <div>
             <h1 className="Faq">Frequently Asked Questions</h1>

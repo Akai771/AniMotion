@@ -1,0 +1,98 @@
+.scheduleAlign{
+    padding-top: 6rem;
+    background-color: var(--bgColor2);
+    display: flex;
+    flex-direction: column;
+}
+
+.scheduleTitle{
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.scheduleDayBtnGrp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.scheduleDayBtn{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.scheduleDayBtn:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.scheduleDivideLine{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 0.1rem;
+    background-color: var(--secondary-color);
+    margin-bottom: 3rem;
+}
+
+.ScheduleCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: var(--primary-color);
+}
+
+.ScheduleCardCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.ScheduleCardImg{
+    width: 7rem;
+    height: 10rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.ScheduleCardAlign{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.scheduleTitleTxt{
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.scheduleTimeTxt{
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+}

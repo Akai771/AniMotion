@@ -14,7 +14,7 @@
 .welcomeBG::before{
     content: "";
     background-color: var(--bgColor);
-    background-image: linear-gradient(transparent, rgb(3, 3, 3)), url("https://i.ibb.co/YXpG6Mm/Anime-Collage2.png") ;
+    background-image: linear-gradient(transparent, rgb(3, 3, 3)), url("../../assets/Images/AnimeCollage2.png") ;
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
@@ -196,4 +196,20 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
+}
+
+
+.Watchbutton {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.Watchbutton:hover {
+  box-shadow: #5e4dcd 0px 0px 0px 2px inset;
 }

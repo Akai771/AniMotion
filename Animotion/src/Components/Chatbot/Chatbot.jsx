@@ -2,8 +2,9 @@ import { useState } from 'react'
 import './Chatbot.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
+import NavBar from '../Navbar/Navbar';
 
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = "";
 const systemMessage = {
   "role": "system", "content": "You are Hiro- AI Chatbot hosted on Animotion(a Anime Streaming Platform). You can ask me anything about Anime and Manga. I will try my best to answer your questions."
 }
@@ -73,7 +74,8 @@ function Chatbot() {
     });
   }
 
-  return (
+  return (<>
+    <NavBar/>
     <div className="App">
       <div className='Chatbox'>
         <div className='ChatDesc'>
@@ -81,26 +83,27 @@ function Chatbot() {
           <span className='Mont400'>Hello, I'm Hiro, your friendly AI chatbot companion here on Animotion! I'm here to assist you with recommendations, answer your queries about anime, and make your viewing experience more enjoyable. Whether you're seeking new shows or need help navigating the platform, I'm at your service!</span>
         </div>
         <div className="ChatContainer">
-          <MainContainer>
+          <MainContainer >
             <ChatContainer >  
               <MessageList 
+                style={{backgroundColor:"#232323",border:"2px solid #636363"}}
                 scrollBehavior="smooth" 
                 typingIndicator={isTyping ? <TypingIndicator content="Hiro is typing" /> : null}
               >
                 {messages.map((message, i) => {
                   console.log(message)
                   return(<>
-                    <Message key={i} model={message}/>
+                    <Message className="ChatUI" key={i} model={message}/>
                   </>) 
                 })}
               </MessageList>
-              <MessageInput placeholder="Type message here" onSend={handleSend} />        
+              <MessageInput style={{backgroundColor:"#232323", border:"2px solid #636363"}} placeholder="Type message here" onSend={handleSend} />        
             </ChatContainer>
           </MainContainer>
         </div>
       </div>
     </div>
-  )
+    </>)
 }
 
 export default Chatbot

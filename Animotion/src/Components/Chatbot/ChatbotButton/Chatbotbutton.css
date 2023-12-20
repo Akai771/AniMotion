@@ -12,11 +12,11 @@
 
   .ChatAlnBtn{
     position: fixed;
-    bottom: 80px;
+    bottom: 85px;
     right: 20px;
   }
   
-  .arrow path {
+  .robotLgo {
     fill: white;
   }
   
@@ -24,7 +24,7 @@
     font-size: 0.7em;
     width: 100px;
     position: absolute;
-    color: #393E46;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,12 +33,12 @@
     transition-duration: .7s;
   }
   
-  .ChatBtn:hover .RedirectTxt {
+  .ChatBtn:hover .ChatTxt {
     opacity: 1;
     transition-duration: .7s;
   }
   
-  .ChatBtn:hover .arrow {
+  .ChatBtn:hover .robotLgo {
     animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
   

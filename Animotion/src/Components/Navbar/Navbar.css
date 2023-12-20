@@ -12,11 +12,14 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
 	height: 80px;
 	padding: 0 2rem;
 	background-color: var(--primary-color);
 	color: var(--textColor);
-	box-shadow: 5px 5px 25px #2228312d;
+	box-shadow: 5px 5px 25px rgba(26, 2, 36, 0.176);
+	position: fixed;
+	z-index: 3;
 }
 
 .logoLink{

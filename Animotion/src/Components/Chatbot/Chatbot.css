@@ -37,13 +37,15 @@
   .Chatbox{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--bgColor);
+    grid-template-areas: "ChatDesc ChatContainer";
+    background-color: var(--bgColor2);
   }
   .ChatContainer {
-    background-color: black;
+    background-color: var(--bgColor2);
     color: white;
     position: relative;
-    height: 57rem;
+    padding-top: 5rem;
+    height: 61rem;
     width: 100rem ;
   }
 
@@ -54,6 +56,7 @@
     align-items: top;
     color: white;
     font-size: 1.5rem;
+    border-right: 5px solid #636363;
   }
 
   .ChatDesc span{
@@ -70,4 +73,8 @@
 
   .ChatDesc p{
     font-size: 1.5rem;
+  }
+
+  .ChatUI{
+    display: flex;
   }

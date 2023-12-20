@@ -1,0 +1,62 @@
+.newsBG{
+    background-color: var(--bgColor2);
+}
+
+.alignNewsBoard{
+    padding-top: 6rem;
+}
+
+.newsTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.ReadMoreBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ReadMoreBtn:hover{
+    background: var(--textColor);
+    color: var(--primary-color);
+}
+
+.cardColor{
+    background-color: var(--primary-color);
+}
+
+.cardDesc{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--textColor);
+    margin: 1rem 0 1rem 0;
+}
+
+.cardTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin: 0 0 1rem 0;
+}
+
+.cardSource{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin: 0 0 1rem 0;
+}

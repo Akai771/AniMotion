@@ -30,8 +30,12 @@ function CarouselHome() {
                   src={slide.Logo}
                   alt="slider logo"
                 />
-                <h1>{slide.caption}</h1>
+                <h1>{slide.title}</h1>
+                <h6 className='carouselSeason'>Season {slide.season}</h6>
                 <p>{slide.description}</p>
+                <a href={slide.link} target="_blank" rel="noreferrer">
+                  <button className='Watchbutton'>Watch Now</button>
+                </a>
               </div> 
             </Carousel.Caption>
           </Carousel.Item>

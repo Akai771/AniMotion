@@ -1,0 +1,178 @@
+.premium{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+    width: auto;
+    position: relative;
+    padding-right: 10rem;
+}    
+
+.premium__container{
+    padding: 20rem 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.PremiumContent{
+    margin-right: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.premium__banner{
+    position: relative;
+    height: 100vh;
+    padding-top:  4rem;
+  }
+  
+  .premium__banner::before {
+    content: "";
+    background-color: var(--bgColor);
+    background-image: linear-gradient(to right, rgba(15, 15, 15) 25%, transparent 70%), url("../../assets/Images/AnimeCollage2.png") ;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  .premiumTitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .premiumTxt{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .compareLink{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+
+  .compareLink:hover{
+    font-size: 1.47rem;
+    transition: ease-in-out 0.2s;
+  }
+
+  .BannerButton {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+  }
+  
+  .BannerButton:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .BannerButton-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .BannerButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+
+.premiumSection2{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background-color: var(--bgColor2);
+  padding-top: 5rem;
+}
+
+.premiumSection3{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background-color: var(--bgColor2);
+  padding-top: 10rem;
+}
+
+.premiumFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background-color: var(--bgColor2);
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+.premiumFooterTxt{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #D1D1D1;
+}
+
+.premiumSection2__title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  color: #fff;
+}
+
+.premiumSection2__txt{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.gridFeaturesAlign{
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.premiumSection2__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureGridDesign{
+  margin: 10rem;
+  padding-left: 4rem;
+}

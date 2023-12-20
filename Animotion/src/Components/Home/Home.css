@@ -4,7 +4,7 @@ body{
 }
 
 .popSect{
-    background-color: #010101;
+    background-color: var(--bgColor2);
 }
 
 .infoSect{
@@ -17,12 +17,9 @@ body{
 }
 
 .rowCard{
-    justify-content: center;
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* gap: 1rem; */
 }
 
 
