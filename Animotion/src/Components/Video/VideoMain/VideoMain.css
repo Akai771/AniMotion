@@ -1,0 +1,137 @@
+.video-main-container{
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 0 0 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgColor2);
+}
+
+.AnimeVideoPlayer{
+    position:relative; 
+    border:none; 
+    overflow:hidden; 
+}
+
+.AnimeVideoPlayer:focus {
+    outline: none;
+  }
+  
+.AnimeVideoPlayer[seamless] {
+    display: block;
+  }
+
+.ServerBox{
+    width: 1280px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    padding-bottom: 1rem;
+}
+
+.ServerInfoTitle{
+    padding-left: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+
+}
+
+.ServerInfo{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--textColor2);
+    margin-top: 1rem;
+}
+
+.video-info-cover-image{
+    width: 10%;
+    height: 35%;
+}
+
+.alignVidMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20rem;
+    gap: 1rem;
+}
+
+.alignVidInfoContent{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.horizontalLine2{
+    width: 100%;
+    height: 1px;
+    background-color: var(--textColor3);
+    margin-top: 1rem;
+}
+
+.VidDescSection{
+    background-color: #232323;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-right: 40rem;
+}
+
+.VidEpisodes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 23rem;
+}
+
+.episodeRadioBtnGrp{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: var(--bgColor);
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    width: 4rem;
+    height: 3rem;
+    font-size: 14px;
+}
+
+.episodeRadioBtnGrp .episodeBtnLabel {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.episodeRadioBtnGrp .episodeBtnLabel  input{
+    display: none;
+}
+
+.episodeRadioBtnGrp .episodeBtnLabel .episodeRadioSpan{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+    padding: .5rem;
+    color: var(--primary-color);
+    transition: all .15s ease-in-out;
+}
+
+.episodeBtnLabel .episodeRadioBtnGrp .episodeRadioSpan:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.episodeRadioBtnGrp .episodeBtnLabel input:checked + .episodeRadioSpan{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    width: 4rem;
+    height: 3rem;
+}

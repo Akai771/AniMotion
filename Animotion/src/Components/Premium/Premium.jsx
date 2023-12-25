@@ -55,10 +55,10 @@ const Premium = () => {
                 <span className="premiumSection2__txt">Stream full seasons of the top anime, simulcasts, Animotion Originals, and more!</span>
                 <br/>
                 <div className="PremiumTrendingAlign">
-                        {ftw.slice(0,8).map((seasonal) => (
+                        {/* {ftw.slice(0,8).map((seasonal) => (
                                 <VidCard key={seasonal.id} title={seasonal.title} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
                             ))
-                        }
+                        } */}
                 </div>
 
                 <br/><br/>

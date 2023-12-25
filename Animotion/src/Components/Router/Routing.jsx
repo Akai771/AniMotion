@@ -14,6 +14,10 @@ import Dmca from "../Footer/FooterPages/DMCA";
 import Contact from "../Footer/FooterPages/Contact";
 import Terms from "../Footer/FooterPages/Terms";
 import Browse from "../Browse/Browse";
+import Error from "../ErrorPage/Error";
+import VideoInfo from "../Video/VideoInfo/VideoInfo";
+import VideoMain from "../Video/VideoMain/VideoMain";
+import Merch from "../Merch/merch";
 
 const Routing = () => {
   return (
@@ -30,10 +34,14 @@ const Routing = () => {
           <Route exact path="/news" element={<NewsBoard/>} />
           <Route exact path="/schedule" element={<Schedule/>} />
           <Route exact path="/browse" element={<Browse/>} />
+          <Route exact path="/details/:id" element={<VideoInfo/>} />
+          <Route exact path="/watch/:id" element={<VideoMain/>} />
+          <Route exact path="/merch" element={<Merch/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />
           <Route exact path="/terms" element={<Terms/>} />
+          <Route path="/*" element={<Error/>} />
         </Routes>
       </Router>
     </>

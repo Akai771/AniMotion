@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 14rem;
-  height: 22rem;
+  height: 24rem;
   padding: .8em;
   background: var(--bgColor2);
   color: #ffffff  ;
@@ -42,7 +42,7 @@
 
 .VidImage{
   width: 12rem;
-  height: 16rem;
+  height: 18rem;
   object-fit: cover;
 }
     

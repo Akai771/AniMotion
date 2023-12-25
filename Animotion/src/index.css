@@ -1,9 +1,14 @@
 :root{
     --primary-color: #7000FF;
+    --primary-color2: #320074;
     --secondary-color: #86FF84;
+    --secondary-color2: #00a700;
     --bgColor: #0f0f0f;
     --bgColor2: #080808;
     --textColor: #fff;
+    --textColor2: #b3b3b3;
+    --textColor3: #A1A1A1;
+    /* background: var(--bgColor2); */
 }
 
 body{

@@ -1,0 +1,48 @@
+.preloader{
+    height: 100vh;
+    width: 100%;
+    background: var(--bgColor2);
+    position: fixed;
+    color: var(--textColor);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.preloader .texts-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 280px;
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    color: var(--textColor);
+}
+
+.preloaderTitle{
+    font-family: "Another Danger", sans-serif;
+    font-size: 5rem;
+    /* color: var(--secondary-color); */
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--textColor2);
+    text-shadow: 6px 4px var(--primary-color);
+    animation-name: example;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%      {opacity: 1;}
+    50%     {opacity: 0;}
+    100%    {opacity: 1;}
+  }

@@ -5,6 +5,7 @@ import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import NewsCard from "./NewsCard";
 import "./NewsBoard.css";
 import Footer from "../Footer/Footer";
+import Preloader from "../Preloader/Preloader";
 
 function NewsBoard() {
     const [articles, setArticles] = useState([]);
@@ -17,6 +18,7 @@ function NewsBoard() {
 
     return(
         <>
+        <Preloader/>
         <div className="newsBG">
             <NavBar />
             <div className="alignNewsBoard">

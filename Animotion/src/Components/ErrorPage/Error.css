@@ -1,0 +1,81 @@
+.ErrorPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bgColor2);
+}
+
+.ErrorPage img{
+    width: 25%;
+    height: 50%;
+
+}
+
+.ErrorPageContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ErrorTitle{
+    content: "";
+    font-family: "Poppins", sans-serif;
+    font-size: 14rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-color2));
+    background-clip: text;
+    color: transparent;
+}
+
+.ErrorTitle2{
+    content: "";
+    font-family: "Poppins", sans-serif;
+    font-size: 14rem;
+    font-weight: 800;
+    background: linear-gradient(to bottom, var(--textColor), #757575);
+    background-clip: text;
+    color: transparent;
+}
+
+.ErrorText{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.ErrorText:hover{
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 10px var(--secondary-color),
+                 0 0 20px var(--secondary-color),
+                 0 0 40px var(--secondary-color);
+}
+
+.ErrorText2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.ErrorBtn{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: var(--primary-color);
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.ErrorBtn:hover{
+    background: var(--primary-color2);
+    color: var(--textColor);
+}

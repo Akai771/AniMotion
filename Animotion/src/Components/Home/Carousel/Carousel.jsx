@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState} from "react"; 
 import data from './CarouselImage';
@@ -33,9 +34,9 @@ function CarouselHome() {
                 <h1>{slide.title}</h1>
                 <h6 className='carouselSeason'>Season {slide.season}</h6>
                 <p>{slide.description}</p>
-                <a href={slide.link} target="_blank" rel="noreferrer">
+                <Link exact to={`/details/${slide.url}`}>
                   <button className='Watchbutton'>Watch Now</button>
-                </a>
+                </Link>
               </div> 
             </Carousel.Caption>
           </Carousel.Item>

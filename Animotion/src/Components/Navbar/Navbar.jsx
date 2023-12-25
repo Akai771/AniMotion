@@ -12,7 +12,7 @@ function NavBar() {
                 	<span className="navLogo">AniMotion</span>
             	</Link>
 				<Link to="/schedule">Schedule</Link>
-				<Link to="/About">Merch</Link>
+				<Link to="/merch">Merch</Link>
 			</nav>
 		</header>
 	);

@@ -1,5 +1,8 @@
 const Genres = [
     {
+        genre : "All"
+    },
+    {
         genre : "Action"
     },
     {

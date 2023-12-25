@@ -82,7 +82,7 @@ export default function CustomizedAccordions() {
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography sx={{fontSize:"20px", fontFamily:"Montserrat", fontWeight:"600"}}>What can I watch on Netflix?</Typography>
+          <Typography sx={{fontSize:"20px", fontFamily:"Montserrat", fontWeight:"600"}}>What can I watch on Animotion?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>

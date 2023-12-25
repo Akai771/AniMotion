@@ -1,6 +1,7 @@
 import {useEffect, useState, React} from "react";
 import CarouselHome from "./Carousel/Carousel.jsx";
 import VidCard from "./VideoCard/VidCard.jsx";
+import VidCard2 from "./VideoCard/VidCard2.jsx";
 import "./Home.css";
 import "../Fonts.css";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
@@ -11,25 +12,28 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import Preloader from "../Preloader/Preloader.jsx";
+// import LinearProgress from '@mui/material/LinearProgress';
 
 const Home = () =>{
     const [recentEp, setRecentEp] = useState([]);
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
 
+
     useEffect(()=>{
-        axios.get("https://api.anify.tv/recent?type=anime&page=3&perPage=12&fields=[id,title,coverImage,currentEpisode,duration,format]")
-        .then((res) => setRecentEp(res.data))
+        axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/recent-episodes")
+        .then((res) => setRecentEp(res.data.results))
     },[])
 
     useEffect(()=>{
-        axios.get("https://api.anify.tv/seasonal/anime?fields=[id,title,coverImage,currentEpisode,season,duration,format]")
-        .then((res) => setPopular(res.data.popular))
+        axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/popular")
+        .then((res) => setPopular(res.data.results))
     },[])
 
     useEffect(()=>{
-        axios.get("https://api.anify.tv/seasonal/anime?fields=[id,title,coverImage,currentEpisode,season,duration,format]")
-        .then((res) => setTrending(res.data.trending))
+        axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/top-airing")
+        .then((res) => setTrending(res.data.results))
     },[])
     
     const settings = {
@@ -41,6 +45,10 @@ const Home = () =>{
     };
     
     return(<>
+
+    <Preloader/>
+
+
     <Navbar/>
     <div id="topCarousel">
         <CarouselHome />
@@ -52,7 +60,7 @@ const Home = () =>{
         <div className="alignCardMargin"> 
             <Slider {...settings}>
                 {trending.map((seasonal) => (
-                        <VidCard key={seasonal.id} title={seasonal.title.english} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
+                        <VidCard2 key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
                     ))
                 }
             </Slider>
@@ -63,7 +71,7 @@ const Home = () =>{
         <div className="alignCardMargin">
         <Slider {...settings}>
             {recentEp.map((recentEp) => (
-                <VidCard key={recentEp.id} title={recentEp.title.english} coverImage={recentEp.coverImage} currentEpisode={recentEp.currentEpisode} duration={recentEp.duration} format={recentEp.format}/>
+                <VidCard key={recentEp.id} id={recentEp.id} title={recentEp.title} coverImage={recentEp.image} currentEpisode={recentEp.episodeNumber}/>
                 ))
             }
         </Slider>
@@ -74,7 +82,7 @@ const Home = () =>{
         <div className="alignCardMargin">
         <Slider {...settings}>
         {popular.map((popular) => (
-                <VidCard key={popular.id} title={popular.title.english} coverImage={popular.coverImage} currentEpisode={popular.currentEpisode} duration={popular.duration} format={popular.format}/>
+                <VidCard2 key={popular.id} id={popular.id} title={popular.title} coverImage={popular.image} />
                 ))
             }
         </Slider>

@@ -6,26 +6,28 @@ import ScheduleCard from "./ScheduleCard";
 import Footer from "../Footer/Footer";
 import axios from "axios";
 import "./Schedule.css";
+import Preloader from "../Preloader/Preloader";
 
-function Schedule() {
+const Schedule = () => {
     const [schedule, setSchedule] = useState([]);
     const [day, setDay] = useState("sunday");
-    
+
     const handleDayChange = (e) => {
         setDay(e.target.value);
     }
-    console.log(day);
 
     useEffect(()=>{
-        axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,airingEpisode,coverImage]")
+        axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,coverImage,airingEpisode]")
         .then((res) => setSchedule(res.data))
     },[])
+    // console.log(schedule);
     const defaultSchedule = schedule[day];
-
-    
+    console.log(defaultSchedule);
+    console.log(day);
 
     return (
     <>
+        <Preloader/>
         <div>
             <NavBar/>
             <div className="scheduleAlign">

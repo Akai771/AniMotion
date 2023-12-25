@@ -8,7 +8,7 @@ function NewsCard({ title, description, url, urlToImage}) {
             <a href={url}><img src={urlToImage?urlToImage:"https://intellij-support.jetbrains.com/hc/user_images/QZP8LIk0pW3bOuWt1P7HIQ.png"} style={{height:"200px", width:"100%"}} class="card-img-top" alt="NewsImage" /></a>
                 <div class="card-body">
                     <h5 class="card-title cardTitle">{title.slice(0,50)}</h5>
-                    <p class="card-tex cardDesc">{description?description.slice(0,90):"some information about the news"}</p>
+                    <p class="card-tex cardDesc">{description?description.slice(0,90):"some information about the news"}....</p>
                     <a href={url} class="ReadMoreBtn">Read More</a>
                 </div>
             </div>
