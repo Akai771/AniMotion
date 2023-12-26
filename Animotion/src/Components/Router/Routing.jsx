@@ -18,6 +18,8 @@ import Error from "../ErrorPage/Error";
 import VideoInfo from "../Video/VideoInfo/VideoInfo";
 import VideoMain from "../Video/VideoMain/VideoMain";
 import Merch from "../Merch/merch";
+import PageConstruction from "../PageConstruction/PageConstruction";
+
 
 const Routing = () => {
   return (
@@ -32,11 +34,11 @@ const Routing = () => {
           <Route exact path="/chat" element={<Chatbot/>} />
           <Route exact path="/premium" element={<Premium/>} />
           <Route exact path="/news" element={<NewsBoard/>} />
-          <Route exact path="/schedule" element={<Schedule/>} />
+          <Route exact path="/schedule" element={<PageConstruction/>} />
           <Route exact path="/browse" element={<Browse/>} />
           <Route exact path="/details/:id" element={<VideoInfo/>} />
           <Route exact path="/watch/:id" element={<VideoMain/>} />
-          <Route exact path="/merch" element={<Merch/>} />
+          <Route exact path="/merch" element={<PageConstruction/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />

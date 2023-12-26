@@ -99,12 +99,12 @@ const VideoMain = () => {
             <div className="characterSection">
                 <span className="characterTitle">Characters:</span>
                 <div className="characterCardAlign">
-                    <CharacterCard image={addData.characters[0].image} c_name={addData.characters[0].name}/>
-                    <CharacterCard image={addData.characters[1].image} c_name={addData.characters[1].name}/>
-                    <CharacterCard image={addData.characters[2].image} c_name={addData.characters[2].name}/>
-                    <CharacterCard image={addData.characters[3].image} c_name={addData.characters[3].name}/>
-                    <CharacterCard image={addData.characters[4].image} c_name={addData.characters[4].name}/>
-                    <CharacterCard image={addData.characters[5].image} c_name={addData.characters[5].name}/>
+                    <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[0].name:"No Data"}/>
+                    <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[1].name:"No Data"}/>
+                    <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[2].name:"No Data"}/>
+                    <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[3].name:"No Data"}/>
+                    <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[4].name:"No Data"}/>
+                    <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[5].name:"No Data"}/>
                 </div>
             </div>
         </div>

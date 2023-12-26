@@ -8,6 +8,7 @@ import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import Footer from "../../Footer/Footer";
 import AddIcon from '@mui/icons-material/Add';
 import Preloader from "../../Preloader/Preloader";
+import CharacterCard from "../VideoMain/characterCard";
 
 const VideoInfo = () => {
     const [animeData, setAnimeData] = useState([]);
@@ -57,9 +58,22 @@ const VideoInfo = () => {
                     <span className="AnimeDesc">{animeData.description}</span>
                 </div>
                 <br/>
-                <span className="AnimeTitle">Trailer:</span>
-                <iframe width="560" height="315" src={addData.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <br /><br />
+                <div>
+                    <span className="characterTitle">Characters:</span>
+                    <div className="characterCardAlign">
+                        <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[0].name:"No Data"}/>
+                        <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[1].name:"No Data"}/>
+                        <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[2].name:"No Data"}/>
+                        <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[3].name:"No Data"}/>
+                        <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[4].name:"No Data"}/>
+                        <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[5].name:"No Data"}/>
+                    </div>
+                </div>
+                <br/><br/>
+                <div className="trailerSection">
+                    <span className="characterTitle">Trailer:</span>
+                    <iframe width="560" height="315" src={addData.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
         <Footer />

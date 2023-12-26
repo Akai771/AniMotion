@@ -91,8 +91,8 @@
     background-color: var(--primary-color);
     color: var(--textColor);
     font-family: "Montserrat", sans-serif;
-    font-size: 0.7rem;
-    font-weight: 800;
+    font-size: 0.8rem;
+    font-weight: 600;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     border: none;
@@ -146,4 +146,12 @@
     border-radius: 1rem;
     padding: 2rem;
     margin-right: 15rem;
+}
+
+.trailerSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10rem;
 }
