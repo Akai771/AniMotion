@@ -36,7 +36,8 @@ function Welcome() {
       <div className="welcSection welcomeBG">
         <Grid container spacing={2} className="welLgo">
           <Grid xs={10}>
-            <item><span className="lgoStyle">AniMotion</span></item>
+            {/* <item><span className="lgoStyle">AniMotion</span></item> */}
+            <item><img src="https://i.postimg.cc/ncchWBxt/Animotion-Logo.png" className="lgoImgStyle" /></item>
           </Grid>
           <Grid xs={2}>
             <item>

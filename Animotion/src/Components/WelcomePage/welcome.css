@@ -39,6 +39,16 @@
     font-size: 25px;
 }
 
+.lgoImgStyle{
+    width: 14rem;
+    height: 14rem;
+    transition: all 0.3s ease-in-out;
+}
+.lgoImgStyle:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 1rem var(--primary-color));
+}
+
 .lgoStyle{
     font-family: 'Another Danger';
     font-size: 35px;

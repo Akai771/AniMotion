@@ -7,6 +7,7 @@ import Footer from "../../Footer/Footer";
 import ChatbotButton from "../../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import Preloader from "../../Preloader/Preloader";
+import CharacterCard from "./characterCard";
 
 const VideoMain = () => {
     const {id} = useParams();
@@ -15,19 +16,15 @@ const VideoMain = () => {
     const [server, setServer] = useState([])
     const [episode, setEpisode] = useState([])
     const [selectedOption, setSelectedOption] = useState(1);
-    // console.log(episode);
-
-    // const defaultEpisodeList = episode.filter((anime) => anime.id.includes("episode-1")[0]);
-    // const defaultEpisode = defaultEpisodeList[0].id;
-    // console.log(defaultEpisode);
-
     const [episodeId, setEpisodeId] = useState([0]);
     const [episodeNumber, setEpisodeNumber] = useState(1);
+    const [addData, setAddData] = useState([])
 
-    const handleClickedEpisode = (e) => {
-        setEpisodeNumber(e.target.value);
-        setEpisodeId(e.target.id);
-    }
+    useEffect(()=>{
+        axios.get(`https://api.anify.tv/search/anime/${id}`)
+        .then((res) => setAddData(res.data.results[0]))
+    },[])
+    console.log(addData);
 
     const handleOptionChange = (e) => {
         setEpisodeNumber(e.target.value);
@@ -66,20 +63,23 @@ const VideoMain = () => {
             </div>
             <br/>
             <div className="VidEpisodes">
-                <span className="AnimeTitle">Episodes:</span>
-                <div className="episodeBtnGrp">
-                    {episode.map((anime) => {
-                        return(<>
-                            {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}
-                            <div className="episodeRadioBtnGrp">
-                                <label className="episodeBtnLabel" key={anime.id} htmlFor={anime.id}>
-                                    <input  className="episodeRadioBtn" type="radio" name={anime.number} id={anime.id} value={anime.number} checked={selectedOption == anime.number} onChange={handleOptionChange}/>
-                                    <span className="episodeRadioSpan">{anime.number}</span>
-                                </label>
-                            </div>
-                        </>)
-                        }
-                    )}
+                <div>
+                    <span className="AnimeTitle">Episodes:</span>
+                    <br/>
+                    <div className="episodeBtnGrp">
+                        {episode.map((anime) => {
+                            return(<>
+                                {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}
+                                <div className="episodeRadioBtnGrp">
+                                    <label className="episodeBtnLabel" key={anime.id} htmlFor={anime.id}>
+                                        <input  className="episodeRadioBtn" type="radio" name={anime.number} id={anime.id} value={anime.number} checked={selectedOption == anime.number} onChange={handleOptionChange}/>
+                                        <span className="episodeRadioSpan">{anime.number}</span>
+                                    </label>
+                                </div>
+                            </>)
+                            }
+                        )}
+                    </div>
                 </div>
             </div>
             <br/>
@@ -96,7 +96,17 @@ const VideoMain = () => {
                     </div>
                 </div>
             </div>
-            <br/><br/>
+            <div className="characterSection">
+                <span className="characterTitle">Characters:</span>
+                <div className="characterCardAlign">
+                    <CharacterCard image={addData.characters[0].image} c_name={addData.characters[0].name}/>
+                    <CharacterCard image={addData.characters[1].image} c_name={addData.characters[1].name}/>
+                    <CharacterCard image={addData.characters[2].image} c_name={addData.characters[2].name}/>
+                    <CharacterCard image={addData.characters[3].image} c_name={addData.characters[3].name}/>
+                    <CharacterCard image={addData.characters[4].image} c_name={addData.characters[4].name}/>
+                    <CharacterCard image={addData.characters[5].image} c_name={addData.characters[5].name}/>
+                </div>
+            </div>
         </div>
         <Footer />
         <ChatbotButton />

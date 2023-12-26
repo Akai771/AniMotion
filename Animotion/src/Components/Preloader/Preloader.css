@@ -26,23 +26,54 @@
     color: var(--textColor);
 }
 
+.preloader__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.preloader__logo{
+    width:25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: opacityAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 .preloaderTitle{
     font-family: "Another Danger", sans-serif;
     font-size: 5rem;
     /* color: var(--secondary-color); */
     text-align: center;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--textColor2);
-    text-shadow: 6px 4px var(--primary-color);
-    animation-name: example;
+    -webkit-text-stroke-color: var(--textColor2); */
+    text-shadow:none;
+    animation-name: glowAnimation;
     animation-duration: 2s;
-    animation-delay: 2s;
     animation-iteration-count: infinite;
 }
 
-@keyframes example {
-    0%      {opacity: 1;}
-    50%     {opacity: 0;}
-    100%    {opacity: 1;}
+@keyframes glowAnimation {
+    0%     {text-shadow:0px 0px 10px var(--textColor),
+                        0px 0px 15px var(--textColor);}
+    25%    {text-shadow: none;}
+    50%    {text-shadow:0px 0px 10px var(--textColor),
+                        0px 0px 15px var(--textColor);}
+    25%    {text-shadow: none;}
+    100%   {text-shadow:0px 0px 10px var(--textColor),
+                        0px 0px 15px var(--textColor);}
+  }
+
+  @keyframes opacityAnimation {
+    0%     {opacity: 1;}
+    50%    {opacity: 0;}
+    100%   {opacity: 1;}
+    
   }
