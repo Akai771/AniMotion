@@ -37,7 +37,7 @@ function CarouselHome() {
                   <span className='carouselDesc'>{slide.description}</span>
                 </div>
                 <Link exact to={`/details/${slide.url}`}>
-                  <button className='Watchbutton'>Watch Now</button>
+                  <button className='WatchButton'>Watch Now</button>
                 </Link>
               </div> 
             </Carousel.Caption>

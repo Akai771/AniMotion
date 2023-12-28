@@ -3,7 +3,6 @@ import CarouselHome from "./Carousel/Carousel.jsx";
 import VidCard from "./VideoCard/VidCard.jsx";
 import VidCard2 from "./VideoCard/VidCard2.jsx";
 import "./Home.css";
-import "../Fonts.css";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import Navbar from "../Navbar/Navbar";
@@ -47,8 +46,6 @@ const Home = ({token}) =>{
     return(<>
 
     <Preloader/>
-
-
     <Navbar/>
     <div id="topCarousel">
         <CarouselHome />

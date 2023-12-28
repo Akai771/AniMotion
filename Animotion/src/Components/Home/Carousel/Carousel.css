@@ -67,3 +67,21 @@
     font-weight: 500;
     font-size: 0.8rem;
 }
+
+.WatchButton{
+    background-color: var(--primary-color);
+    color: var(--textColor);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.WatchButton:hover{
+    background-color: var(--primary-color2);
+    color: var(--textColor2);
+}

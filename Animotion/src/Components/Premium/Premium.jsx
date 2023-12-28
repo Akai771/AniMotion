@@ -8,12 +8,13 @@ import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import FlightIcon from '@mui/icons-material/Flight';
 import DevicesIcon from '@mui/icons-material/Devices';
 import TopRedirect from "../TopRedirectButton/TopRedirect";
-import VidCard from "../Home/VideoCard/VidCard";
+import VidCard2 from "../Home/VideoCard/VidCard2";
 import axios from "axios";
 import PremiumCard from "./PremiumCard/PremiumCard.jsx";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Preloader from "../Preloader/Preloader.jsx";
 
 const Premium = () => {
     const [ftw, setFtw] = useState([]);
@@ -33,8 +34,9 @@ const Premium = () => {
 
 
     return (<>
+            <Preloader/>
             <header>
-                <Link exact to="/"><span className="navLogo">AniMotion</span></Link>
+                <Link exact to="/home"><span className="navLogo">AniMotion</span></Link>
             </header>
             <div className="premium__banner" id="premium__banner">
                 <div className="premium__container">
@@ -55,10 +57,10 @@ const Premium = () => {
                 <span className="premiumSection2__txt">Stream full seasons of the top anime, simulcasts, Animotion Originals, and more!</span>
                 <br/>
                 <div className="PremiumTrendingAlign">
-                        {/* {ftw.slice(0,8).map((seasonal) => (
-                                <VidCard key={seasonal.id} title={seasonal.title} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
+                        {ftw.slice(0,8).map((seasonal) => (
+                                <VidCard2 key={seasonal.id} title={seasonal.title.english} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
                             ))
-                        } */}
+                        }
                 </div>
 
                 <br/><br/>
