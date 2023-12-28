@@ -39,10 +39,41 @@
     font-size: 0.8rem;
     font-weight: 600;
   }
+
+  .VidCardImage{
+    position: relative;
+    overflow: hidden;
+  }
   
   .VidImage{
     width: 12rem;
     height: 16rem;
     object-fit: cover;
   }
+
+  .playIcon{
+    color: var(--textColor);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -10%;
+    opacity: 0;
+  }
+
+  .VidCard:hover .playIcon{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+
+  .VidCard:hover .VidImage{
+    text-align: center;
+    opacity: 0.5;
+    filter: blur(2px);
+    transition: 0.5s ease-in-out;
+  }
+
+
       

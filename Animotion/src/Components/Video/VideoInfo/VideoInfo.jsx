@@ -9,6 +9,7 @@ import Footer from "../../Footer/Footer";
 import AddIcon from '@mui/icons-material/Add';
 import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "../VideoMain/characterCard";
+import ReactPlayer from "react-player";
 
 const VideoInfo = () => {
     const [animeData, setAnimeData] = useState([]);
@@ -39,14 +40,14 @@ const VideoInfo = () => {
             <img src={animeData.image} alt="Anime Cover Image" className="video-info-cover-image" id="animeImage"/>
             <div className="alignVidInfo col-8">
                 <span className="AnimeTitle">{animeData.title}</span>
-                <span className="AnimeTags2"><span className="AnimeTags">{addData.format}</span> | <span className="AnimeTags">{addData.type}</span> | <span className="AnimeTags">{addData.duration}m</span></span>
+                <span className="AnimeTags2"><span className="AnimeTags">{addData?addData.format:"No Data"}</span> | <span className="AnimeTags">{addData?addData.type:"No Data"}</span> | <span className="AnimeTags">{addData?addData.duration:"No Data"}m</span></span>
                 {/* <span className="AnimeAlternateTitle">Other Names: {addData.title}</span> */}
                 <span className="AnimeInfoTitle">Genres: <span className="AnimeInfo">{animeData.genres}</span> </span>
                 <span className="AnimeInfoTitle">Release Date: <span className="AnimeInfo">{animeData.releaseDate}</span></span>
                 <span className="AnimeInfoTitle">Status: <span className="AnimeInfo">{animeData.status}</span></span>
                 <span className="AnimeInfoTitle">Total Episodes: <span className="AnimeInfo">{animeData.totalEpisodes}</span></span>
-                <span className="AnimeInfoTitle">Rating: <span className="AnimeInfo">{addData.averageRating}</span></span>
-                <span className="AnimeInfoTitle">Season: <span className="AnimeInfo">{addData.season}</span></span>
+                <span className="AnimeInfoTitle">Rating: <span className="AnimeInfo">{addData?addData.averageRating:"No Data"}</span></span>
+                <span className="AnimeInfoTitle">Season: <span className="AnimeInfo">{addData?addData.season:"No Data"}</span></span>
                 <div className="episodeBtnGrp2">
                     <Link exact to={`/watch/${id}`}><button className="watchButton">Watch Now</button></Link>
                     <button className="watchButton"><AddIcon style={{fontSize:"1rem"}}/> Add to List</button>
@@ -72,7 +73,7 @@ const VideoInfo = () => {
                 <br/><br/>
                 <div className="trailerSection">
                     <span className="characterTitle">Trailer:</span>
-                    <iframe width="560" height="315" src={addData.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <ReactPlayer url={addData?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
                 </div>
             </div>
         </div>

@@ -20,6 +20,12 @@ body{
     padding-right: 4rem;
 }
 
+.alignCardMargin2{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding-right: 4rem;
+}
+
 
 .vl {
   border-left: 6px solid var(--primary-color);

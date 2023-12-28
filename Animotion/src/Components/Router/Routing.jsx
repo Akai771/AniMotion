@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Signin from "../Signing/Signin";
@@ -21,23 +21,37 @@ import Merch from "../Merch/merch";
 import PageConstruction from "../PageConstruction/PageConstruction";
 
 
+
 const Routing = () => {
+  const [token, setToken] = useState(false);
+
+  if(token){
+    sessionStorage.setItem("token", JSON.stringify(token));
+  }
+
+  useEffect(() => {
+    if(sessionStorage.getItem("token")){
+      let data = JSON.parse(sessionStorage.getItem("token"));
+      setToken(data);
+    }
+  },[]);
+
   return (
     <>
       <Router>
         {/* <NavBar /> */}
         <Routes>
           <Route exact path="/" element={<Welcome />} />
-          <Route exact path="/signin" element={<Signin />} />
+          <Route exact path="/signin" element={<Signin setToken={setToken}/>} />
           <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/home" element={<Home/>} />
-          <Route exact path="/chat" element={<Chatbot/>} />
-          <Route exact path="/premium" element={<Premium/>} />
-          <Route exact path="/news" element={<NewsBoard/>} />
-          <Route exact path="/schedule" element={<PageConstruction/>} />
-          <Route exact path="/browse" element={<Browse/>} />
-          <Route exact path="/details/:id" element={<VideoInfo/>} />
-          <Route exact path="/watch/:id" element={<VideoMain/>} />
+          {token?<Route exact path="/home" element={<Home token={token}/>} />:""}
+          {token?<Route exact path="/chat" element={<Chatbot/>} />:""}
+          {/* {token?<Route exact path="/premium" element={<Premium/>} />:""} */}
+          {token?<Route exact path="/news" element={<NewsBoard/>} />:""}
+          {token?<Route exact path="/schedule" element={<Schedule/>} />:""}
+          {token?<Route exact path="/browse" element={<Browse/>} />:""}
+          {token?<Route exact path="/details/:id" element={<VideoInfo/>} />:""}
+          {token?<Route exact path="/watch/:id" element={<VideoMain/>} />:""}
           <Route exact path="/merch" element={<PageConstruction/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />

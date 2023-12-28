@@ -13,13 +13,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Preloader from "../Preloader/Preloader.jsx";
-// import LinearProgress from '@mui/material/LinearProgress';
 
-const Home = () =>{
+const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
 
+    console.log(token);
 
     useEffect(()=>{
         axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/recent-episodes")
@@ -68,13 +68,13 @@ const Home = () =>{
         <br/><br/> 
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
         <br/>
-        <div className="alignCardMargin">
-        <Slider {...settings}>
+        <div className="alignCardMargin2">
+        {/* <Slider {...settings}> */}
             {recentEp.map((recentEp) => (
                 <VidCard key={recentEp.id} id={recentEp.id} title={recentEp.title} coverImage={recentEp.image} currentEpisode={recentEp.episodeNumber}/>
                 ))
             }
-        </Slider>
+        {/* </Slider> */}
         </div>
         <br/><br/>
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Popular</h3></div>
@@ -86,6 +86,11 @@ const Home = () =>{
                 ))
             }
         </Slider>
+        </div>
+        <br/><br/>
+        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Seasonal</h3></div>
+        <br/>
+        <div className="alignCardMargin">
         </div>
         <br/><br/>
     </section>

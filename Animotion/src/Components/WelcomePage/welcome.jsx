@@ -37,7 +37,7 @@ function Welcome() {
         <Grid container spacing={2} className="welLgo">
           <Grid xs={10}>
             {/* <item><span className="lgoStyle">AniMotion</span></item> */}
-            <item><img src="https://i.postimg.cc/ncchWBxt/Animotion-Logo.png" className="lgoImgStyle" /></item>
+            <item><img src="https://i.postimg.cc/q7ZBw5Q6/Animotion-Logo.png" className="lgoImgStyle" /></item>
           </Grid>
           <Grid xs={2}>
             <item>

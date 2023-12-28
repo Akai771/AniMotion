@@ -40,13 +40,14 @@
 }
 
 .lgoImgStyle{
-    width: 14rem;
-    height: 14rem;
+    width: 8rem;
+    height: 8rem;
+    filter: drop-shadow(0 0 1rem var(--bgColor));
     transition: all 0.3s ease-in-out;
 }
 .lgoImgStyle:hover{
     transform: scale(1.1);
-    filter: drop-shadow(0 0 1rem var(--primary-color));
+    filter: drop-shadow(0 0 1rem var(--textColor));
 }
 
 .lgoStyle{
@@ -99,14 +100,14 @@
     padding: 1em 2.5em 1em 2.5em;
     border: none;
     background: #fff;
-    transition: all 0.1s linear;
+    transition: all 0.3s linear;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
     border-radius: 2em;
    }
 
     .Signbtn:hover {
-     background: var(--secondary-color);
-     color: var(--primary-color);
+     background: var(--primary-color);
+     color: var(--secondary-color);
     }
 
 .GSInput-grp {

@@ -11,7 +11,7 @@ function Error() {
                 <span className="ErrorTitle">4<span className="ErrorTitle2">0</span>4</span>
                 <span className="ErrorText">Oops, sorry we can't find that page!</span>
                 <span className="ErrorText2">Either something went wrong or the page doesn't exist anymore.</span>
-                <Link exact to="/home"><button className="ErrorBtn">Back to homepage</button></Link>
+                <Link exact to="/signin"><button className="ErrorBtn">Back to Login Page</button></Link>
             </div>
         </div>
         </>

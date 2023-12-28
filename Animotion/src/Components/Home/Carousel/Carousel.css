@@ -24,11 +24,13 @@
 .carouselContent{
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    margin: 0 28rem 0 28rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 28rem 0 28rem;
+    position: absolute;
     text-align: left;
-    padding: 10px;
+    top: 50%;
+    transform: translate(2%, -100%);
 }
 
 .carouselContent h1{
@@ -51,4 +53,17 @@
     color: var(--secondary-color);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+
+.carouselDescBox{
+    /* border: 1px solid var(--secondary-color); */
+    max-width: 40rem;
+    padding-bottom: 1rem;
+}
+
+.carouselDesc{
+    color: var(--textColor2);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
 }

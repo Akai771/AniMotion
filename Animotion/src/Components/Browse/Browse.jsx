@@ -72,7 +72,9 @@ const Browse = () => {
                 </div>
                 <div className="container browse2Section">
                     <div class="row">
-                        <div className="col-8">
+                        <div 
+                        // className="col-8"
+                        >
                             <div className="BrowseAnimeContainer">
                                 <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
                                 <div className="alignBrowseAnime">
@@ -87,7 +89,7 @@ const Browse = () => {
                                 </div>
                             </div>  
                         </div>
-                        <div className="verticalDivisionLine"/>
+                        {/* <div className="verticalDivisionLine"/>
                         <div className="col">
                             <span className="genreTitle">Genres</span>
                             <div className="genreBtnGrp">
@@ -98,7 +100,7 @@ const Browse = () => {
                                 }
                                 )}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <br/><br/>                

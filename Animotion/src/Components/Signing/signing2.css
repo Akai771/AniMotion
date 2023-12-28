@@ -1,0 +1,130 @@
+.sign{
+    width: 100%;
+    height: 100vh;
+    background: var(--bgColor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpTitle{
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.signUpCard{
+    background: #232323;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.nameDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.textBoxSign{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.textBoxSign label{
+    color: var(--secondary-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+.textBoxSign input{
+    background: var(--bgColor2);
+    border: none;
+    width: 25rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    background-color: #1F1F1F;
+    color: var(--textColor3);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.textBoxSign input::placeholder{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.textBoxSign2{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.textBoxSign2 label{
+    color: var(--secondary-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+.textBoxSign2 input{
+    background: var(--bgColor2);
+    border: none;
+    width: 12rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    background-color: #1F1F1F;
+    color: var(--textColor3);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.textBoxSign2 input::placeholder{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.signUpButton{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem 5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.signUpButton:hover{
+    background-color: var(--primary-color2);
+    color: var(--secondary-color2);
+}
+
+.signLink{
+    color: var(--textColor2);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.signLink a{
+    color: var(--secondary-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: none;
+}

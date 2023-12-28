@@ -10,6 +10,7 @@
 
 header {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -20,6 +21,15 @@ header {
 	box-shadow: 5px 5px 25px rgba(26, 2, 36, 0.176);
 	position: fixed;
 	z-index: 3;
+}
+
+.navBar{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
 }
 
 .logoLink{
@@ -112,4 +122,12 @@ nav {
     -webkit-text-stroke-color: var(--textColor);
     text-shadow: 2px 3px var(--secondary-color);
     transition: all 0.3s ease-in-out;
+}
+
+.alignProfileIcon{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
 }

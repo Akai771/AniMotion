@@ -33,7 +33,9 @@ function CarouselHome() {
                 />
                 <h1>{slide.title}</h1>
                 <h6 className='carouselSeason'>Season {slide.season}</h6>
-                <p>{slide.description}</p>
+                <div className='carouselDescBox'>
+                  <span className='carouselDesc'>{slide.description}</span>
+                </div>
                 <Link exact to={`/details/${slide.url}`}>
                   <button className='Watchbutton'>Watch Now</button>
                 </Link>

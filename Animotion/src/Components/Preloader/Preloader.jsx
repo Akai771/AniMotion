@@ -11,7 +11,7 @@ const Preloader = () => {
         <>
             <div className="preloader">
                 <div className="preloader__container">
-                    <img className="preloader__logo" src="https://i.postimg.cc/zGMxHC7w/Animotion-Logo.png" alt="logo" />
+                    <img className="preloader__logo" src="https://i.postimg.cc/q7ZBw5Q6/Animotion-Logo.png" alt="logo" />
                     {/* <h1 className="preloaderTitle">Animotion</h1> */}
                     <div className="texts-container">
                         <span>Anime,</span>

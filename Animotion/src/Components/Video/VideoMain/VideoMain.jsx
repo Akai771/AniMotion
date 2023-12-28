@@ -8,6 +8,7 @@ import ChatbotButton from "../../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "./characterCard";
+import ReactPlayer from "react-player";
 
 const VideoMain = () => {
     const {id} = useParams();
@@ -50,6 +51,7 @@ const VideoMain = () => {
         .then((res) => setServer(res.data[0]))
     },[episodeId])
 
+    console.log(server);
 
 
     return(<>
