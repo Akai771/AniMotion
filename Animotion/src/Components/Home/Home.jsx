@@ -85,11 +85,6 @@ const Home = ({token}) =>{
         </Slider>
         </div>
         <br/><br/>
-        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Seasonal</h3></div>
-        <br/>
-        <div className="alignCardMargin">
-        </div>
-        <br/><br/>
     </section>
     <Footer/>
     <TopRedirect location="#topCarousel"/>
