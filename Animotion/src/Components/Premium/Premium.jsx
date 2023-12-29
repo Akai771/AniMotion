@@ -25,7 +25,7 @@ const Premium = () => {
     },[])
 
     return (<>
-            {/* <Preloader/> */}
+            <Preloader/>
             <header>
                 <Link exact to="/home"><span className="navLogo">AniMotion</span></Link>
             </header>

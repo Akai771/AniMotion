@@ -18,7 +18,7 @@ import VideoInfo from "../Video/VideoInfo/VideoInfo";
 import VideoMain from "../Video/VideoMain/VideoMain";
 // import Merch from "../Merch/merch";
 import PageConstruction from "../PageConstruction/PageConstruction";
-import Payment from "../Premium/paymentGateway/payment";
+import Payment from "../Premium/paymentGateway/paymentPage";
 
 
 
