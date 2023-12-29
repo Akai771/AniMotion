@@ -24,17 +24,8 @@ const Premium = () => {
         .then((res) => setFtw(res.data.trending))
     },[])
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 7,
-        slidesToScroll: 1
-    };
-
-
     return (<>
-            <Preloader/>
+            {/* <Preloader/> */}
             <header>
                 <Link exact to="/home"><span className="navLogo">AniMotion</span></Link>
             </header>
@@ -43,9 +34,9 @@ const Premium = () => {
                     <div className="PremiumContent">
                         <div>
                             <h1 className="premiumTitle">Upgrade your anime experience with our Ultra membership</h1>
-                            <button className="BannerButton ">
+                            <Link exact to={`/payment/ultra_mo`}><button className="BannerButton ">
                                 <span className="BannerButton-content">Start Ultra Membership</span>
-                            </button>
+                            </button></Link>
                         </div>
                         <span className="premiumTxt">Your account will automatically renew at ₹99.00 per month. You may cancel at any time</span>
                         <a href="#PremiumCard" className="compareLink">Compare all plans<KeyboardArrowDownIcon style={{fontSize:"2.8rem", fontWeight:"bold"}}/></a>

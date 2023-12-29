@@ -18,8 +18,6 @@ const Home = ({token}) =>{
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
 
-    console.log(token);
-
     useEffect(()=>{
         axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/recent-episodes")
         .then((res) => setRecentEp(res.data.results))

@@ -1,0 +1,223 @@
+.paymentGateway{
+    background-color: var(--bgColor2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.paymentTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--textColor);
+
+}
+
+.paymentDescCard{
+    width: 50rem;
+    background-color: #232323;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.paymentDescCard span{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.paymentDescCard2{
+  width: 50rem;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.paymentDescCard2 span{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.paymentInput{
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    width: 45rem;
+    background-color: #3a3939;
+    padding: 1rem;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+}
+
+.paymentInput::placeholder{
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--textColor3);
+}
+
+.creditInfo{
+    width: 50rem;
+    padding: 1rem;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.paymentInput2{
+    border-radius: 0.5rem;
+    width: 22rem;
+    background-color: #3a3939;
+    padding: 1rem;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+}
+
+.paymentInput2::placeholder{
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--textColor3);
+}
+
+.upiInput{
+    width: 30rem;
+    background-color: #3a3939;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+}
+
+.upiInput::placeholder{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--textColor3);
+}
+
+.upiBtn{
+    width: 10rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upiBtn:hover{
+    color: var(--textColor2);
+    background-color: var(--primary-color2);
+}
+
+.arrowIconUpi1{
+    width: 2rem;
+    height: 2rem;
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+.arrowIconUpi2{
+    width: 2rem;
+    height: 2rem;
+    color: var(--textColor);
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.accordion {
+    max-width: 600px;
+  }
+  
+  .accordion-title{
+    width: 47rem;
+    background-color: #232323;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .accordion-content {
+    background-color: #232323;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+  
+  @media screen and (max-width: 700px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .accordion {
+      width: 90%;
+    }
+  }
+
+  .creditCardInputs{
+    width: 45rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .creditCardBtn{
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+  }
+
+  .creditCardBtn:hover{
+    color: var(--textColor2);
+    background-color: var(--primary-color2);
+  }

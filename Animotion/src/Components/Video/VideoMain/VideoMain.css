@@ -11,8 +11,8 @@
     position:relative; 
     border:none; 
     overflow:hidden; 
-    color: aqua;
-    background-color: aqua;
+    color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 .AnimeVideoPlayer:focus {

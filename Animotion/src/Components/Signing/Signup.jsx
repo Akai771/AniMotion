@@ -12,8 +12,6 @@ function Signup() {
     password: "",
   });
 
-  console.log(formData);
-
   function handleChange(e){
     setFormData((prevFormData)=>{
       return{

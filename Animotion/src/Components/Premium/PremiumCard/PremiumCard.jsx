@@ -1,7 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./PremiumCard.css";
 
 const PremiumCard = () => {
+    const ultra_mo = "ultra_mo";
+    const super1 = "super";
+    const ultra_yr = "ultra_yr";
+
+
     return (
         <>
             <div className="PremiumCardAlign">
@@ -9,7 +15,7 @@ const PremiumCard = () => {
                     <span className="PremiumCardTitle">Super</span>
                     <span className="PremiumCardPrice">₹79.00/mo</span>
                     <span className="VATTxt">VAT INCLUSIVE</span>
-                    <button className="PremiumCardButton">GO SUPER</button>
+                    <Link exact to={`/payment/${super1}`}><button className="PremiumCardButton">GO SUPER</button></Link>
                     <p className="PremiumCardText">Stream the entire Animotion library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
                     <div>
                         <div className="PlusBanner">
@@ -28,7 +34,7 @@ const PremiumCard = () => {
                     <span className="PremiumCardTitle">Ultra</span>
                         <span className="PremiumCardPrice">₹99.00/mo</span>
                         <span className="VATTxt">VAT INCLUSIVE</span>
-                        <button className="PremiumCardButtonPop">GO ULTRA</button>
+                        <Link exact to={`/payment/${ultra_mo}`}><button className="PremiumCardButtonPop">GO ULTRA</button></Link>
                         <p className="PremiumCardText">Stream the entire Animotion library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
                         <div style={{margin:"1rem"}}>
                             <div className="PlusBanner">
@@ -48,7 +54,7 @@ const PremiumCard = () => {
                     <span className="PremiumCardTitle">Ultra</span>
                     <span className="PremiumCardPrice">₹999.00/yr</span>
                     <span className="VATTxt">VAT INCLUSIVE</span>
-                    <button className="PremiumCardButton">GO ULTRA</button>
+                    <Link exact to={`/payment/${ultra_yr}`}><button className="PremiumCardButton">GO ULTRA</button></Link>
                     <p className="PremiumCardText">Stream the entire Animotion library ad-free, watch new episodes shortly after Japan, and read digital manga*</p>
                     <div style={{margin:"1rem"}}>
                         <div className="PlusBanner">

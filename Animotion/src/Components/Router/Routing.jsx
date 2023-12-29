@@ -19,6 +19,7 @@ import VideoInfo from "../Video/VideoInfo/VideoInfo";
 import VideoMain from "../Video/VideoMain/VideoMain";
 import Merch from "../Merch/merch";
 import PageConstruction from "../PageConstruction/PageConstruction";
+import Payment from "../Premium/paymentGateway/payment";
 
 
 
@@ -52,6 +53,7 @@ const Routing = () => {
           {token?<Route exact path="/browse" element={<Browse/>} />:""}
           {token?<Route exact path="/details/:id" element={<VideoInfo/>} />:""}
           {token?<Route exact path="/watch/:id" element={<VideoMain/>} />:""}
+          <Route exact path="/payment/:tag" element={<Payment/>} />
           <Route exact path="/merch" element={<PageConstruction/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />
