@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./payment.css";
+import "./Payment.css";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
