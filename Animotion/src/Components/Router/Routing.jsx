@@ -5,7 +5,6 @@ import Signin from "../Signing/Signin";
 import Signup from "../Signing/Signup";
 import Welcome from "../WelcomePage/welcome";
 import Home from "../Home/Home";
-// import NavBar from "../Navbar/Navbar";
 import Premium from "../Premium/Premium";
 import Chatbot from "../Chatbot/Chatbot";
 import NewsBoard from "../News/NewsBoard";
@@ -17,7 +16,7 @@ import Browse from "../Browse/Browse";
 import Error from "../ErrorPage/Error";
 import VideoInfo from "../Video/VideoInfo/VideoInfo";
 import VideoMain from "../Video/VideoMain/VideoMain";
-import Merch from "../Merch/merch";
+// import Merch from "../Merch/merch";
 import PageConstruction from "../PageConstruction/PageConstruction";
 import Payment from "../Premium/paymentGateway/payment";
 
