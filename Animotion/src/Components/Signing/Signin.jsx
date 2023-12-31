@@ -11,8 +11,6 @@ function Signin({setToken}) {
     password: "",
   });
 
-  console.log(formData);
-
   function handleChange(e){
     setFormData((prevFormData)=>{
       return{
@@ -32,7 +30,6 @@ function Signin({setToken}) {
         }
       )
       if (error) throw error
-      console.log(data)
       setToken(data)
       navigate('/home')
     } 

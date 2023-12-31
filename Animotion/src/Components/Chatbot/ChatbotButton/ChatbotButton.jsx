@@ -6,7 +6,7 @@ class ChatbotButton extends React.Component {
   render() {
     return (
       <>
-        <Link to="/chat">
+        <Link to="/hiro">
             <div className="ChatAlnBtn">
                 <button class="ChatBtn">
                     <span class="material-symbols-outlined robotLgo" style={{color:"white"}}>

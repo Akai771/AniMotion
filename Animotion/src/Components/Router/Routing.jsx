@@ -49,7 +49,7 @@ const Routing = () => {
           <Route exact path="/forgot-password" element={<ForgotPass/>} />
           <Route exact path="/update-password" element={<ResetPass/>} />
           {token?<Route exact path="/home" element={<Home token={token}/>} />:""}
-          {token?<Route exact path="/chat" element={<Chatbot/>} />:""}
+          {token?<Route exact path="/hiro" element={<Chatbot/>} />:""}
           {token?<Route exact path="/premium" element={<Premium/>} />:""}
           {token?<Route exact path="/news" element={<NewsBoard/>} />:""}
           {token?<Route exact path="/schedule" element={<Schedule/>} />:""}
