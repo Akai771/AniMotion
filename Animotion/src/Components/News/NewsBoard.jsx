@@ -9,8 +9,9 @@ import Preloader from "../Preloader/Preloader";
 
 function NewsBoard() {
     const [articles, setArticles] = useState([]);
+
     useEffect(() => {
-            let url = `https://newsapi.org/v2/everything?q=anime&sortBy=publishedAt&language=en&apiKey=8a0f9665ed1a4f5c9854825646e774b5`
+            let url = `https://newsapi.org/v2/everything?q=anime&sortBy=publishedAt&language=en&apiKey=${import.meta.env.VITE_NEWS_API}`;
             fetch(url)
             .then((response) => response.json())
             .then(data => setArticles(data.articles)) 

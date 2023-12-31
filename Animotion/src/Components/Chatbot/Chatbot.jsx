@@ -4,7 +4,7 @@ import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import NavBar from '../Navbar/Navbar';
 
-const API_KEY = "";
+const API_KEY = import.meta.env.VITE_OPENAI_API;
 const systemMessage = {
   "role": "system", "content": "You are Hiro- AI Chatbot hosted on Animotion(a Anime Streaming Platform). You can ask me anything about Anime and Manga. I will try my best to answer your questions."
 }
@@ -58,7 +58,7 @@ function Chatbot() {
     {
       method: "POST",
       headers: {
-        "Authorization": "Bearer " + process.env.OPENAI_API_KEY,
+        "Authorization": "Bearer " + import.meta.env.VITE_OPENAI_API,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiRequestBody)
