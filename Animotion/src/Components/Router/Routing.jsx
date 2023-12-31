@@ -19,7 +19,9 @@ import VideoMain from "../Video/VideoMain/VideoMain";
 // import Merch from "../Merch/merch";
 import PageConstruction from "../PageConstruction/PageConstruction";
 import Payment from "../Premium/paymentGateway/paymentPage";
-
+import ForgotPass from "../Signing/ForgotPassword/forgotPass";
+import ResetPass from "../Signing/ForgotPassword/resetPass";
+import Profile from "../Profile/profile";
 
 
 const Routing = () => {
@@ -44,6 +46,8 @@ const Routing = () => {
           <Route exact path="/" element={<Welcome />} />
           <Route exact path="/signin" element={<Signin setToken={setToken}/>} />
           <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/forgot-password" element={<ForgotPass/>} />
+          <Route exact path="/update-password" element={<ResetPass/>} />
           {token?<Route exact path="/home" element={<Home token={token}/>} />:""}
           {token?<Route exact path="/chat" element={<Chatbot/>} />:""}
           {token?<Route exact path="/premium" element={<Premium/>} />:""}
@@ -54,6 +58,7 @@ const Routing = () => {
           {token?<Route exact path="/watch/:id" element={<VideoMain/>} />:""}
           <Route exact path="/payment/:tag" element={<Payment/>} />
           <Route exact path="/merch" element={<PageConstruction/>} />
+          <Route exact path="/profile" element={<Profile  token={token}/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />

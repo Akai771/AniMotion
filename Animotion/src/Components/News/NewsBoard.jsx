@@ -16,6 +16,21 @@ function NewsBoard() {
             .then(data => setArticles(data.articles)) 
         }, []);
 
+        {articles && articles.length > 0 ? (
+            articles.map((news, index) => (
+                <NewsCard
+                    key={index}
+                    title={news.title}
+                    description={news.description}
+                    url={news.url}
+                    urlToImage={news.urlToImage}
+                    source={news.source.name}
+                />
+            ))
+        ) : (
+            <p>No articles available</p>
+        )}
+
     return(
         <>
         <Preloader/>
@@ -23,11 +38,25 @@ function NewsBoard() {
             <NavBar />
             <div className="alignNewsBoard">
                 <h1 className="newsTitle" id="AnimeNews">Anime News</h1>
-                {articles.map((news, index) => {
+                {articles && articles.length > 0 ? (
+                    articles.map((news, index) => (
+                        <NewsCard
+                            key={index}
+                            title={news.title}
+                            description={news.description}
+                            url={news.url}
+                            urlToImage={news.urlToImage}
+                            source={news.source.name}
+                        />
+                    ))
+                ) : (
+                    <p>No articles available</p>
+                )}
+                {/* {articles.map((news, index) => {
                     return(
                         <NewsCard key={index} title={news.title} description={news.description} url={news.url} urlToImage={news.urlToImage} source={news.source.name}/>
                     );
-                })}
+                })} */}
             </div>
             <br/><br/>
             <Footer />

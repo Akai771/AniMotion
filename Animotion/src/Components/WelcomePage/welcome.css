@@ -115,21 +115,23 @@
     align-items: center;
   }
   
-  .GSInput {
+  .GetSInput {
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 13px;
     min-height: 50px;
     width: 22rem;
     padding: 0 1rem;
-    color: #fff;
-    border: 1px solid #5e4dcd;
+    color: var(--textColor2);
+    border: 1px solid var(--primary-color);
     border-radius: 6px 0 0 6px;
     background-color: rgba(0, 0, 0, 0.349);
+    outline: none;
+    transition: border-color .3s ease-in-out;
   }
 
   .GSInput::placeholder{
-    color: #ffffffb7;
+    color: var(--textColor3);
   }
   
   .GSInputButton {
@@ -139,16 +141,16 @@
     padding: .4em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
-    background-color: #5e4dcd;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--textColor);
     font-size: 13px;
     cursor: pointer;
-    transition: background-color .3s ease-in-out;
+    transition: all .3s ease-in-out;
   }
   
   .GSInputButton:hover {
-    background-color: #3c3a85;
-    color: #ffffff91;
+    background-color: var(--primary-color2);
+    color: var(--textColor2);
   }
   
   .GSInput:focus, .input:focus-visible {
@@ -223,4 +225,19 @@
 
 .Watchbutton:hover {
   box-shadow: #5e4dcd 0px 0px 0px 2px inset;
+}
+
+.txtGreenEffect{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.txtGreenEffect:hover{
+  text-shadow: 0 0 10px var(--secondary-color),
+  0 0 20px var(--secondary-color),
+  0 0 40px var(--secondary-color),
+  0 0 80px var(--secondary-color);
 }

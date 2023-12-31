@@ -50,11 +50,11 @@ function Welcome() {
           </Grid>
         </Grid>
         <div className="welSectCont">
-          <span className="Mont800 w3-animate-opacity" style={{fontSize:"35px"}}>The biggest Anime hits. Ready to watch here from ₹79</span>
-          <span className="Mont500 w3-animate-opacity" style={{fontSize:"15px"}}>Join today. Cancel anytime.</span>
+          <span className="Mont800 w3-animate-opacity" style={{fontSize:"2.5rem"}}>The biggest Anime hits. Ready to watch here from ₹79</span>
+          <span className="Mont500 w3-animate-opacity" style={{fontSize:"1rem"}}>Join <span className="txtGreenEffect">today</span>. Cancel <span className="txtGreenEffect">anytime</span>.</span>
           <div>
             <div class="GSInput-grp">
-              <input type="text" class="GSInput" style={{borderColor:{color}}} id="Email" name="Email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}/>
+              <input type="text" class="GetSInput" style={{borderColor:{color}}} id="Email" name="Email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}/>
               <Link exact to="/signup">
                 <button class="GSInputButton" onClick={clickHandler}>Get Started</button>
               </Link>
@@ -67,7 +67,7 @@ function Welcome() {
         <div className="sectContent">
           <div style={{paddingLeft:"5em"}}>
             <h1 className="Mont800" style={{fontSize:"40px"}}>Enjoy anytime</h1>
-            <span className="Mont500" style={{fontSize:"20px"}}>New Episodes released everyday shortly after Japan</span>
+            <span className="Mont500" style={{fontSize:"20px", color:"var(--secondary-color)"}}>New Episodes released everyday shortly after Japan</span>
           </div>
           <div style={{paddingTop:"4rem"}}>
             <AccessTimeIcon style={{fontSize:"25rem", color:"#4F4F4F"}} />
@@ -78,11 +78,11 @@ function Welcome() {
       <div className="sectSide1">
         <div className="sectContent">
             <div>
-              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="tv"/>
+              <img src="https://i.postimg.cc/YqWm9pNt/tvImage.png" alt="tv"/>
             </div>
             <div>
               <h1 className="Mont800" style={{fontSize:"40px"}}>Enjoy anywhere</h1>
-              <span className="Mont500" style={{fontSize:"20px"}}>Watch on PC ,Tablets, Chromecast, and more.</span>
+              <span className="Mont500" style={{fontSize:"20px",color:"var(--secondary-color)"}}>Watch on PC ,Tablets, Chromecast, and more.</span>
             </div>
         </div>
       </div>
@@ -91,10 +91,10 @@ function Welcome() {
         <div className="sectContent">
           <div style={{paddingLeft:"10rem"}}>
             <h1 className="Mont800" style={{fontSize:"40px"}}>Download your shows to watch offline</h1>
-            <span className="Mont500" style={{fontSize:"20px"}}>Save your favourites easily and always have something to watch.</span>
+            <span className="Mont500" style={{fontSize:"20px",color:"var(--secondary-color)"}}>Save your favourites easily and always have something to watch.</span>
           </div>
           <div style={{paddingTop:"4rem"}}>
-            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="download" />
+            <img src="https://i.postimg.cc/CLgwGSTh/suzume-Phone.png" alt="download" />
           </div>
         </div> 
       </div>

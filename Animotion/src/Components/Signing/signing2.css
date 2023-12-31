@@ -128,3 +128,30 @@
     font-size: 0.8rem;
     text-decoration: none;
 }
+
+.resetPassDescDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    text-align: center;
+}
+
+.resetPassDesc{
+    color: var(--textColor3);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.resetTitle{
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.alignLabelReset{
+    padding-bottom: 0.5rem;
+}

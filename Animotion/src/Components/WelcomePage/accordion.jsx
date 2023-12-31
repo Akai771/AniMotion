@@ -55,7 +55,7 @@ export default function CustomizedAccordions() {
     <div style={{fontSize:"2rem"}}>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography sx={{fontSize:"20px", fontFamily:"Montserrat", fontWeight:"600"}}>What is Animotion?</Typography>
+          <Typography sx={{fontSize:"1rem", fontFamily:"Montserrat", fontWeight:"600",color:"var(--textColor2)"}}>What is Animotion?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
@@ -70,7 +70,7 @@ export default function CustomizedAccordions() {
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography sx={{fontSize:"20px", fontFamily:"Montserrat", fontWeight:"600"}}>How much does Animotion cost?</Typography>
+          <Typography sx={{fontSize:"1rem", fontFamily:"Montserrat", fontWeight:"600", color:"var(--textColor2)"}}>How much does Animotion cost?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
@@ -82,7 +82,7 @@ export default function CustomizedAccordions() {
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography sx={{fontSize:"20px", fontFamily:"Montserrat", fontWeight:"600"}}>What can I watch on Animotion?</Typography>
+          <Typography sx={{fontSize:"1rem", fontFamily:"Montserrat", fontWeight:"600",color:"var(--textColor2)"}}>What can I watch on Animotion?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
@@ -93,15 +93,15 @@ export default function CustomizedAccordions() {
       </Accordion>
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography sx={{fontSize:"20px", fontFamily:"Montserrat", fontWeight:"600"}}>Where can I watch?</Typography>
+          <Typography sx={{fontSize:"1rem", fontFamily:"Montserrat", fontWeight:"600",color:"var(--textColor2)"}}>Where can I watch?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{fontSize:"15px", fontFamily:"Montserrat", fontWeight:"400"}}>
             Watch anywhere, anytime. Sign in with your Animotion account to watch instantly on the 
-            web at Animotion.com from your personal computer, 
+            web at animotion-two.vercel.app from your personal computer, 
             including smart TVs, smartphones, tablets, streaming media players.
             <br/><br/>
-            You can also download your favourite shows with the iOS, Android, or Windows 11 app.
+            You can also download your favourite shows.
             Use downloads to watch while you're on the go and without an internet connection.
             Take Animotion with you anywhere.
           </Typography>
