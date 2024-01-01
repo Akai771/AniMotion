@@ -15,8 +15,8 @@ const Preloader = () => {
                     {/* <h1 className="preloaderTitle">Animotion</h1> */}
                     <div className="texts-container">
                         <span>Anime,</span>
-                        <span>News,</span>
-                        <span>Merch.</span>
+                        <span>Manga,</span>
+                        <span>News.</span>
                     </div>
                 </div>
             </div>

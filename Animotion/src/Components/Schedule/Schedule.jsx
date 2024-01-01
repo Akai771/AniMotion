@@ -3,7 +3,6 @@ import NavBar from "../Navbar/Navbar";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import ScheduleCard from "./ScheduleCard";
-import Footer from "../Footer/Footer";
 import axios from "axios";
 import "./Schedule.css";
 import Preloader from "../Preloader/Preloader";
@@ -21,7 +20,7 @@ const Schedule = () => {
     useEffect(()=>{
         axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,coverImage,airingEpisode]")
         .then((res) => setSchedule(res.data))
-        setDefaultSchedule(schedule[day] || []); 
+        setDefaultSchedule(schedule[day] || schedule["sunday"]); 
     },[day])
     console.log(defaultSchedule);
     console.log(day);

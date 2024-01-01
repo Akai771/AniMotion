@@ -26,7 +26,7 @@
 }
 
 .welcSection{
-    height: 85vh;
+    height: auto;
 }
 
 .welLgo{
@@ -183,7 +183,6 @@
   align-items: center;
   justify-content: center;
   margin: 5rem 0rem 5rem 0rem;
-  border: 1px;
 }
 
 .horizontalLine{

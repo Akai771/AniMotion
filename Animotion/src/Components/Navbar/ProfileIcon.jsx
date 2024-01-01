@@ -79,8 +79,8 @@ async function getGif(){
               onClose={handleCloseUserMenu}
             >
               <MenuItem onClick={getGif} >Random PFP</MenuItem>
+              <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem>My Account</MenuItem></Link>
               <Link exact to={"/premium"} style={{textDecoration:"none", color:"var(--secondary-color)"}}><MenuItem>Premium</MenuItem></Link>
-              <Link exact to={"/profile"} style={{textDecoration:"none"}}><MenuItem>My Account</MenuItem></Link>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>
           </Box>

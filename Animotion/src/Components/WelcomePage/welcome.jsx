@@ -94,7 +94,7 @@ function Welcome() {
             <span className="Mont500" style={{fontSize:"20px",color:"var(--secondary-color)"}}>Save your favourites easily and always have something to watch.</span>
           </div>
           <div style={{paddingTop:"4rem"}}>
-            <img src="https://i.postimg.cc/CLgwGSTh/suzume-Phone.png" alt="download" />
+            <img className="suzumeImage" src="https://i.postimg.cc/CLgwGSTh/suzume-Phone.png" alt="download" />
           </div>
         </div> 
       </div>

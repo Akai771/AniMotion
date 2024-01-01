@@ -16,12 +16,14 @@ import Browse from "../Browse/Browse";
 import Error from "../ErrorPage/Error";
 import VideoInfo from "../Video/VideoInfo/VideoInfo";
 import VideoMain from "../Video/VideoMain/VideoMain";
-// import Merch from "../Merch/merch";
 import PageConstruction from "../PageConstruction/PageConstruction";
 import Payment from "../Premium/paymentGateway/paymentPage";
 import ForgotPass from "../Signing/ForgotPassword/forgotPass";
 import ResetPass from "../Signing/ForgotPassword/resetPass";
 import Profile from "../Profile/profile";
+import MangaInfo from "../Merch/MangaInfo/MangaInfo";
+import MangaRead from "../Merch/MangaRead/MangaRead";
+import Manga from "../Merch/manga";
 
 
 const Routing = () => {
@@ -57,7 +59,9 @@ const Routing = () => {
           {token?<Route exact path="/details/:id" element={<VideoInfo/>} />:""}
           {token?<Route exact path="/watch/:id" element={<VideoMain/>} />:""}
           <Route exact path="/payment/:tag" element={<Payment/>} />
-          <Route exact path="/merch" element={<PageConstruction/>} />
+          <Route exact path="/manga" element={<Manga/>} />
+          <Route exact path="/manga/details/:id" element={<MangaInfo/>} />
+          <Route exact path="/manga/read/:id/:chapId" element={<MangaRead/>} />
           <Route exact path="/profile" element={<Profile  token={token}/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />

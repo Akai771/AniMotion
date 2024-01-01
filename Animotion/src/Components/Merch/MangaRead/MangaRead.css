@@ -1,0 +1,11 @@
+.mangaImageAlign{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350rem;
+}
+
+.MangaChapters{
+    width: 75rem;
+}

@@ -1,19 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "./Browse.css";
+import "./manga.css";
 import NavBar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
-import Genres from "./Genres";
 import axios from "axios";
-import BrowseCard from "./BrowseCard/BrowseCard";
+import MangaCard from "./MangaCard/MangaCard";
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Preloader from "../Preloader/Preloader";
 
-const Browse = () => {
+const Manga = () => {
     const [browse, setBrowse] = useState([]);
     const [search, setSearch] = useState("");
     const [searchTerm, setSearchTerm] = useState("popular");
@@ -47,7 +46,7 @@ const Browse = () => {
     console.log(searchTerm);
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/${searchTerm}?page=${page}`)
+        axios.get(`https://consumet-api-yncc.onrender.com/manga/mangadex/${searchTerm}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
     console.log(browse);
@@ -63,7 +62,7 @@ const Browse = () => {
             <Preloader/>
             <NavBar/>
             <div className="browseContent">
-                <h1 className="browseTitle" id="browse">Browse Anime</h1>
+                <h1 className="browseTitle" id="browse">Browse Manga</h1>
                 <div className="browseSearchBox">
                     <input type="text" className="SearchInput" placeholder="Search" onChange={handleChange}/>
                     <button className="search__btn" onClick={handleSubmit}>
@@ -79,7 +78,7 @@ const Browse = () => {
                                 <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
                                 <div className="alignBrowseAnime">
                                     {browse.map((seasonal) => (
-                                            <BrowseCard key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
+                                            <MangaCard id={seasonal.id} title={seasonal.title.slice(0,40)} coverImage={"https://via.placeholder.com/150x190"}/>
                                         ))
                                     }
                                 </div>
@@ -112,4 +111,4 @@ const Browse = () => {
     </>)
 }
 
-export default Browse;
+export default Manga;

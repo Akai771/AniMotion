@@ -11,10 +11,10 @@ function NavBar() {
 					<Link to="/home" className="logoLink">
 						<span className="navLogo">AniMotion</span>
 					</Link>
-					<Link to="/browse">Browse</Link>
+					<Link to="/browse">Anime</Link>
+					<Link to="/manga">Manga</Link>
 					<Link to="/news">News</Link>
 					<Link to="/schedule">Schedule</Link>
-					<Link to="/merch">Merch</Link>
 				</nav>
 				<div className="alignProfileIcon">
 					<ProfileIcon />
