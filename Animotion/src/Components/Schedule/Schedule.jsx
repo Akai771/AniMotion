@@ -20,7 +20,7 @@ const Schedule = () => {
     useEffect(()=>{
         axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,coverImage,airingEpisode]")
         .then((res) => setSchedule(res.data))
-        setDefaultSchedule(schedule[day] || schedule["sunday"]); 
+        setDefaultSchedule(schedule[day] || []); 
     },[day])
     console.log(defaultSchedule);
     console.log(day);
