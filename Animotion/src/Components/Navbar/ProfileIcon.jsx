@@ -34,7 +34,7 @@ async function getGif(){
   const navigate = useNavigate();
 
 	function handleLogout(){
-		sessionStorage.removeItem("token");
+		localStorage.removeItem("token");
 		navigate("/signin");
 	}
 
@@ -80,6 +80,7 @@ async function getGif(){
             >
               <MenuItem onClick={getGif} >Random PFP</MenuItem>
               <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem>My Account</MenuItem></Link>
+              <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem>Watchlist</MenuItem></Link>
               <Link exact to={"/premium"} style={{textDecoration:"none", color:"var(--secondary-color)"}}><MenuItem>Premium</MenuItem></Link>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>

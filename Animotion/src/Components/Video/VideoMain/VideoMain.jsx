@@ -20,18 +20,25 @@ const VideoMain = () => {
     const [episodeId, setEpisodeId] = useState([0]);
     const [episodeNumber, setEpisodeNumber] = useState(1);
     const [addData, setAddData] = useState([])
+    const [pracData, setPracData] = useState([])
+ 
+    const url = `https://api.anify.tv/sources?providerId=gogoanime&watchId=${encodeURIComponent("/kubo-san-wa-mob-wo-yurusanai-episode-10")}&episodeNumber=10&id=148969&subType=sub&server=gogocdn`;
+    useEffect(()=>{
+        axios.get(url)
+        .then((res) => setPracData(res.data))
+    },[])
+    console.log(pracData);
+
 
     useEffect(()=>{
         axios.get(`https://api.anify.tv/search/anime/${id}`)
         .then((res) => setAddData(res.data.results[0]))
     },[])
-    console.log(addData);
 
     const handleOptionChange = (e) => {
         setEpisodeNumber(e.target.value);
         setEpisodeId(e.target.id);
         setSelectedOption(e.target.value);
-
       };
 
       console.log(selectedOption);
@@ -50,8 +57,6 @@ const VideoMain = () => {
         axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/servers/${episodeId}`)
         .then((res) => setServer(res.data[0]))
     },[episodeId])
-
-    console.log(server);
 
 
     return(<>

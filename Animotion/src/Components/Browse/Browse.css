@@ -5,6 +5,7 @@
     align-items: center;
     padding-top: 6rem;
     background-color: var(--bgColor2);
+    min-height: 100vh;
 }
 
 .browseTitle{

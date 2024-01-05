@@ -24,18 +24,19 @@ import Profile from "../Profile/profile";
 import MangaInfo from "../Merch/MangaInfo/MangaInfo";
 import MangaRead from "../Merch/MangaRead/MangaRead";
 import Manga from "../Merch/manga";
+import Watchlist from "../Watchlist/Watchlist";
 
 
 const Routing = () => {
   const [token, setToken] = useState(false);
 
   if(token){
-    sessionStorage.setItem("token", JSON.stringify(token));
+    localStorage.setItem("token", JSON.stringify(token));
   }
 
   useEffect(() => {
-    if(sessionStorage.getItem("token")){
-      let data = JSON.parse(sessionStorage.getItem("token"));
+    if(localStorage.getItem("token")){
+      let data = JSON.parse(localStorage.getItem("token"));
       setToken(data);
     }
   },[]);
@@ -58,11 +59,12 @@ const Routing = () => {
           {token?<Route exact path="/browse" element={<Browse/>} />:""}
           {token?<Route exact path="/details/:id" element={<VideoInfo/>} />:""}
           {token?<Route exact path="/watch/:id" element={<VideoMain/>} />:""}
-          <Route exact path="/payment/:tag" element={<Payment/>} />
-          <Route exact path="/manga" element={<Manga/>} />
-          <Route exact path="/manga/details/:id" element={<MangaInfo/>} />
-          <Route exact path="/manga/read/:id/:chapId" element={<MangaRead/>} />
-          <Route exact path="/profile" element={<Profile  token={token}/>} />
+          {token?<Route exact path="/payment/:tag" element={<Payment/>} />:""}
+          {token?<Route exact path="/manga" element={<Manga/>} />:""}
+          {token?<Route exact path="/manga/details/:id" element={<MangaInfo/>} />:""}
+          {token?<Route exact path="/manga/read/:id/:chapId" element={<MangaRead/>} />:""}
+          {token?<Route exact path="/profile" element={<Profile  token={token}/>} />:""}
+          {token?<Route exact path="/watchlist" element={<Watchlist  token={token}/>} />:""}
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />

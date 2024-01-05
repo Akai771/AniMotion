@@ -51,12 +51,6 @@ const Manga = () => {
     },[searchTerm, page])
     console.log(browse);
 
-    
-
-    const handleDayChange = (e) => {
-        setSelectedGenre(e.target.value);
-    }
-
     return(<>
         <div>
             <Preloader/>

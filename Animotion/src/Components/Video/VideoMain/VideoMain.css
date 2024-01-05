@@ -160,6 +160,13 @@
     border-radius: 10rem 10rem 10rem 10rem;
     height: 6rem;
     width: 20rem;
+    cursor: pointer;
+    transition: all .15s ease-in-out
+}
+
+.characterCard:hover{
+    transform: scale(1.1);
+    background-color: #313131;
 }
 
 .characterCardImgDiv{

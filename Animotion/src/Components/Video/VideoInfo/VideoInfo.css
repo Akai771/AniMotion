@@ -59,7 +59,6 @@
     font-weight: 600;
     color: var(--primary-color);
     margin-top: 1rem;
-
 }
 
 .AnimeInfo{
@@ -68,6 +67,14 @@
     font-weight: 500;
     color: var(--textColor3);
     margin-top: 1rem;
+}
+
+.AnimeInfo2{
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--textColor);
 }
 
 .AnimeDesc{
@@ -104,6 +111,21 @@
 .watchButton:hover{
     background-color: var(--secondary-color);
     color: var(--primary-color);
+}
+
+.watchButtonDiabled{    
+    text-align: center;
+    background-color: var(--primary-color2);
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .episodeBtn{
@@ -154,4 +176,44 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 10rem;
+}
+
+.descBoxBtnDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.descBoxBtn{
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--textColor2);
+    padding: 0.25rem 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.descBoxBtn:hover{
+    background-color: var(--primary-color);
+    color: var(--textColor);
+}
+
+.tagsBox{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0rem 5rem;
+    gap: 0.5rem;
+}
+
+.watchlistSpan{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--textColor);
 }

@@ -4,7 +4,7 @@
     flex-direction: row;
     padding: 8rem 0 0 3rem;
     border: 1px solid var(--primary-color);
-    height: 85vh auto;
+    min-height: 85vh;
     margin:0;
 }
 
