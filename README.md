@@ -1,4 +1,4 @@
-# Gym Products Website
+# Animotion - Anime Streaming Website
 This React.js project is a Anime Streaming website where users can watch Anime and read Manga. The website also features a AI Chatbot that helps in recommending users new anime or manga.
 
 **Features:**
