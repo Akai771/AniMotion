@@ -1,4 +1,4 @@
-#Animotion - Anime Streaming Platform
+# Animotion - Anime Streaming Platform
 
 Animotion is a comprehensive Anime Streaming Platform designed to cater to anime enthusiasts' needs. It offers an immersive experience for watching anime, reading manga, staying updated with the latest anime-related news, and interacting with Hiro, an AI Chatbot providing recommendations and valuable anime-related information.
 
