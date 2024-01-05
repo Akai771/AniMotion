@@ -8,6 +8,10 @@ import Box from '@mui/material/Box';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import axios from "axios";
 import "./Navbar.css";
+import LogoutIcon from '@mui/icons-material/Logout';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 
 function ProfileIcon() {
 
@@ -50,7 +54,7 @@ async function getGif(){
 
   const darkTheme = createTheme({
     palette: {
-      mode: 'dark',
+      mode: "dark",  
     },
   });
 
@@ -79,10 +83,10 @@ async function getGif(){
               onClose={handleCloseUserMenu}
             >
               <MenuItem onClick={getGif} >Random PFP</MenuItem>
-              <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem>My Account</MenuItem></Link>
-              <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem>Watchlist</MenuItem></Link>
-              <Link exact to={"/premium"} style={{textDecoration:"none", color:"var(--secondary-color)"}}><MenuItem>Premium</MenuItem></Link>
-              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+              <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><AccountCircleOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> My Account </MenuItem></Link>
+              <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><BookmarkBorderIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Watchlist </MenuItem></Link>
+              <Link exact to={"/premium"} style={{textDecoration:"none", color:"var(--secondary-color)"}}><MenuItem><WorkspacePremiumOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Premium </MenuItem></Link>
+              <MenuItem onClick={handleLogout}><LogoutIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Logout</MenuItem>
             </Menu>
           </Box>
           </ThemeProvider>
