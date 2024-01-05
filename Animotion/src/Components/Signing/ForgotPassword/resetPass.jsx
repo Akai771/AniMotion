@@ -5,6 +5,7 @@ import "../signing2.css";
 
 
 function ResetPass({setToken}) {
+  const [passType, setPassType] = useState("password");
   const [pass, setPass] = useState("");
 
   function handleChange(e){
@@ -16,9 +17,20 @@ function ResetPass({setToken}) {
     try {
         const { data, error } = await supabase.auth.updateUser({ password: pass })
         if (error) throw error
+        alert("Password Updated");
+        navigate('/signin')
     } 
     catch (error) {
       alert(error)
+    }
+  }
+
+  function handlePasswordClick(){
+    if (passType === "password"){
+      setPassType("text");
+    }
+    else{
+      setPassType("password");
     }
   }
 
@@ -31,10 +43,17 @@ function ResetPass({setToken}) {
             <label className='alignLabelReset'>New Password</label>
             <input 
             placeholder='Enter New Password'
-            type="password"
+            type={passType}
             name="password"
             onChange={handleChange}
             />
+          </div>
+          <div className='showPasswordDiv'>
+            <label className='showPassword'>
+              <input type="checkbox" onClick={handlePasswordClick}/>
+              <div class="checkmark"></div>
+            </label>
+            <span className='passText'>Show Password</span>
           </div>
           <button type='submit' className='signUpButton'>Update</button>
         </form>

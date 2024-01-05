@@ -31,14 +31,14 @@ function Watchlist() {
                     >
                         <div className="BrowseAnimeContainer">
                             <div className="alignBrowseAnime">
-                                {watchlist.map((anime) => (
+                                {watchlist?watchlist.map((anime) => (
                                     <BrowseCard
                                         key={anime.animeId}
                                         id={anime.animeId}
                                         title={anime.animeTitle}
                                         coverImage={anime.animeImage}
                                     />
-                                ))}
+                                )):null}
                             </div>
                         </div>  
                     </div>

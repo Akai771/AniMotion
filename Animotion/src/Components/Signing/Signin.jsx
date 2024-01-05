@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from "../Signing/supabaseClient";
 import "./signing2.css";
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
 
 function Signin({setToken}) {
+  const [passType, setPassType] = useState("password");
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -38,6 +40,15 @@ function Signin({setToken}) {
     }
   }
 
+  function handlePasswordClick(){
+    if (passType === "password"){
+      setPassType("text");
+    }
+    else{
+      setPassType("password");
+    }
+  }
+
   return (
     <>
       <div className='sign'>
@@ -54,12 +65,19 @@ function Signin({setToken}) {
           </div>
           <div className='textBoxSign'>
             <label>Password</label>
-            <input 
-            placeholder='Password'
-            type="password"
-            name="password"
-            onChange={handleChange}
-            />
+              <input 
+              placeholder='Password'
+              type={passType}
+              name="password"
+              onChange={handleChange}
+              />
+          </div>
+          <div className='showPasswordDiv'>
+            <label className='showPassword'>
+              <input type="checkbox" onClick={handlePasswordClick}/>
+              <div class="checkmark"></div>
+            </label>
+            <span className='passText'>Show Password</span>
           </div>
           <button type='submit' className='signUpButton'>Login</button>
         </form>
