@@ -12,7 +12,7 @@ Animotion is a comprehensive Anime Streaming Platform designed to cater to anime
 
 ## Project Overview
 
-Animotion is a culmination of our final year college project, leveraging a stack of cutting-edge technologies to create an exceptional anime-centric platform:
+Animotion is a culmination of my final year college project, leveraging a stack of cutting-edge technologies to create an exceptional anime-centric platform:
 
 ### Technologies Utilized:
 
