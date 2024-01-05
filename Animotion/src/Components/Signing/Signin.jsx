@@ -64,7 +64,7 @@ function Signin({setToken}) {
           <button type='submit' className='signUpButton'>Login</button>
         </form>
           <span className='signLink'>Don't have a account? <Link exact to="/signup">Sign Up</Link></span>
-          <span className='signLink'><Link exact to="/forgotpassword">Forgot Password?</Link></span>
+          <span className='signLink'><Link exact to="/forgot-password">Forgot Password?</Link></span>
       </div>
     </>
   )};
