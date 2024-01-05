@@ -24,7 +24,7 @@ import Profile from "../Profile/profile";
 import MangaInfo from "../Merch/MangaInfo/MangaInfo";
 import MangaRead from "../Merch/MangaRead/MangaRead";
 import Manga from "../Merch/manga";
-import Watchlist from "../Watchlist/Watchlist";
+import Watchlist from "../Watchlist/watchlist";
 
 
 const Routing = () => {
