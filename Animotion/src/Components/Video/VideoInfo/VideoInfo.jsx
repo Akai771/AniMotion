@@ -108,12 +108,12 @@ const VideoInfo = () => {
                     <div className="characterCardAlign">
                         {addData.characters?
                         <>
-                            <CharacterCard image={addData.characters.image?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[0].name:"No Data"}/>
-                            <CharacterCard image={addData.characters.image?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[1].name:"No Data"}/>
-                            <CharacterCard image={addData.characters.image?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[2].name:"No Data"}/>
-                            <CharacterCard image={addData.characters.image?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[3].name:"No Data"}/>
-                            <CharacterCard image={addData.characters.image?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[4].name:"No Data"}/>
-                            <CharacterCard image={addData.characters.image?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[5].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[0].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[1].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[2].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[3].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[4].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[5].name:"No Data"}/>
                         </>
                         :"No Data"}
                     </div>

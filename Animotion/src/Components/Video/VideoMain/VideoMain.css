@@ -11,8 +11,7 @@
     position:relative; 
     border:none; 
     overflow:hidden; 
-    color: var(--primary-color);
-    background-color: var(--primary-color);
+    background-color: #232323;
 }
 
 .AnimeVideoPlayer:focus {
@@ -84,10 +83,41 @@
 .VidEpisodes{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 0rem 1rem 14em;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0 1rem 0;
 }
+
+.episodeBox{
+    overflow-y: scroll;
+    background-color: var(--bgColor2);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 85rem;
+    max-height: 8rem;
+    margin: 0;
+    box-sizing: border-box;
+    --sb-track-color: var(--bgColor);
+    --sb-thumb-color: #86ff84;
+    --sb-size: 10px;
+
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+}
+
+.episodeBox::-webkit-scrollbar {
+    width: var(--sb-size) 
+  }
+  
+  .episodeBox::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+  }
+  
+  .episodeBox::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+    
+    }
 
 .episodeRadioBtnGrp{
     position: relative;

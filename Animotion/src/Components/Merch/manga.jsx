@@ -42,14 +42,27 @@ const Manga = () => {
         setPage(1);
     }
 
-    console.log(search);
-    console.log(searchTerm);
-
     useEffect(()=>{
         axios.get(`https://consumet-api-yncc.onrender.com/manga/mangadex/${searchTerm}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
-    console.log(browse);
+
+    const options = {
+    method: 'GET',
+    url: 'https://manga-kakalot.p.rapidapi.com/search',
+    params: {search: 'title'},
+    headers: {
+        'X-RapidAPI-Key': '1277aeaf7cmsh0fa4d916bceb446p1740a1jsn9d611343e42c',
+        'X-RapidAPI-Host': 'manga-kakalot.p.rapidapi.com'
+    }
+    };
+
+    try {
+        const response = axios.request(options);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
 
     return(<>
         <div>

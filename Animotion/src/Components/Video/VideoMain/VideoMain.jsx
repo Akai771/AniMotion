@@ -16,19 +16,10 @@ const VideoMain = () => {
     const [animeData, setAnimeData] = useState([]);
     const [server, setServer] = useState([])
     const [episode, setEpisode] = useState([])
-    const [selectedOption, setSelectedOption] = useState(1);
+    const [selectedOption, setSelectedOption] = useState();
     const [episodeId, setEpisodeId] = useState([0]);
     const [episodeNumber, setEpisodeNumber] = useState(1);
     const [addData, setAddData] = useState([])
-    const [pracData, setPracData] = useState([])
- 
-    const url = `https://api.anify.tv/sources?providerId=gogoanime&watchId=${encodeURIComponent("/kubo-san-wa-mob-wo-yurusanai-episode-10")}&episodeNumber=10&id=148969&subType=sub&server=gogocdn`;
-    useEffect(()=>{
-        axios.get(url)
-        .then((res) => setPracData(res.data))
-    },[])
-    console.log(pracData);
-
 
     useEffect(()=>{
         axios.get(`https://api.anify.tv/search/anime/${id}`)
@@ -73,19 +64,21 @@ const VideoMain = () => {
                 <div>
                     <span className="AnimeTitle">Episodes:</span>
                     <br/>
-                    <div className="episodeBtnGrp">
-                        {episode.map((anime) => {
-                            return(<>
-                                {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}
-                                <div className="episodeRadioBtnGrp">
-                                    <label className="episodeBtnLabel" key={anime.id} htmlFor={anime.id}>
-                                        <input  className="episodeRadioBtn" type="radio" name={anime.number} id={anime.id} value={anime.number} checked={selectedOption == anime.number} onChange={handleOptionChange}/>
-                                        <span className="episodeRadioSpan">{anime.number}</span>
-                                    </label>
-                                </div>
-                            </>)
-                            }
-                        )}
+                    <div className="episodeBox">
+                        <div className="episodeBtnGrp">
+                            {episode.map((anime) => {
+                                return(<>
+                                    {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}
+                                    <div className="episodeRadioBtnGrp">
+                                        <label className="episodeBtnLabel" key={anime.id} htmlFor={anime.id}>
+                                            <input  className="episodeRadioBtn" type="radio" name={anime.number} id={anime.id} value={anime.number} checked={selectedOption == anime.number} onChange={handleOptionChange}/>
+                                            <span className="episodeRadioSpan">{anime.number}</span>
+                                        </label>
+                                    </div>
+                                </>)
+                                }
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,7 +88,7 @@ const VideoMain = () => {
                 <div className="VidDescSection">
                     <span className="AnimeTitle">{animeData.title}</span>
                     <br/>
-                    <span className="AnimeInfoTitle">Episode {episodeNumber}</span>
+                    <span className="AnimeInfo">Episode {episodeNumber}</span>
                     <div className="horizontalLine2"/>
                     <br/>
                     <div> 

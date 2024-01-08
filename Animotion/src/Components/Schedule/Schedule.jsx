@@ -9,8 +9,9 @@ import Preloader from "../Preloader/Preloader";
 
 const Schedule = () => {
     const [schedule, setSchedule] = useState([]);
-    const [day, setDay] = useState("sunday");
     const [defaultSchedule, setDefaultSchedule] = useState([]);
+    const today = new Date().toLocaleString('en-us', {  weekday: 'long' }).toLowerCase();
+    const [day, setDay] = useState(today);
 
 
     const handleDayChange = (e) => {
@@ -21,7 +22,7 @@ const Schedule = () => {
         axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,coverImage,airingEpisode]")
         .then((res) => setSchedule(res.data))
         setDefaultSchedule(schedule[day] || []); 
-    },[day])
+    },[day, schedule])
     console.log(defaultSchedule);
     console.log(day);
 

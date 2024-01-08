@@ -6,7 +6,7 @@ import NavBar from '../Navbar/Navbar';
 
 const API_KEY = import.meta.env.VITE_OPENAI_API;
 const systemMessage = {
-  "role": "system", "content": "You are Hiro- AI Chatbot hosted on Animotion(a Anime Streaming Platform). You can ask me anything about Anime and Manga. I will try my best to answer your questions."
+  "role": "system", "content": "You are Hiro- AI Chatbot hosted on Animotion(a Anime Streaming Platform). You can ask me anything about Anime and Manga.This website is made by Akai as his final year project and the website is still in its development phase. On this website you can read Manga, Read News, Check Anime Schedule, and watch Anime and watchlist them. There is also a fun feature of Random PFP Generator.For the source code you can check 'https://github.com/Akai771/AniMotion'. I will try my best to answer your questions."
 }
 
 function Chatbot() {
@@ -58,14 +58,13 @@ function Chatbot() {
     {
       method: "POST",
       headers: {
-        "Authorization": "Bearer " + import.meta.env.VITE_OPENAI_API,
+        "Authorization": "Bearer " + API_KEY,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiRequestBody)
     }).then((data) => {
       return data.json();
     }).then((data) => {
-      console.log(data);
       setMessages([...chatMessages, {
         message: data.choices[0].message.content,
         sender: "ChatGPT"
@@ -83,17 +82,18 @@ function Chatbot() {
           <span className='Mont400'>Hello, I'm Hiro, your friendly AI chatbot companion here on Animotion! I'm here to assist you with recommendations, answer your queries about anime, and make your viewing experience more enjoyable. Whether you're seeking new shows or need help navigating the platform, I'm at your service!</span>
         </div>
         <div className="ChatContainer">
-          <MainContainer >
-            <ChatContainer >  
+          <MainContainer>
+            <ChatContainer>  
               <MessageList 
                 style={{backgroundColor:"#232323",border:"2px solid #636363"}}
                 scrollBehavior="smooth" 
                 typingIndicator={isTyping ? <TypingIndicator content="Hiro is typing" /> : null}
               >
                 {messages.map((message, i) => {
-                  console.log(message)
                   return(<>
-                    <Message className="ChatUI" key={i} model={message}/>
+                    <Message className="ChatUI" key={i} model={message}>
+                      <Message.Header sender="Hiro" />
+                    </Message>
                   </>) 
                 })}
               </MessageList>

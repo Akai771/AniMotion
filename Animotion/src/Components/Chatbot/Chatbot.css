@@ -39,6 +39,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "ChatDesc ChatContainer";
     background-color: var(--bgColor2);
+    max-height: 65rem;
   }
   .ChatContainer {
     background-color: var(--bgColor2);
@@ -46,7 +47,9 @@
     position: relative;
     padding-top: 5rem;
     height: 61rem;
-    width: 100rem ;
+    max-height: 61rem;
+    width: 90rem;
+    max-width: 90rem ;
   }
 
   .ChatDesc{
