@@ -10,10 +10,12 @@ import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "../VideoMain/characterCard";
 import ReactPlayer from "react-player";
 import WatchlistButton from "./watchlistButton";
+import RecommendCard from "./recommendCard";
 
 const VideoInfo = () => {
     const [animeData, setAnimeData] = useState([]);
     const [addData, setAddData] = useState([])
+    const [recommend, setRecommend] = useState([]);
     const [episodes, setEpisodes] = useState([]);
     const [isWatchlist, setIsWatchlist] = useState(false);
 
@@ -42,26 +44,11 @@ const VideoInfo = () => {
         }
     }, []);
 
-    const handleAddToWatchlist = (animeId, animeTitle, animeImage) => {
-        const existingAnimeIndex = watchlist.findIndex(
-            (anime) => anime.animeId === animeId
-          );
-      
-          if (existingAnimeIndex !== -1) {
-            setIsWatchlist(false);
-            setWatchlist(watchlist.filter((anime) => anime.animeId !== animeId));
-            localStorage.setItem('watchlist', JSON.stringify(watchlist));
-          } 
-          else {
-            setIsWatchlist(true);
-            setWatchlist((prevWatchlist) => [
-              ...prevWatchlist,
-              { animeId, animeTitle, animeImage },
-            ]);
-            localStorage.setItem('watchlist', JSON.stringify(watchlist));
-          }
-        };
-
+    useEffect(()=>{
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
+        .then((res) => setRecommend(res.data.results))
+    },[])
+    console.log(recommend);
 
     return(<>
         <Preloader/>
@@ -121,6 +108,16 @@ const VideoInfo = () => {
                     <span className="characterTitle">Trailer:</span>
                     <ReactPlayer url={addData?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
                 </div>
+                <div className="recommendedSection">
+                    <span className="characterTitle">Recommended for you:</span>
+                        <div className="alignRecommendAnime">
+                            {recommend.slice(0,14).map((recom) => (
+                                <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
+                                ))
+                            }
+                        </div>
+                </div>
+                <br/><br/>
             </div>
         </div>
         <Footer />

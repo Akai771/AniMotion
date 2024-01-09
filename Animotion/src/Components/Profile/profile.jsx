@@ -68,14 +68,17 @@ function Profile({token}) {
         <div className="optionsDiv">
             <div className="optionsBox">
                 <div className="options">
-                <span className="optionsTitle">General</span>
+                <span className="optionsTitle">My Account</span>
                     {options.map((option) => {
                         return(<>
                             <div className="optionsRadioBtnGrp">
-                                <label className="optionsBtnLabel" key={option.tags} htmlFor={option.tags}>
+                            <a className="optionsAnchorTag" href={option.links}>
+                                {/* <label className="optionsBtnLabel" key={option.tags} htmlFor={option.tags}>
                                     <input  className="optionsRadioBtn" type="radio" name={option.tags} id={option.tags} value={option.tags} checked={selectedOption == option.tags} onChange={handleOptionChange}/>
                                     <span className="optionsRadioSpan">{option.tags}</span>
-                                </label>
+                                </label> */}
+                                <span className="optionsTags" key={option.tags} htmlFor={option.tags}>{option.tags}</span>
+                            </a>
                             </div>
                         </>)
                         }
@@ -84,8 +87,8 @@ function Profile({token}) {
             </div>
         </div>
         <div className="profile">
-            <div className="settingContBox">
-                <div className="settingCont">
+            <div className="settingContBox" id="userInformation" >
+                <div className="settingCont" >
                     <h1 className="settingContTitle">User Information</h1>
                     <br/>
                     <div className="settingMainCont">
@@ -99,9 +102,11 @@ function Profile({token}) {
                         </div>
                     </div>
                 </div>
-                <br/><br/><br/>
-                <div className="settingCont">
-                    <h1 className="settingContTitle">Membership Info </h1>
+                <br/>
+                <div className="horizontalLine2"/>
+                <div id="memberInformation" />
+                <div className="settingCont" >
+                    <h1 className="settingContTitle" >Membership Info </h1>
                     <span className="settingContSubtitle">Manage your membership plan</span>
                     <br/>
                     <div className="settingMainCont2">
@@ -119,6 +124,8 @@ function Profile({token}) {
                     </div>
                 </div>
                 <br/><br/>
+                <div className="horizontalLine2"/>
+                <div id="changeEmail" />
                 <div className="settingCont">
                     <h1 className="settingContTitle">Change Email Address </h1>
                     <div>
@@ -131,10 +138,11 @@ function Profile({token}) {
                             </div>
                             <button className="settingContBtn" onClick={handleChangeEmailButton}>Change Email</button>
                         </div>
-                        
                     </div>
                 </div>
                 <br/><br/>
+                <div className="horizontalLine2"/>
+                <div id="changePassword" />
                 <div className="settingCont">
                     <h1 className="settingContTitle">Change Password </h1>
                     <div>
@@ -153,7 +161,9 @@ function Profile({token}) {
                         </div>
                     </div>
                 </div>
-                <br/><br/>
+                <br/>
+                <div className="horizontalLine2"/>
+                <div id="logout" />
                 <div className="settingCont">
                     <h1 className="settingContTitle">Log Out</h1>
                     <div>
@@ -162,6 +172,7 @@ function Profile({token}) {
                         </div>
                     </div>
                 </div>
+                <div className="horizontalLine2"/>
             </div>
         </div>
         <Footer/>

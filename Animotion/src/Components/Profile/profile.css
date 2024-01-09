@@ -189,9 +189,9 @@
 
 .optionsTitle{
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--textColor);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--secondary-color);
 }
 
 .optionsTags{
@@ -283,4 +283,16 @@
     background-color: rgb(182, 47, 47);
     color: var(--textColor2);
     cursor: pointer;
+}
+
+.optionsAnchorTag{
+    text-decoration: none;
+}
+
+.optionsAnchorTag:hover{
+    color: var(--secondary-color);
+}
+
+.optionsAnchorTag:visited{
+    color: var(--textColor);
 }

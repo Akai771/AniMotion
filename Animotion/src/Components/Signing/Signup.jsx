@@ -29,7 +29,7 @@ function Signup() {
           email: formData.email,
           password: formData.password,
           options:{
-            emailRedirectTo: 'https://animotion.vercel.app/#/signin',
+            emailRedirectTo: 'https://animotion.vercel.app/signin',
             data: {
               fname: formData.fname,
               lname: formData.lname,

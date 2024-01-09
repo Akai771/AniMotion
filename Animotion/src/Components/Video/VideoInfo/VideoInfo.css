@@ -7,12 +7,6 @@
     margin:0;
 }
 
-.video-info-container img{
-    width: 15%;
-    height: 40%;
-    object-fit: cover;
-}
-
 .additionalAnimeInfo{
     display: flex;
     flex-direction: column;
@@ -170,7 +164,7 @@
     margin-right: 15rem;
 }
 
-.trailerSection{
+.trailerSection .recommendedSection{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -216,4 +210,10 @@
     font-size: 0.7rem;
     font-weight: 800;
     color: var(--textColor);
+}
+
+.alignRecommendAnime{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-top: 1rem;
 }

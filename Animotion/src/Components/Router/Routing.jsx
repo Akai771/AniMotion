@@ -29,7 +29,6 @@ import Watchlist from "../Watchlist/watchlist";
 
 const Routing = () => {
   const [token, setToken] = useState(false);
-  // const [tokenState, setTokenState] = useState(false);
 
   if(token){
     localStorage.setItem("token", JSON.stringify(token));
