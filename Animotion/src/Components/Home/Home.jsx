@@ -19,17 +19,17 @@ const Home = ({token}) =>{
     const [trending, setTrending] = useState([]);
 
     useEffect(()=>{
-        axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/recent-episodes")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/recent-episodes")
         .then((res) => setRecentEp(res.data.results))
     },[])
 
     useEffect(()=>{
-        axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/popular")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/popular")
         .then((res) => setPopular(res.data.results))
     },[])
 
     useEffect(()=>{
-        axios.get("https://consumet-api-yncc.onrender.com/anime/gogoanime/top-airing")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setTrending(res.data.results))
     },[])
     
@@ -85,7 +85,7 @@ const Home = ({token}) =>{
         <br/><br/>
     </section>
     <Footer/>
-    <TopRedirect location="#topCarousel"/>
+    <TopRedirect/>
     <ChatbotButton/>
     </>);
 }

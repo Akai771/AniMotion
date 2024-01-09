@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {HashRouter as Router, Route, Routes } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Signin from "../Signing/Signin";
 import Signup from "../Signing/Signup";
@@ -29,6 +29,7 @@ import Watchlist from "../Watchlist/watchlist";
 
 const Routing = () => {
   const [token, setToken] = useState(false);
+  // const [tokenState, setTokenState] = useState(false);
 
   if(token){
     localStorage.setItem("token", JSON.stringify(token));
@@ -39,7 +40,11 @@ const Routing = () => {
       let data = JSON.parse(localStorage.getItem("token"));
       setToken(data);
     }
+    else{
+      setToken(false);
+    }
   },[]);
+
 
   return (
     <>

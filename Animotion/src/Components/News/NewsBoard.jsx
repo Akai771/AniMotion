@@ -62,7 +62,7 @@ function NewsBoard() {
             <br/><br/>
             <Footer />
             <ChatbotButton />
-            <TopRedirect location="#AnimeNews"/>
+            <TopRedirect/>
         </div>
         </>
     );

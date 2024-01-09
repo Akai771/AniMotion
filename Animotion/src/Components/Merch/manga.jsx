@@ -43,7 +43,7 @@ const Manga = () => {
     }
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/manga/mangadex/${searchTerm}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/${searchTerm}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
 

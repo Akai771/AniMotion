@@ -13,12 +13,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    border-radius: 1rem;
     height: auto;
-    background-color: #232323;
+    background-color: var(--bgColor);
     width: auto;
     padding: 5rem;
     margin-top: 8rem;
+    margin-left: 10rem;
+    gap: 5rem;
 }
 
 .settingMainCont{
@@ -63,11 +64,13 @@
     font-size: 1rem;
     font-weight: 500;
     color: var(--textColor2);
-    background-color: #2e2e2e;
+    background-color: var(--bgColor3);
     border: none;
     border-radius: 0.5rem;
     width: 25rem;
     padding: 0.8rem;
+    text-decoration: none;
+    outline: none;
 
 }
 
@@ -159,4 +162,125 @@
     font-weight: 600;
     color: var(--textColor);
     text-align: center;
+}
+
+.optionsBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    background-color: var(--bgColor);
+    width: 30rem;
+    max-width: 30rem;
+    margin: 8rem 0rem 8rem 5rem;
+    gap: 2rem;
+    position: fixed;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.optionsTitle{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.optionsTags{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--textColor2);
+    cursor: pointer;
+}
+
+.optionsTags:hover{
+    color: var(--secondary-color);
+}
+
+.optionsTags:checked{
+    color: var(--secondary-color);
+}
+
+.optionsRadioBtnGrp
+
+.optionsRadioBtnGrp .optionsBtnLabel {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.optionsRadioBtnGrp .optionsBtnLabel  input{
+    display: none;
+}
+
+.optionsRadioBtnGrp .optionsBtnLabel .optionsRadioSpan{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    padding: .5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: var(--textColor2);
+    transition: all .15s ease-in-out;
+}
+
+.optionsBtnLabel .optionsRadioBtnGrp .optionsRadioSpan:hover{
+    color: var(--primary-color);
+}
+
+.optionsRadioBtnGrp .optionsBtnLabel input:checked + .optionsRadioSpan{
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.settingContBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    width: 10rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.settingContBtn:hover{
+    background-color: var(--primary-color2);
+    color: var(--textColor3);
+    cursor: pointer;
+}
+
+.settingLogoutBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    background-color: rgb(255, 66, 66);
+    border: none;
+    border-radius: 0.5rem;
+    width: 10rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.settingLogoutBtn:hover{
+    background-color: rgb(182, 47, 47);
+    color: var(--textColor2);
+    cursor: pointer;
 }

@@ -6,8 +6,6 @@ import Navbar from "../../Navbar/Navbar";
 import ChatbotButton from "../../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import Footer from "../../Footer/Footer";
-import AddIcon from '@mui/icons-material/Add';
-import DoneIcon from '@mui/icons-material/Done';
 import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "../VideoMain/characterCard";
 import ReactPlayer from "react-player";
@@ -22,12 +20,12 @@ const VideoInfo = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setAnimeData(res.data))
     },[])
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisodes(res.data.episodes))
     },[])
 
@@ -108,12 +106,12 @@ const VideoInfo = () => {
                     <div className="characterCardAlign">
                         {addData.characters?
                         <>
-                            <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[0].name:"No Data"}/>
-                            <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[1].name:"No Data"}/>
-                            <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[2].name:"No Data"}/>
-                            <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[3].name:"No Data"}/>
-                            <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[4].name:"No Data"}/>
-                            <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters.name?addData.characters[5].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[0].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[1].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[2].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[3].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[4].name:"No Data"}/>
+                            <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[5].name:"No Data"}/>
                         </>
                         :"No Data"}
                     </div>

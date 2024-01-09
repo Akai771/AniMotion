@@ -29,12 +29,12 @@ const MangaRead = () => {
       };
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/manga/mangadex/read/${chapId}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/read/${chapId}`)
         .then((res) => setChapterData(res.data))
     },[chapId])
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/manga/mangadex/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/info/${id}`)
         .then((res) => setMangaData(res.data))
     },[])
 
@@ -80,7 +80,7 @@ const MangaRead = () => {
         </div>
         <Footer />
         <ChatbotButton />
-        <TopRedirect location="#videoPlayer"/>
+        <TopRedirect/>
     </>)
 }
 

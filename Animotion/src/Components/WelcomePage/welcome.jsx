@@ -5,6 +5,7 @@ import Accordion  from "./accordion";
 import "./welcome.css";
 import "../fonts.css";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import TopRedirect from "../TopRedirectButton/TopRedirect";
 
 function Welcome() {
   var color;
@@ -109,6 +110,7 @@ function Welcome() {
           </div>
         </div> 
       </div>
+      <TopRedirect/>
     </div>
   </>)
 }

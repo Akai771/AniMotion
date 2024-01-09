@@ -101,7 +101,7 @@ const Premium = () => {
             <div className="premiumFooter">
                     <span className="premiumFooterTxt">Plan automatically renews after trial period at the price selected in the plan comparison. You may cancel at any time. Restrictions and other terms apply, including changes to price and content, features.</span>
             </div>
-            <TopRedirect location="#premium__banner"/>         
+            <TopRedirect/>         
     </>);
 };
 

@@ -20,7 +20,7 @@ const MangaInfo = () => {
     const descEng = mangaDesc[0]?mangaDesc[0].en:"No Data";
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/manga/mangadex/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/info/${id}`)
         .then((res) => setMangaData(res.data))
     },[])
 
@@ -78,7 +78,7 @@ const MangaInfo = () => {
         </div>
         <Footer />
         <ChatbotButton />
-        <TopRedirect location="#animeImage"/>
+        <TopRedirect/>
     </>)
 }
 

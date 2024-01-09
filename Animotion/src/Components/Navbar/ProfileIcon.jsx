@@ -12,6 +12,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
+import { supabase } from "../Signing/supabaseClient";
 
 function ProfileIcon() {
 
@@ -39,6 +40,7 @@ async function getGif(){
 
 	function handleLogout(){
 		localStorage.removeItem("token");
+    supabase.auth.signOut();
 		navigate("/signin");
 	}
 

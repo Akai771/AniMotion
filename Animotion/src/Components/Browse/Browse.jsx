@@ -47,7 +47,7 @@ const Browse = () => {
     console.log(searchTerm);
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/${searchTerm}?page=${page}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
     console.log(browse);
@@ -107,7 +107,7 @@ const Browse = () => {
             </div>
             <Footer/>
             <ChatbotButton/>
-            <TopRedirect location="#browse"/>
+            <TopRedirect/>
         </div>
     </>)
 }

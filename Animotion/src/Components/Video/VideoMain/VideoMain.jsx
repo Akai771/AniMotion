@@ -35,17 +35,17 @@ const VideoMain = () => {
       console.log(selectedOption);
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisode(res.data.episodes))
     },[])
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setAnimeData(res.data))
     },[])
 
     useEffect(()=>{
-        axios.get(`https://consumet-api-yncc.onrender.com/anime/gogoanime/servers/${episodeId}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/servers/${episodeId}`)
         .then((res) => setServer(res.data[0]))
     },[episodeId])
 

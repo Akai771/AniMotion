@@ -82,7 +82,7 @@ const Schedule = () => {
                 
             </div>
             <ChatbotButton/>
-            <TopRedirect location="#topCarousel"/>
+            <TopRedirect/>
         </div>
         </>);
 }
