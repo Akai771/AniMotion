@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./VidCard.css";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const VidCard2 = ({id, title, coverImage, currentEpisode, duration, format, vidUrl}) => {
+const VidCard2 = ({id, title, coverImage}) => {
     return (
       <>
         <div class="VidCard">    

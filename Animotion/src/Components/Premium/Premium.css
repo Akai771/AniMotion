@@ -184,3 +184,14 @@
   align-items: center;
   text-align: center;
 }
+
+
+@media only screen and (max-width: 1366px) {
+  .PremiumContent{
+    margin-right: 50rem;
+}
+  
+  .premiumTitle{
+    font-size: 2rem;
+  }
+}

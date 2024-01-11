@@ -12,6 +12,8 @@
     border:none; 
     overflow:hidden; 
     background-color: #232323;
+    width: 1280px;
+    height: 720px;
 }
 
 .AnimeVideoPlayer:focus {
@@ -230,4 +232,37 @@
     color: var(--primary-color);
     text-align: center;
     margin-top: 1rem;
+}
+
+@media only screen and (max-width:1366px){
+    .AnimeVideoPlayer{
+        width: 1024px;
+        height: 576px;
+    }
+
+    .ServerBox{
+        width: 1024px;
+    }
+
+    .VidEpisodes{
+        margin: 1rem 0 1rem 10rem;
+    }
+
+    .characterSection{
+        margin-left: 10rem;
+    }
+
+    .characterCardAlign{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .characterCard{
+        width: 18rem;
+        height: 5rem;
+    }
+
+    .characterCardName{
+        font-size: 1rem;
+    }
 }

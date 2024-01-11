@@ -1,17 +1,16 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "./Browse.css";
 import NavBar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
-import Genres from "./Genres";
 import axios from "axios";
 import BrowseCard from "./BrowseCard/BrowseCard";
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Preloader from "../Preloader/Preloader";
+import "./Browse.css";
 
 const Browse = () => {
     const [browse, setBrowse] = useState([]);

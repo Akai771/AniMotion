@@ -296,3 +296,13 @@
 .optionsAnchorTag:visited{
     color: var(--textColor);
 }
+
+@media only screen and (max-width:1366px) {
+    .optionsBox{
+        width: 20rem;
+        max-width: 20rem;
+        margin: 8rem 0rem 8rem 4rem;
+        gap: 2rem;
+        position: fixed;
+    }
+}

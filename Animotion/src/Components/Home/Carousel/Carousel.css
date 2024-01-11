@@ -85,3 +85,95 @@
     background-color: var(--primary-color2);
     color: var(--textColor2);
 }
+
+@media screen and (max-width: 768px) {
+    .carouselImage{
+        position: relative;
+    }
+    
+    .carouselImage::before{
+        content: "";
+        background-color: var(--bgColor);
+        background-image: linear-gradient(to right, rgba(15, 15, 15) 5%, transparent 90%);
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+    
+    }
+    
+    .aniLogo{
+        width: 150px;
+        object-fit: cover;
+    }
+    
+    .carouselContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 28rem 0 28rem;
+        position: absolute;
+        text-align: left;
+        top: 50%;
+        transform: translate(2%, -100%);
+    }
+    
+    .carouselContent h1{
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+    }
+    
+    .carouselContent p{
+        font-size: 0.5rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+    
+    .carouselContentDir{
+        transform: translate(-450px, -200px);
+    }
+    
+    .carouselSeason{
+        color: var(--secondary-color);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+    
+    .carouselDescBox{
+        /* border: 1px solid var(--secondary-color); */
+        width: 20rem;
+        max-width: 20rem;
+        padding-bottom: 1rem;
+    }
+    
+    .carouselDesc{
+        color: var(--textColor2);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 0.6rem;
+    }
+    
+    .WatchButton{
+        background-color: var(--primary-color);
+        color: var(--textColor);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 0.6rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .WatchButton:hover{
+        background-color: var(--primary-color2);
+        color: var(--textColor2);
+    }
+}

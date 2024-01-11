@@ -45,3 +45,17 @@ body{
     gap: 6px;
     color: var(--textColor);
 }
+
+@media only screen and (max-width: 1366px){
+    .alignHomeItems{
+        padding-left: 30px;
+    }
+
+    .alignCardMargin2{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        overflow: hidden;
+    }
+
+    
+}

@@ -54,7 +54,7 @@ const VideoMain = () => {
         <Preloader/>
         <NavBar />
         <div className="video-main-container">
-            <iframe width="1280" height="720"  className="AnimeVideoPlayer" src={server.url} title="Animotion video player" id="videoPlayer" allowfullscreen="allowfullscreen"/>
+            <iframe className="AnimeVideoPlayer" src={server.url} title="Animotion video player" id="videoPlayer" allowfullscreen="allowfullscreen"/>
             <div className="ServerBox">
                 <span className="ServerInfoTitle">Episode: <span className="ServerInfo">{episodeNumber}</span></span>
                 <span className="ServerInfoTitle">Server: <span className="ServerInfo">{server.name}</span></span>

@@ -45,4 +45,55 @@
   height: 18rem;
   object-fit: cover;
 }
+
+@media screen and (max-width: 500px){
+  .VidCard {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 15rem;
+    padding: .8em;
+    background: var(--bgColor2);
+    color: #ffffff  ;
+    position: relative;
+    overflow: visible;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .VidCard:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .VidCard-info {
+    padding-top: 5px;
+    height: auto;
+  }
+    
+  .vidInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+  
+  .vidInfoCont{
+    font-size: 0.6rem;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    color: var(--secondary-color);
+  }
+  
+  .VidCardTitle{
+    font-family: "montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .VidImage{
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+  }
+}
     

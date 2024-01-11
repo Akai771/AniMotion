@@ -44,15 +44,15 @@ function Welcome() {
             <item>
               <Link exact to="/signin">
                 <button class="full-rounded Signbtn">
-                  <span>Sign In</span>
+                  <span>Login</span>
                 </button>
               </Link>
             </item>
           </Grid>
         </Grid>
         <div className="welSectCont">
-          <span className="Mont800 w3-animate-opacity" style={{fontSize:"2.5rem"}}>The biggest Anime hits. Ready to watch here from ₹79</span>
-          <span className="Mont500 w3-animate-opacity" style={{fontSize:"1rem"}}>Join <span className="txtGreenEffect">today</span>. Cancel <span className="txtGreenEffect">anytime</span>.</span>
+          <span className="w3-animate-opacity welcomeTitle" >The biggest Anime hits. Ready to watch here from ₹79</span>
+          <span className="w3-animate-opacity welcomeSubtitle">Join <span className="welcomeSubtitle2">today</span>. Cancel <span className="welcomeSubtitle2">anytime</span>.</span>
           <div>
             <div class="GSInput-grp">
               <input type="text" class="GetSInput" style={{borderColor:{color}}} id="Email" name="Email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}/>
@@ -66,33 +66,32 @@ function Welcome() {
       </div>
       <div className="sectSide1" >
         <div className="sectContent">
-          <div style={{paddingLeft:"5em"}}>
-            <h1 className="Mont800" style={{fontSize:"40px"}}>Enjoy anytime</h1>
-            <span className="Mont500" style={{fontSize:"20px", color:"var(--secondary-color)"}}>New Episodes released everyday shortly after Japan</span>
+          <div className="sectContAlign1">
+            <h1 className="sectContTitle">Enjoy anytime</h1>
+            <span className="sectContSubtitle">New Episodes released everyday shortly after Japan</span>
           </div>
           <div style={{paddingTop:"4rem"}}>
             <AccessTimeIcon style={{fontSize:"25rem", color:"#4F4F4F"}} />
           </div>
         </div>
       </div>
-
       <div className="sectSide1">
         <div className="sectContent">
             <div>
               <img src="https://i.postimg.cc/YqWm9pNt/tvImage.png" alt="tv"/>
             </div>
-            <div>
-              <h1 className="Mont800" style={{fontSize:"40px"}}>Enjoy anywhere</h1>
-              <span className="Mont500" style={{fontSize:"20px",color:"var(--secondary-color)"}}>Watch on PC ,Tablets, Chromecast, and more.</span>
+            <div className="sectContAlign2">
+              <span className="sectContTitle">Enjoy anywhere</span>
+              <span className="sectContSubtitle">Watch on PC ,Tablets, Chromecast, and more.</span>
             </div>
         </div>
       </div>
 
       <div className="sectSide1" >
         <div className="sectContent">
-          <div style={{paddingLeft:"10rem"}}>
-            <h1 className="Mont800" style={{fontSize:"40px"}}>Download your shows to watch offline</h1>
-            <span className="Mont500" style={{fontSize:"20px",color:"var(--secondary-color)"}}>Save your favourites easily and always have something to watch.</span>
+          <div className="sectContAlign1 sectContPadding">
+            <h1 className="sectContTitle">Download your shows to watch offline</h1>
+            <span className="sectContSubtitle">Save your favourites easily and always have something to watch.</span>
           </div>
           <div style={{paddingTop:"4rem"}}>
             <img className="suzumeImage" src="https://i.postimg.cc/CLgwGSTh/suzume-Phone.png" alt="download" />

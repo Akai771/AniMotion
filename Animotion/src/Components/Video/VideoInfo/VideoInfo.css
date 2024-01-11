@@ -1,9 +1,15 @@
-.video-info-container{
+.videoInfoPage{
     background-color: var(--bgColor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-info-container{
     display: flex;
     flex-direction: row;
     padding: 8rem 0 0 3rem;
-    border: 1px solid var(--primary-color);
     margin:0;
 }
 
@@ -30,6 +36,13 @@
     font-weight: 800;
     color: var(--secondary-color);
 
+}
+
+.AnimeTitle2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--textColor2);
 }
 
 .AnimeTags{
@@ -164,7 +177,7 @@
     margin-right: 15rem;
 }
 
-.trailerSection .recommendedSection{
+.trailerSection {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -213,7 +226,38 @@
 }
 
 .alignRecommendAnime{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    padding-top: 1rem;
+    width: 100rem;
+    max-width: 100rem;
+}
+
+.recommendedSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10rem;
+}
+
+.characterTitle2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+.recommendMinAnime{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1366px){
+    .alignRecommendAnime{
+        width: 85rem;
+        max-width: 85rem;
+    }
+
+    .characterCardAlign{
+        padding-left: 8rem;
+    }
 }

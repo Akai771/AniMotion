@@ -25,6 +25,27 @@
     z-index: -1;
 }
 
+.welcomeTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--textColor);
+}
+
+.welcomeSubtitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--textColor2);
+}
+
+.welcomeSubtitle2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
 .welcSection{
     height: auto;
 }
@@ -185,6 +206,39 @@
   margin: 5rem 0rem 5rem 0rem;
 }
 
+.sectContAlign1{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.sectContAlign2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-left: 2rem;
+}
+
+.sectContPadding{
+  padding-left: 12rem;
+}
+
+.sectContTitle{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: var(--textColor);
+}
+
+.sectContSubtitle{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
 .horizontalLine{
   border: 5px solid #232323;
   width: 100%;
@@ -240,3 +294,293 @@
   0 0 40px var(--secondary-color),
   0 0 80px var(--secondary-color);
 }
+
+
+
+
+
+
+/* @media only screen and (max-width: 768px){
+  .welDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+    width: auto;
+    position: relative;
+  }
+
+  .welcomeBG{
+      position: relative;
+  }
+
+  .welcomeBG::before{
+      content: "";
+      background-color: var(--bgColor);
+      background-image: linear-gradient(transparent, rgb(3, 3, 3)), url("../../assets/Images/AnimeCollage2.png") ;
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%; 
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+  }
+
+  .welcSection{
+      height: auto;
+  }
+
+  .welLgo{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; 
+      padding: 2rem 4rem 0rem 0rem;
+      color: white;
+      font-size: 20px;
+  }
+
+  .lgoImgStyle{
+      width: 5rem;
+      height: 5rem;
+      filter: drop-shadow(0 0 1rem var(--bgColor));
+      transition: all 0.3s ease-in-out;
+  }
+  .lgoImgStyle:hover{
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 1rem var(--textColor));
+  }
+
+  .lgoStyle{
+      font-family: 'Another Danger';
+      font-size: 35px;
+      font-weight: 100;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgb(123, 255, 121);
+      text-shadow: 2px 3px var(--primary-color);
+  }
+
+  .lgoStyle:hover{
+      transition: all 0.3s ease-in-out;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: transparent;
+      text-shadow: 2px 3px transparent;
+  }
+
+  .welSectCont{
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0rem 10rem 0rem 10rem;
+      gap: 15px;
+  }
+
+  .welContent{
+      background-color: var(--bgColor);
+      background-size: cover;
+      color: var(--secondary-color);
+      font-weight: 500;
+  }
+
+  .welcomeTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 0.7rem;
+    color: var(--textColor);
+  }
+
+  .welcomeSubtitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.5rem;
+    color: var(--textColor2);
+  }
+
+  .welcomeSubtitle2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.5rem;
+    color: var(--secondary-color);
+  }
+
+
+  .Signbtn {
+      cursor: pointer;
+      font-size: 8px;
+      font-weight: 800;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+      margin: auto;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      background: #fff;
+      transition: all 0.3s linear;
+      box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+      border-radius: 2em;
+    }
+
+      .Signbtn:hover {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+      }
+
+  .GSInput-grp {
+      display: flex;
+      align-items: center;
+    }
+    
+    .GetSInput {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 6px;
+      min-height: 25px;
+      width: 10rem;
+      padding: 0 1rem;
+      color: var(--textColor2);
+      border: 1px solid var(--primary-color);
+      border-radius: 6px 0 0 6px;
+      background-color: rgba(0, 0, 0, 0.349);
+      outline: none;
+      transition: border-color .3s ease-in-out;
+    }
+
+    .GSInput::placeholder{
+      color: var(--textColor3);
+    }
+    
+    .GSInputButton {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      min-height: 25px;
+      padding: .4em 1em;
+      margin-bottom: 0.7rem;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      background-color: var(--primary-color);
+      color: var(--textColor);
+      font-size: 6px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+    }
+    
+    .GSInputButton:hover {
+      background-color: var(--primary-color2);
+      color: var(--textColor2);
+    }
+    
+    .GSInput:focus, .input:focus-visible {
+      border-color: #f7f7f7;
+      outline: none;
+    }
+
+    .errMsg{
+      font-family: "Montserrat", sans-serif;
+      color: red;
+      font-size: 6px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+    }
+
+  .sectSide1{
+      background-color: black;
+      color: white;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .sectContAlign1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-left: 3rem;
+  }
+
+  .sectContAlign2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .sectContent{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0rem 2rem 0rem;
+    width: auto;
+  }
+
+  .sectContent img{
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .sectContTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: .7rem;
+    color: var(--textColor);
+
+  }
+
+  .sectContSubtitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .4rem;
+    color: var(--secondary-color);
+  }
+
+  .horizontalLine{
+    border: 5px solid #232323;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+
+  }
+
+  .Faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+
+  }
+
+  .AccordMargin{
+    margin: 0rem 15rem 0rem 15rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+
+  .Watchbutton {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease;
+  }
+
+  .Watchbutton:hover {
+    box-shadow: #5e4dcd 0px 0px 0px 2px inset;
+  }
+} */

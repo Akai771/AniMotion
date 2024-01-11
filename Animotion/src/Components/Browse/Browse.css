@@ -5,15 +5,16 @@
     align-items: center;
     padding-top: 6rem;
     background-color: var(--bgColor2);
+    height: auto;
     min-height: 100vh;
 }
 
 .browseTitle{
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--textColor);
-    padding-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--textColor);
+  padding-bottom: 1rem;
 }
 
 .browse2Section{
@@ -84,11 +85,11 @@
 }
 
 .browseAnimeTitle2{
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    font-style: italic;
-    color: var(--secondary-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--secondary-color);
 }
 
 

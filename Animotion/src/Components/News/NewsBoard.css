@@ -16,6 +16,13 @@
     margin: 1rem 0 1rem 0;
 }
 
+.newsCardAlign{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
 .ReadMoreBtn{
     font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
@@ -60,4 +67,10 @@
     font-weight: 500;
     color: var(--secondary-color);
     margin: 0 0 1rem 0;
+}
+
+@media only screen and (max-width:1366px){
+    .newsCardAlign{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
