@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--bgColor2);
+    overflow: hidden;
 }
 
 .AnimeVideoPlayer{
@@ -120,6 +121,13 @@
     border-radius: 10px;
     
     }
+
+.episodeMainBtnGrp{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin-right: 40rem;
+}
 
 .episodeRadioBtnGrp{
     position: relative;
@@ -264,5 +272,67 @@
 
     .characterCardName{
         font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .video-main-container{
+        padding: 8rem 0 0 0;
+    }
+
+    .AnimeVideoPlayer{
+        width: 350px;
+        height: 197px;
+    }
+
+    .ServerBox{
+        width: 350px;
+    }
+
+    .VidEpisodes{
+        width: 23rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .episodeBox{
+        max-width: 26rem;
+        max-height: 15rem;
+        overflow: auto;
+    }
+
+    .episodeMainBtnGrp{
+        grid-template-columns: repeat(5, 1fr);
+        margin-right: 0;
+    }
+
+    .episodeRadioBtnGrp{
+        width: 3rem;
+        height: 2rem;
+    }
+    .episodeRadioBtnGrp .episodeBtnLabel .episodeRadioSpan{
+        font-size: 0.8rem;
+    }
+
+    .episodeRadioBtnGrp .episodeBtnLabel input:checked + .episodeRadioSpan{
+        font-size: 0.8rem;
+        width: 3rem;
+        height: 2rem;
+    }
+
+    .alignVidMain{
+        flex-direction: column;
+    }
+
+    .alignVidMain img{
+        display: none;
+    }
+
+    .VidDescSection{
+        margin: 2rem;
+    }
+
+    .characterSection{
+       display: none;
     }
 }

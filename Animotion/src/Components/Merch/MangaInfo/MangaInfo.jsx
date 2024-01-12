@@ -26,11 +26,8 @@ const MangaInfo = () => {
 
     const chapters = [mangaData.chapters];
     const totalChapters = chapters?chapters[0]:"No Data";
-    // console.log(totalChapters);
     const readLatestBtn = totalChapters?totalChapters[0].id:"No Data";
     const readNewBtn = totalChapters?totalChapters.slice(-1)[0].id:"No Data";
-    console.log(readLatestBtn);
-    console.log(readNewBtn);
     const chapterLength = chapters[0]?chapters[0].length:"No Data";
 
     return(<>
@@ -39,10 +36,10 @@ const MangaInfo = () => {
         <div className="manga-info-container">
             <img src={mangaData?mangaData.image:"https://via.placeholder.com/150x190"} alt="Manga Cover Image" className="video-info-cover-image" id="animeImage"/>
             <div className="alignVidInfo col-8">
-                <span className="AnimeTitle">{mangaData.title}</span>
-                <span className="AnimeInfoTitle">Genres: <span className="AnimeInfo">{mangaData.genres}</span> </span>
-                <span className="AnimeInfoTitle">Status: <span className="AnimeInfo">{mangaData.status}</span></span>
-                <span className="AnimeInfoTitle">Total Chapters: <span className="AnimeInfo">{chapterLength}</span></span>
+                <span className="MangaTitle">{mangaData.title}</span>
+                <span className="MangaInfoTitle">Genres: <span className="AnimeInfo">{mangaData.genres?mangaData.genres.join(" ,"):"NoData"}</span> </span>
+                <span className="MangaInfoTitle">Status: <span className="AnimeInfo">{mangaData.status}</span></span>
+                <span className="MangaInfoTitle">Total Chapters: <span className="AnimeInfo">{chapterLength}</span></span>
                 {/* <span className="AnimeInfoTitle">Rating: <span className="AnimeInfo">{mangaData?mangaData.rating:"No Data"}</span></span> */}
                 {/* <span className="AnimeInfoTitle">Authors: <span className="AnimeInfo">{mangaData?mangaData.authors:"No Data"}</span></span> */}
                 <div className="episodeBtnGrp2">
@@ -50,14 +47,14 @@ const MangaInfo = () => {
                     <Link exact to={`/manga/read/${id}/${readNewBtn}`}><button className="watchButton">Read First Chapter</button></Link>
                 </div>
                 <br/>
-                <div className="AnimeDescSection">
-                    <span className="AnimeDescTitle">Synopsis: </span>
+                <div className="MangaDescSection">
+                    <span className="MangaDescTitle">Synopsis: </span>
                     <br/>   
-                    <span className="AnimeDesc">{descEng}</span>
+                    <span className="MangaDesc">{descEng}</span>
                 </div>
                 <br/>
                 <div>
-                    <span className="AnimeDescTitle">Chapters: </span>
+                    <span className="MangaDescTitle">Chapters: </span>
                     <br/>
                     <div className="chapterBoxAlign">
                         <ul className="chapterBox">

@@ -12,7 +12,7 @@ body{
     background-color: #f1f1f1;
 }
 
-.alignHomeItems{
+.alignHomeItems1{
     padding-left: 60px;
 }
 
@@ -54,6 +54,20 @@ body{
     .alignCardMargin2{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        overflow: hidden;
+    }
+
+    
+}
+
+@media only screen and (max-width: 768px){
+    .alignHomeItems{
+        padding-left:30px;
+    }
+
+    .alignCardMargin2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         overflow: hidden;
     }
 

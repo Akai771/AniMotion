@@ -46,53 +46,100 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 500px){
+.VidCard2 {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+  height: 24rem;
+  padding: .8em;
+  background: var(--bgColor2);
+  color: #ffffff  ;
+  position: relative;
+  overflow: visible;
+}
+
+.VidCard2:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.VidCard-info2 {
+  padding-top: 5px;
+  height: auto;
+}
+  
+.vidInfo2{
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+
+.vidInfoCont2{
+  font-size: 0.6rem;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.VidCardTitle2{
+  font-family: "montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.VidImage2{
+  width: 12rem;
+  height: 18rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px){
   .VidCard {
-    display: flex;
-    flex-direction: column;
-    width: 10rem;
+    width: 8.5rem;
     height: 15rem;
-    padding: .8em;
-    background: var(--bgColor2);
-    color: #ffffff  ;
-    position: relative;
-    overflow: visible;
-    border: 1px solid var(--primary-color);
+    padding: .4em;
+  }
+
+  .VidCard2 {
+    width: 8.5rem;
+    height: 15rem;
+    padding: .4em;
   }
   
-  .VidCard:hover {
-    transform: scale(1.1);
+  .VidCard2:hover {
+    transform: scale(1.05);
     transition: 0.5s ease-in-out;
     cursor: pointer;
   }
   
-  .VidCard-info {
-    padding-top: 5px;
+  .VidCard-info2 {
+    padding-top: 1px;
     height: auto;
   }
     
-  .vidInfo{
+  .vidInfo2{
     display: flex;
     flex-direction: row;
     gap: 0.4rem;
   }
   
-  .vidInfoCont{
-    font-size: 0.6rem;
+  .vidInfoCont2{
+    font-size: 0.4rem;
     font-family: "montserrat", sans-serif;
     font-weight: 400;
     color: var(--secondary-color);
   }
   
-  .VidCardTitle{
+  .VidCardTitle2{
     font-family: "montserrat", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
   }
   
-  .VidImage{
-    width: 10rem;
-    height: 15rem;
+  .VidImage2{
+    width: 8rem;
+    height: 12rem;
     object-fit: cover;
   }
 }

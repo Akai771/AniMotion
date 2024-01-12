@@ -65,7 +65,7 @@ const VideoMain = () => {
                     <span className="AnimeTitle">Episodes:</span>
                     <br/>
                     <div className="episodeBox">
-                        <div className="episodeBtnGrp">
+                        <div className="episodeMainBtnGrp">
                             {episode.map((anime) => {
                                 return(<>
                                     {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}

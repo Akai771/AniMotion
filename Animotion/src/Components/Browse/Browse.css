@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 8rem;
     background-color: var(--bgColor2);
     height: auto;
     min-height: 100vh;
@@ -93,14 +93,14 @@
 }
 
 
-.browseSearchBox {
+.browseAnimeSearchBox {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3rem;
   }
   
-  .SearchInput {
+  .SearchAnimeInput {
     width: 30rem;
     height: 100%;
     outline: none;
@@ -117,16 +117,16 @@
     transition: all .2s ease;
   }
   
-  .SearchInput:hover {
+  .SearchAnimeInput:hover {
     border: 2px solid rgba(255, 255, 255, 0.16);
   }
   
-  .SearchInput:focus {
+  .SearchAnimeInput:focus {
     border: 2px solid var(--primary-color);
     background-color: var(--bgColor2);
   }
   
-  .search__btn {
+  .searchAnime__btn {
     border: none;
     cursor: pointer;
     background-color: rgba(42, 42, 45, 1);
@@ -171,3 +171,35 @@
         border: 1px solid transparent;
         color: var(--secondary-color);
     }
+
+@media only screen and (max-width: 768px) {
+  .browseContent{
+    overflow: hidden;
+  }
+  .browseTitle{
+    font-size: 1.5rem;
+  }
+
+  .SearchAnimeInput{
+    width: 18rem;
+    height: 80%;
+  }
+
+  .searchAnime__btn{
+    height: 80%;
+  }
+
+  .browseAnimeTitle{
+    font-size: 1.5rem;
+  }
+
+  .browseAnimeTitle2{
+    font-size: 1.5rem;
+  }
+
+  .alignBrowseAnime{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

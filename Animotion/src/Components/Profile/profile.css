@@ -306,3 +306,90 @@
         position: fixed;
     }
 }
+
+@media only screen and (max-width:768px) {
+    .settingContBox{
+        padding: 2rem;
+        margin-top: 8rem;
+        margin-left: 0rem;
+        gap: 2rem;
+        width: 25rem;
+    }
+    .optionsBox{
+        display: none
+    }
+
+    .settingMainCont{
+        gap:1rem
+    }
+
+    .settingContTitle{
+        font-size: 2rem;
+    }
+
+    .settingContSubtitle{
+        font-size: 0.7rem;
+    }
+
+    .settingContSpan{
+        font-size: 0.8rem;
+    }
+
+    .settingContInput{
+        font-size: 0.8rem;
+        width: 19rem;
+    }
+
+    .premiumDiv{
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .settingPremiumTitle{
+        font-size: 2rem;
+    }
+
+    .settingPremiumDesc{
+        font-size: 0.6rem;
+    }
+
+    .settingPremiumBtn{
+        font-size: 0.8rem;
+        width: 8rem;
+        margin-top: 0;
+    }
+
+    .orderHistoryPremium{
+        padding-top: 1rem;
+    }
+
+    .orderHistoryTitle{
+        font-size: 0.8rem;
+    }
+
+    .orderHistoryDesc{
+        font-size: 0.5rem;
+    }
+
+    .settingPremiumDivision{
+        margin-top: 1rem;
+    }
+
+    .settingPremiumCurrent{
+        font-size: 1rem;
+    }
+
+    .settingContBtn{
+        font-size: 0.6rem;
+        width: 8rem;
+        margin-top: 0;
+    }
+
+    .settingLogoutBtn{
+        font-size: 0.6rem;
+        width: 8rem;
+        margin-top: 0;
+    }
+
+    
+}

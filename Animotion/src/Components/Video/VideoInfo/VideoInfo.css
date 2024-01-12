@@ -185,6 +185,11 @@
     margin-bottom: 10rem;
 }
 
+.reactTrailerPlayer{
+    width: 200px;
+    height: 100px;
+}
+
 .descBoxBtnDiv{
     display: flex;
     flex-direction: row;
@@ -260,4 +265,91 @@
     .characterCardAlign{
         padding-left: 8rem;
     }
+}
+
+@media only screen and (max-width: 768px){
+    .videoInfoPage{
+        overflow: hidden;
+    }
+
+    .video-info-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8rem 0 0 0;
+        margin:0;
+    }
+
+    .video-info-container img{
+        width: 60%;
+    }
+
+    .additionalAnimeInfo{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0rem;
+        padding-top: 1rem;
+        background-color: #232323;
+        height:auto;
+        border: 1px solid var(--primary-color);
+    }
+
+
+    .alignVidInfo{
+        padding-top: 2rem;
+        width: 26rem;
+    }
+
+    .AnimeTitle{
+        font-size: 1.3rem;
+    }
+
+    .AnimeTags{
+        font-size: .7rem;
+    }
+
+    .AnimeTags2{
+        font-size: .7rem;
+    }
+
+    .AnimeInfoTitle{
+        font-size: .8rem;
+    }
+
+    .AnimeInfo{
+        font-size: .8rem;
+    }
+
+    .AnimeInfo2{
+        font-size: .8rem;
+    }
+
+    .AnimeDescSection{
+        margin-right: 1rem;
+    }
+
+    .AnimeDesc{
+        font-size: .8rem;
+    }
+
+    .AnimeDescTitle{
+        font-size: 1rem;
+    }
+
+    .characters{
+        display: none;
+    }
+
+    .descBoxBtn{
+        font-size: .7rem;
+    }
+
+    .trailerSection{
+        display: none;
+    }
+
+    .recommendedSection{
+        display: none;
+    }
+
 }

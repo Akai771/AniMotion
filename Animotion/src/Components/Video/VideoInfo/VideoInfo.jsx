@@ -24,8 +24,27 @@ const VideoInfo = () => {
     const [recommendPop, setRecommendPop] = useState([]);
     const [recommendTitle, setRecommendTitle] = useState("");
     const [recommendLength, setRecommendLength] = useState(0);
-
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [reactWidth, setReactWidth] = useState("200px");
     const {id} = useParams();
+    var settings = {}
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+  
+    useEffect(() => {
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+    let dataBasedOnScreenSize;
+
+
+
+    
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
@@ -63,13 +82,26 @@ const VideoInfo = () => {
         }
     }, []);
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 400,
-        slidesToShow: 8,
-        slidesToScroll: 2,
-    };
+    if (screenWidth < 768) {
+        settings = {
+            dots: true,
+            infinite: true,
+            speed: 400,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        };
+    } 
+    else {
+        settings = {
+            dots: true,
+            infinite: true,
+            speed: 400,
+            slidesToShow: 8,
+            slidesToScroll: 2
+        };
+    }
+
+    
 
     return(<>
         <Preloader/>
@@ -77,7 +109,7 @@ const VideoInfo = () => {
         <div className="videoInfoPage">
             <div className="video-info-container">
                 <img src={animeData.image?animeData.image:"https://via.placeholder.com/150x190"} alt="Anime Cover Image" className="video-info-cover-image" id="animeImage"/>
-                <div className="alignVidInfo col-8">
+                <div className="alignVidInfo">
                     <span className="AnimeTitle">{animeData.title}</span>
                     <span className="AnimeTags2"><span className="AnimeTags">{addData?addData.format:"No Data"}</span> | <span className="AnimeTags">{addData?addData.type:"No Data"}</span> | <span className="AnimeTags">{addData?addData.duration:"No Data"}m</span></span>
                     {/* <span className="AnimeAlternateTitle">Other Names: {addData.title}</span> */}
@@ -110,7 +142,7 @@ const VideoInfo = () => {
                         <span className="AnimeDesc">{animeData.description}</span>
                     </div>
                     <br/>
-                    <div>
+                    <div className="characters">
                         <span className="characterTitle2">Characters:</span>
                         <div className="characterCardAlign">
                             {addData.characters?
@@ -128,7 +160,7 @@ const VideoInfo = () => {
                     <br/><br/>
                     <div className="trailerSection">
                         <span className="characterTitle2">Trailer:</span>
-                        <ReactPlayer url={addData.trailer?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
+                        <ReactPlayer className="reactTrailerPlayer" url={addData.trailer?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
                     </div>
                     <br/><br/>
                 </div>

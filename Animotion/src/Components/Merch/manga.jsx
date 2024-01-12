@@ -14,6 +14,7 @@ import Preloader from "../Preloader/Preloader";
 
 const Manga = () => {
     const [browse, setBrowse] = useState([]);
+    const [browse2, setBrowse2] = useState([]);
     const [search, setSearch] = useState("");
     const [searchTerm, setSearchTerm] = useState("popular");
     const [selectedGenre, setSelectedGenre] = useState("All");
@@ -46,44 +47,28 @@ const Manga = () => {
         axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/${searchTerm}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
-
-    const options = {
-    method: 'GET',
-    url: 'https://manga-kakalot.p.rapidapi.com/search',
-    params: {search: 'title'},
-    headers: {
-        'X-RapidAPI-Key': '1277aeaf7cmsh0fa4d916bceb446p1740a1jsn9d611343e42c',
-        'X-RapidAPI-Host': 'manga-kakalot.p.rapidapi.com'
-    }
-    };
-
-    try {
-        const response = axios.request(options);
-        console.log(response.data);
-    } catch (error) {
-        console.error(error);
-    }
+    console.log(browse);
 
     return(<>
         <div>
             <Preloader/>
             <NavBar/>
-            <div className="browseContent">
-                <h1 className="browseTitle" id="browse">Browse Manga</h1>
+            <div className="mangaContent">
+                <h1 className="mangaTitle" id="browse">Browse Manga</h1>
                 <div className="browseSearchBox">
                     <input type="text" className="SearchInput" placeholder="Search" onChange={handleChange}/>
                     <button className="search__btn" onClick={handleSubmit}>
                         <SearchIcon style={{color:"white"}}/>
                     </button>
                 </div>
-                <div className="container browse2Section">
+                <div className="container Manga2Section">
                     <div class="row">
                         <div 
                         // className="col-8"
                         >
-                            <div className="BrowseAnimeContainer">
-                                <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
-                                <div className="alignBrowseAnime">
+                            <div className="BrowseMangaContainer">
+                                <span className="browseMangaTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
+                                <div className="alignBrowseManga">
                                     {browse.map((seasonal) => (
                                             <MangaCard id={seasonal.id} title={seasonal.title.slice(0,40)} coverImage={"https://via.placeholder.com/150x190"}/>
                                         ))

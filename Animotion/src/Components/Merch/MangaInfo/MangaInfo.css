@@ -14,7 +14,7 @@
     object-fit: cover;
 }
 
-.additionalAnimeInfo{
+.additionalMangaInfo{
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
@@ -25,13 +25,13 @@
 }
 
 
-.alignVidInfo{
+.alignMangaInfo{
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
 }
 
-.AnimeTitle{
+.MangaTitle{
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 800;
@@ -39,7 +39,7 @@
 
 }
 
-.AnimeTags{
+.MangaTags{
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
@@ -47,14 +47,14 @@
     
 }
 
-.AnimeTags2{
+.MangaTags2{
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--textColor3);
 }
 
-.AnimeInfoTitle{
+.MangaInfoTitle{
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -63,7 +63,7 @@
 
 }
 
-.AnimeInfo{
+.MangaInfo{
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -71,7 +71,7 @@
     margin-top: 1rem;
 }
 
-.AnimeDesc{
+.MangaDesc{
     font-family: "Montserrat", sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
@@ -79,7 +79,7 @@
     margin-top: 1rem;
 }
 
-.AnimeDescTitle{
+.MangaDescTitle{
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     font-weight: 800;
@@ -142,19 +142,11 @@
 }
 
 
-.AnimeDescSection{
+.MangaDescSection{
     background-color: #232323;
     border-radius: 1rem;
     padding: 2rem;
     margin-right: 15rem;
-}
-
-.trailerSection{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 10rem;
 }
 
 .chapterBoxAlign{

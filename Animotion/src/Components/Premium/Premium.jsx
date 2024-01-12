@@ -29,6 +29,7 @@ const Premium = () => {
             <header>
                 <Link exact to="/home"><span className="navLogo">AniMotion</span></Link>
             </header>
+            <div className="premium">
             <div className="premium__banner" id="premium__banner">
                 <div className="premium__container">
                     <div className="PremiumContent">
@@ -100,6 +101,7 @@ const Premium = () => {
             </div>
             <div className="premiumFooter">
                     <span className="premiumFooterTxt">Plan automatically renews after trial period at the price selected in the plan comparison. You may cancel at any time. Restrictions and other terms apply, including changes to price and content, features.</span>
+            </div>
             </div>
             <TopRedirect/>         
     </>);

@@ -57,7 +57,7 @@
     border-radius: 0.5rem;
     margin-top: 2rem;
     width: 45rem;
-    background-color: #3a3939;
+    background-color: var(--bgColor);
     padding: 1rem;
     border: none;
     display: flex;
@@ -88,7 +88,7 @@
 .paymentInput2{
     border-radius: 0.5rem;
     width: 22rem;
-    background-color: #3a3939;
+    background-color: var(--bgColor);
     padding: 1rem;
     border: none;
     display: flex;
@@ -107,7 +107,7 @@
 
 .upiInput{
     width: 30rem;
-    background-color: #3a3939;
+    background-color: var(--bgColor);
     padding: 1rem;
     border: none;
     border-radius: 0.5rem;
@@ -220,4 +220,102 @@
   .creditCardBtn:hover{
     color: var(--textColor2);
     background-color: var(--primary-color2);
+  }
+
+  @media only screen and (max-width:768px) {
+    .paymentGateway{
+      overflow: hidden;
+    }
+    .paymentTitle{
+      font-size: 1.5rem;
+    }
+
+    .paymentDescCard{
+      width: 25rem;
+    }
+
+    .paymentDescCard span{
+      font-size: 0.8rem;
+    }
+
+    .paymentDescCard2{
+      width: 25rem;
+    }
+
+    .paymentDescCard2 span{
+      font-size: 0.8rem;
+    }
+
+    .paymentInput{
+      width: 20rem;
+      padding: .5rem;
+    }
+    
+    .paymentInput::placeholder{
+      font-size: 0.6rem;
+    }
+
+    .paymentInput2::placeholder{
+      font-size: 0.6rem;
+    }
+
+    .paymentInput2{
+      width:9.5rem;
+      padding: .5rem;
+    }
+
+    .upiInput{
+      width: 15rem;
+      padding: .4rem;
+    }
+
+    .upiInput::placeholder{
+      font-size: 0.6rem;
+    }
+
+    .upiBtn{
+      width: 5rem;
+      height: 2.5rem;
+      font-size: 0.8rem;
+    }
+
+    .arrowIconUpi1{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .arrowIconUpi2{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .accordion{
+      width: 300px;
+    }
+
+    .creditCardInputs{
+      width: 25rem;
+    }
+
+    .accordion-title{
+      width: 22rem;
+    }
+
+    .creditInfo{
+      width: 20rem;;
+
+    }
+
+    .creditCardInputs{
+      width: 20rem;
+    }
+
+    .creditCardBtn{
+      width: 20rem;
+      height: 2.5rem;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+    }
+
+    
   }

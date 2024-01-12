@@ -17,6 +17,22 @@ const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    var settings = {}
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+  
+    useEffect(() => {
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+    let dataBasedOnScreenSize;
 
     useEffect(()=>{
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/recent-episodes")
@@ -32,14 +48,27 @@ const Home = ({token}) =>{
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setTrending(res.data.results))
     },[])
+
+    if (screenWidth < 768) {
+        settings = {
+            dots: true,
+            infinite: true,
+            speed: 400,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        };
+    } 
+    else {
+        settings = {
+            dots: true,
+            infinite: true,
+            speed: 400,
+            slidesToShow: 8,
+            slidesToScroll: 2
+        };
+    }
     
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 400,
-        slidesToShow: 8,
-        slidesToScroll: 2
-    };
+    
     
     return(<>
 

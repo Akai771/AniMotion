@@ -1,4 +1,4 @@
-.browseContent{
+.mangaContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@
     background-color: var(--bgColor2);
 }
 
-.browseTitle{
+.mangaTitle{
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 800;
@@ -15,7 +15,7 @@
     padding-bottom: 1rem;
 }
 
-.browse2Section{
+.manga2Section{
     padding-top: 8rem;
 }
 
@@ -62,19 +62,19 @@
     padding-bottom: 1rem;
 }
 
-.BrowseAnimeContainer{
+.BrowseMangaContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.alignBrowseAnime{
+.alignBrowseManga{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
-.browseAnimeTitle{
+.browseMangaTitle{
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 800;
@@ -82,7 +82,7 @@
     padding-bottom: 1rem;
 }
 
-.browseAnimeTitle2{
+.browseMangaTitle2{
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 800;

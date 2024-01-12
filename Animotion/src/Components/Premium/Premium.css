@@ -1,11 +1,6 @@
 .premium{
     display: flex;
     flex-direction: column;
-    margin: 0;
-    height: auto;
-    width: auto;
-    position: relative;
-    padding-right: 10rem;
 }    
 
 .premium__container{
@@ -193,5 +188,70 @@
   
   .premiumTitle{
     font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .premium{
+    overflow: hidden;
+  }
+  .PremiumContent{
+    margin-right: 3rem;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.PremiumTrendingAlign{
+  overflow: hidden;
+}
+  
+  .premiumTitle{
+    font-size: 1.5rem;
+  }
+
+  .premiumTxt{
+    font-size: 0.8rem;
+  }
+
+  .compareLink{
+    font-size: 1rem;
+  }
+
+  .BannerButton{
+    height: 3rem;
+    padding: 0 2rem;
+    width: 10rem;
+    font-size: 0.8rem;
+  }
+
+  .premiumSection2__title{
+    font-size: 2rem;
+  }
+
+  .premiumSection2__txt{
+    font-size: 0.5rem;
+  }
+
+  .premiumFooter{
+    padding-top: 1rem;
+  }
+
+  .premiumFooterTxt{
+    margin: 1rem;
+    text-align: center;
+    font-size: 0.5rem;
+  }
+
+  .featureGridDesign{
+    margin: 5rem;
+    padding-left: 2rem;
+  }
+
+  .premiumSection2__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
