@@ -63,12 +63,12 @@ const Browse = () => {
             <NavBar/>
             <div className="browseContent">
                 <h1 className="browseTitle" id="browse">Browse Anime</h1>
-                <div className="browseAnimeSearchBox">
+                <form className="browseAnimeSearchBox" onSubmit={handleSubmit}>
                     <input type="text" className="SearchAnimeInput" placeholder="Search" onChange={handleChange}/>
-                    <button className="searchAnime__btn" onClick={handleSubmit}>
+                    <button className="searchAnime__btn" type="submit">
                         <SearchIcon style={{color:"white"}}/>
                     </button>
-                </div>
+                </form>
                 <div className="container browse2Section">
                     <div class="row">
                         <div 

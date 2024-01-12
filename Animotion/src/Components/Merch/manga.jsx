@@ -55,12 +55,12 @@ const Manga = () => {
             <NavBar/>
             <div className="mangaContent">
                 <h1 className="mangaTitle" id="browse">Browse Manga</h1>
-                <div className="browseSearchBox">
+                <form className="browseSearchBox" onSubmit={handleSubmit}>
                     <input type="text" className="SearchInput" placeholder="Search" onChange={handleChange}/>
-                    <button className="search__btn" onClick={handleSubmit}>
+                    <button className="search__btn" type="submit">
                         <SearchIcon style={{color:"white"}}/>
                     </button>
-                </div>
+                </form>
                 <div className="container Manga2Section">
                     <div class="row">
                         <div 
