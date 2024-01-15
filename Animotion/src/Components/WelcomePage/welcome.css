@@ -222,7 +222,7 @@
 }
 
 .sectContPadding{
-  padding-left: 12rem;
+  padding-left: 15rem;
 }
 
 .sectContTitle{
@@ -295,7 +295,109 @@
   0 0 80px var(--secondary-color);
 }
 
+@media only screen and (max-width: 1366px) { 
+  .welDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .welcomeTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--textColor);
+  }
 
+  .welcomeSubtitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: var(--textColor2);
+  }
+
+  .welcomeSubtitle2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+  }
+
+  .welSectCont{
+    margin: 10rem 30rem 0rem 30rem;
+  }
+
+  .welLgo{
+    padding: 2rem 0rem 0rem 5rem;
+  }
+
+  .lgoImgStyle{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .lgoStyle{
+    font-family: 'Another Danger';
+    font-size: 35px;
+    font-weight: 100;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(123, 255, 121);
+    text-shadow: 2px 3px var(--primary-color);
+  }
+
+  .welContent{
+    background-color: var(--bgColor);
+    background-size: cover;
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+
+  .sectContent{
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0rem 5rem 0rem;
+  }
+
+  .sectContPadding{
+    padding-left: 20rem;
+  }
+
+  .sectContAlign1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-left: 3rem;
+  }
+
+  .sectContAlign2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .sectContTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--textColor);
+  }
+
+  .sectContSubtitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--secondary-color);
+  }
+}
 
 
 
