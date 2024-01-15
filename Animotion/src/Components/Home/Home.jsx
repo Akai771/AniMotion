@@ -77,7 +77,7 @@ const Home = ({token}) =>{
     <div id="topCarousel">
         <CarouselHome />
     </div>
-    <section className="alignHomeItems popSect">
+    <section className="alignHomeItems1 popSect">
         <br/>
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Trending</h3></div>
         <br/>

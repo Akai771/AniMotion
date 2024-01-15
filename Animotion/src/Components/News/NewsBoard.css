@@ -19,6 +19,7 @@
 .newsCardAlign{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    padding-left: 3rem;
     justify-content: center;
     align-items: center;
 }
