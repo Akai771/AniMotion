@@ -19,6 +19,7 @@ const Manga = () => {
     const [searchTerm, setSearchTerm] = useState("popular");
     const [selectedGenre, setSelectedGenre] = useState("All");
     const [page, setPage] = useState(1);
+    
 
     const handleNextPage = () => {
         if(page>0){
@@ -70,7 +71,7 @@ const Manga = () => {
                                 <span className="browseMangaTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
                                 <div className="alignBrowseManga">
                                     {browse.map((seasonal) => (
-                                            <MangaCard id={seasonal.id} title={seasonal.title.slice(0,40)} coverImage={"https://via.placeholder.com/150x190"}/>
+                                            <MangaCard id={seasonal.id} title={seasonal.title.slice(0,40)} coverImage={seasonal.image?seasonal.image:"https://via.placeholder.com/150x190"}/>
                                         ))
                                     }
                                 </div>
