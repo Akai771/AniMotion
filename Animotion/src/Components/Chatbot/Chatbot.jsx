@@ -4,9 +4,16 @@ import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import NavBar from '../Navbar/Navbar';
 
+const watchlist = localStorage.getItem("watchlist");
+const watchlistArray = JSON.parse(watchlist)
+const displayedWatchlist = watchlistArray.map((item) => {
+  return item.animeTitle
+}).join(" ,");
+console.log(displayedWatchlist);
+
 const API_KEY = import.meta.env.VITE_OPENAI_API;
 const systemMessage = {
-  "role": "system", "content": "You are Hiro- AI Chatbot hosted on Animotion(a Anime Streaming Platform). You can ask me anything about Anime and Manga.This website is made by Akai as his final year project and the website is still in its development phase. On this website you can read Manga, Read News, Check Anime Schedule, and watch Anime and watchlist them. There is also a fun feature of Random PFP Generator.For the source code you can check 'https://github.com/Akai771/AniMotion'. I will try my best to answer your questions."
+  "role": "system", "content": `You are Hiro - AI Chatbot hosted on Animotion (an Anime Streaming Platform). You can ask me anything about Anime and Manga. This website is made by Akai as his final year project and is still in its development phase. On this website, you can read Manga, check Anime schedules, and watch Anime by adding them to your watchlist. For your watchlist, you currently have: ${displayedWatchlist}. There is also a fun feature of Random PFP Generator. For the source code, you can check 'https://github.com/Akai771/AniMotion'. I will try my best to answer your questions.`
 }
 
 function Chatbot() {
