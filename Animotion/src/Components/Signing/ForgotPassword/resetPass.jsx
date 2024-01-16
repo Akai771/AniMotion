@@ -7,7 +7,8 @@ import "../signing2.css";
 function ResetPass({setToken}) {
   const [passType, setPassType] = useState("password");
   const [pass, setPass] = useState("");
-
+  const navigate = useNavigate();
+  
   function handleChange(e){
     setPass(e.target.value);
   }
