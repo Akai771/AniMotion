@@ -15,7 +15,7 @@ function ForgotPass({setToken}) {
     e.preventDefault();
     try {
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: 'https://animotion-two.vercel.app/#/update-password',
+        redirectTo: 'https://animotion-two.vercel.app/update-password',
       })
       if (error) throw error
       alert('Check your email for the password reset link')
