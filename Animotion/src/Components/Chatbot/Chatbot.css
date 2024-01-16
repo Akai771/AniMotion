@@ -39,15 +39,16 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "ChatDesc ChatContainer";
     background-color: var(--bgColor2);
-    max-height: 65rem;
+    max-height: 75rem;
   }
+
   .ChatContainer {
     background-color: var(--bgColor2);
     color: white;
     position: relative;
     padding-top: 5rem;
-    height: 61rem;
-    max-height: 61rem;
+    height: 75rem;
+    max-height: 75rem;
     width: 90rem;
     max-width: 90rem ;
   }
@@ -82,6 +83,28 @@
     display: flex;
   }
 
+  @media only screen and (max-width:1368px){
+    .Chatbox{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "ChatDesc ChatContainer";
+      background-color: var(--bgColor2);
+      max-height: 85rem;
+      overflow: hidden;
+    }
+    
+    .ChatContainer {
+      background-color: var(--bgColor2);
+      color: white;
+      position: relative;
+      padding-top: 5rem;
+      height:55rem;
+      max-height: 52rem;
+      width: 65rem;
+      max-width: 90rem ;
+      overflow: hidden;
+    }
+  }
 
   @media only screen and (max-width:768px) {
     .Chatbox{
