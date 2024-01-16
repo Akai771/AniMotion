@@ -23,8 +23,6 @@ const Schedule = () => {
         .then((res) => setSchedule(res.data))
         setDefaultSchedule(schedule[day] || []); 
     },[day, schedule])
-    console.log(defaultSchedule);
-    console.log(day);
 
     return (
     <>

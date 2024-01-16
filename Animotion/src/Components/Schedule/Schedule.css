@@ -137,11 +137,6 @@
     font-weight: 600;
 }
 
-
-
-
-
-
 .radio-inputs {
     position: relative;
     display: flex;
@@ -186,4 +181,19 @@
     color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: 600;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .radio-inputs {
+      width: 20rem;
+    }
+    
+    .scheduleDayTxt{
+        margin-left: 2rem;
+    }
+
+    .ScheduleCard{
+        margin: 1rem 2rem 1rem 2rem;
+    }
+
   }
