@@ -166,8 +166,10 @@ function Profile({token}) {
                 <div id="logout" />
                 <div className="settingCont">
                     <h1 className="settingContTitle">Log Out</h1>
+                    <span className="settingContSubtitle">Back to the real world!</span>
                     <div>
                         <div className="settingMainCont">
+                            <br/>
                             <button className="settingLogoutBtn" onClick={handleLogout}> Log Out</button>
                         </div>
                     </div>
