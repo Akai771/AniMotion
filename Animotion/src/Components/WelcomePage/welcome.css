@@ -30,6 +30,25 @@
     font-weight: 800;
     font-size: 3rem;
     color: var(--textColor);
+    animation-name: glowTitle;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes glowTitle{
+  0%{
+    text-shadow: none
+  }
+  50%{
+    text-shadow: 
+    0 0 10px var(--textColor),
+    0 0 20px var(--textColor),
+    0 0 40px var(--textColor);
+  }
+  100%{
+    text-shadow: none;
+  }
 }
 
 .welcomeSubtitle{
@@ -37,6 +56,8 @@
     font-weight: 500;
     font-size: 1rem;
     color: var(--textColor2);
+    animation-name: opacityAnimation;
+    animation-duration: .5s;
 }
 
 .welcomeSubtitle2{
@@ -305,6 +326,7 @@
     position: relative;
     overflow: hidden;
   }
+
   .welcomeTitle{
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
