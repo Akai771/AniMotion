@@ -23,6 +23,28 @@ header {
 	z-index: 3;
 }
 
+.greetBox{
+	background-color: aqua;
+}
+
+.greetText2{
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 1.3rem;
+	color: var(--secondary-color);
+}
+
+.greetDivider{
+	border: 1px solid #424242;
+}
+
+.greetText1{
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 1.3rem;
+	color: var(--textColor);
+}
+
 .navBar{
 	display: flex;
 	flex-direction: row;

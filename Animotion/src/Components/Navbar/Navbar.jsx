@@ -17,7 +17,7 @@ function NavBar() {
 					<Link to="/schedule">Schedule</Link>
 				</nav>
 				<div className="alignProfileIcon">
-					<ProfileIcon />
+					<ProfileIcon/>
 				</div>
 			</div>
 		</header>
