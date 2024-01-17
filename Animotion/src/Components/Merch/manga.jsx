@@ -14,13 +14,10 @@ import Preloader from "../Preloader/Preloader";
 
 const Manga = () => {
     const [browse, setBrowse] = useState([]);
-    const [browse2, setBrowse2] = useState([]);
     const [search, setSearch] = useState("");
     const [searchTerm, setSearchTerm] = useState("popular");
-    const [selectedGenre, setSelectedGenre] = useState("All");
     const [page, setPage] = useState(1);
     
-
     const handleNextPage = () => {
         if(page>0){
             setPage(page+1);
@@ -45,7 +42,7 @@ const Manga = () => {
     }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/${searchTerm}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/${searchTerm}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
     console.log(browse);
@@ -64,14 +61,12 @@ const Manga = () => {
                 </form>
                 <div className="container Manga2Section">
                     <div class="row">
-                        <div 
-                        // className="col-8"
-                        >
+                        <div>
                             <div className="BrowseMangaContainer">
                                 <span className="browseMangaTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
                                 <div className="alignBrowseManga">
                                     {browse.map((seasonal) => (
-                                            <MangaCard id={seasonal.id} title={seasonal.title.slice(0,40)} coverImage={seasonal.image?seasonal.image:"https://via.placeholder.com/150x190"}/>
+                                            <MangaCard id={seasonal.id} title={seasonal.title.slice(0,40)} coverImage={seasonal.image?seasonal.image:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png"}/>
                                         ))
                                     }
                                 </div>
@@ -81,18 +76,6 @@ const Manga = () => {
                                 </div>
                             </div>  
                         </div>
-                        {/* <div className="verticalDivisionLine"/>
-                        <div className="col">
-                            <span className="genreTitle">Genres</span>
-                            <div className="genreBtnGrp">
-                                {Genres.map((genre) => {
-                                    return(<>
-                                        <button className="GenreBtn" value={genre.genre} onClick={handleDayChange}>{genre.genre}</button>
-                                    </>)
-                                }
-                                )}
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <br/><br/>                

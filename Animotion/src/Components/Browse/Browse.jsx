@@ -16,7 +16,6 @@ const Browse = () => {
     const [browse, setBrowse] = useState([]);
     const [search, setSearch] = useState("");
     const [searchTerm, setSearchTerm] = useState("popular");
-    const [selectedGenre, setSelectedGenre] = useState("All");
     const [page, setPage] = useState(1);
 
     const handleNextPage = () => {
@@ -51,12 +50,6 @@ const Browse = () => {
     },[searchTerm, page])
     console.log(browse);
 
-    
-
-    const handleDayChange = (e) => {
-        setSelectedGenre(e.target.value);
-    }
-
     return(<>
         <div>
             <Preloader/>
@@ -71,9 +64,7 @@ const Browse = () => {
                 </form>
                 <div className="container browse2Section">
                     <div class="row">
-                        <div 
-                        // className="col-8"
-                        >
+                        <div>
                             <div className="BrowseAnimeContainer">
                                 <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
                                 <div className="alignBrowseAnime">
@@ -88,18 +79,6 @@ const Browse = () => {
                                 </div>
                             </div>  
                         </div>
-                        {/* <div className="verticalDivisionLine"/>
-                        <div className="col">
-                            <span className="genreTitle">Genres</span>
-                            <div className="genreBtnGrp">
-                                {Genres.map((genre) => {
-                                    return(<>
-                                        <button className="GenreBtn" value={genre.genre} onClick={handleDayChange}>{genre.genre}</button>
-                                    </>)
-                                }
-                                )}
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <br/><br/>                
