@@ -12,29 +12,33 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
+import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 import { supabase } from "../Signing/supabaseClient";
 
 function ProfileIcon() {
+  const token = JSON.parse(localStorage.getItem("token"));
+  const user = token?token.user.user_metadata:"No Data";
+  const name = user.fname;
 
-const options = {
-  method: 'GET',
-  url: 'https://any-anime.p.rapidapi.com/v1/anime/gif/1',
-  headers: {
-    'X-RapidAPI-Key': '1277aeaf7cmsh0fa4d916bceb446p1740a1jsn9d611343e42c',
-    'X-RapidAPI-Host': 'any-anime.p.rapidapi.com'
-  }
-};
-const [pfp, setPfp] = React.useState("https://res.cloudinary.com/anyanime/image/upload/anime-icegif-11Kurizu9.gif");
+  const options = {
+    method: 'GET',
+    url: 'https://any-anime.p.rapidapi.com/v1/anime/gif/1',
+    headers: {
+      'X-RapidAPI-Key': '1277aeaf7cmsh0fa4d916bceb446p1740a1jsn9d611343e42c',
+      'X-RapidAPI-Host': 'any-anime.p.rapidapi.com'
+    }
+  };
+  const [pfp, setPfp] = React.useState("https://res.cloudinary.com/anyanime/image/upload/anime-icegif-11Kurizu9.gif");
 
-async function getGif(){
-  try {
-    const response = await axios.request(options);
-    setPfp(response.data.images[0]);
-    console.log(response.data);
-  } catch (error) {
-    console.error(error);
+  async function getGif(){
+    try {
+      const response = await axios.request(options);
+      setPfp(response.data.images[0]);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   }
-}
 
   const navigate = useNavigate();
 
@@ -84,10 +88,13 @@ async function getGif(){
               open={Boolean(anchorEl)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem onClick={getGif} >Random PFP</MenuItem>
+              <MenuItem onClick={handleCloseUserMenu}><span className="greetText1">Hi, <span className="greetText2">{name}</span> </span></MenuItem>
+              <div className="greetDivider" />
+              <MenuItem onClick={getGif}><AddAPhotoOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/>Random PFP</MenuItem>
               <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><AccountCircleOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> My Account </MenuItem></Link>
               <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><BookmarkBorderIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Watchlist </MenuItem></Link>
               <Link exact to={"/premium"} style={{textDecoration:"none", color:"var(--secondary-color)"}}><MenuItem><WorkspacePremiumOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Premium </MenuItem></Link>
+              <div className="greetDivider" />
               <MenuItem onClick={handleLogout}><LogoutIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Logout</MenuItem>
             </Menu>
           </Box>
