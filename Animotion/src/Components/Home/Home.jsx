@@ -17,6 +17,7 @@ const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
+    const [movies, setMovies] = useState([]);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     var settings = {}
@@ -47,6 +48,11 @@ const Home = ({token}) =>{
     useEffect(()=>{
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setTrending(res.data.results))
+    },[])
+
+    useEffect(()=>{
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
+        .then((res) => setMovies(res.data.results))
     },[])
 
     if (screenWidth < 768) {
@@ -83,8 +89,8 @@ const Home = ({token}) =>{
         <br/>
         <div className="alignCardMargin"> 
             <Slider {...settings}>
-                {trending.map((seasonal) => (
-                        <VidCard2 key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
+                {popular.map((popular) => (
+                    <VidCard2 key={popular.id} id={popular.id} title={popular.title} coverImage={popular.image} />
                     ))
                 }
             </Slider>
@@ -101,12 +107,23 @@ const Home = ({token}) =>{
         {/* </Slider> */}
         </div>
         <br/><br/>
-        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Popular</h3></div>
+        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>New on Animotion</h3></div>
         <br/>
         <div className="alignCardMargin">
         <Slider {...settings}>
-        {popular.map((popular) => (
-                <VidCard2 key={popular.id} id={popular.id} title={popular.title} coverImage={popular.image} />
+            {trending.map((seasonal) => (
+                        <VidCard2 key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
+                    ))
+                }
+        </Slider>
+        </div>
+        <br/><br/>
+        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Movies</h3></div>
+        <br/>
+        <div className="alignCardMargin">
+        <Slider {...settings}>
+        {movies.map((movie) => (
+                <VidCard2 key={movie.id} id={movie.id} title={movie.title} coverImage={movie.image} />
                 ))
             }
         </Slider>
