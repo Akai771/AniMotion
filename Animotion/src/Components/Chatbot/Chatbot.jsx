@@ -6,9 +6,9 @@ import NavBar from '../Navbar/Navbar';
 
 const watchlist = localStorage.getItem("watchlist");
 const watchlistArray = JSON.parse(watchlist)
-const displayedWatchlist = watchlistArray.map((item) => {
+const displayedWatchlist = watchlistArray?watchlistArray.map((item) => {
   return item.animeTitle
-}).join(" ,");
+}).join(" ,"):"No Anime in Watchlist";
 console.log(displayedWatchlist);
 
 const API_KEY = import.meta.env.VITE_OPENAI_API;
