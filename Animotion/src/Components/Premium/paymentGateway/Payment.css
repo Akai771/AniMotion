@@ -65,6 +65,7 @@
     align-items: center;
     justify-content: space-between;
     outline: none;
+    color: var(--textColor2);
 }
 
 .paymentInput::placeholder{
@@ -96,6 +97,7 @@
     align-items: center;
     justify-content: space-between;
     outline: none;
+    color: var(--textColor2);
 }
 
 .paymentInput2::placeholder{
@@ -116,6 +118,7 @@
     align-items: center;
     justify-content: space-between;
     outline: none;
+    color: var(--textColor2);
 }
 
 .upiInput::placeholder{
