@@ -25,6 +25,7 @@ import MangaInfo from "../Merch/MangaInfo/MangaInfo";
 import MangaRead from "../Merch/MangaRead/MangaRead";
 import Manga from "../Merch/manga";
 import Watchlist from "../Watchlist/watchlist";
+import GenresPage from "../Browse/GenresPage/GenresPage";
 
 
 const Routing = () => {
@@ -60,7 +61,8 @@ const Routing = () => {
           {token?<Route exact path="/premium" element={<Premium/>} />:""}
           {token?<Route exact path="/news" element={<NewsBoard/>} />:""}
           {token?<Route exact path="/schedule" element={<Schedule/>} />:""}
-          {token?<Route exact path="/browse" element={<Browse/>} />:""}
+          {token?<Route exact path="/anime" element={<Browse/>} />:""}
+          {token?<Route exact path="/genre/:genreId" element={<GenresPage/>} />:""}
           {token?<Route exact path="/details/:id" element={<VideoInfo/>} />:""}
           {token?<Route exact path="/watch/:id" element={<VideoMain/>} />:""}
           {token?<Route exact path="/payment/:tag" element={<Payment/>} />:""}

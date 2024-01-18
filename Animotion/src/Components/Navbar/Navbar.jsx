@@ -11,7 +11,7 @@ function NavBar() {
 					<Link to="/home" className="logoLink">
 						<span className="navLogo">AniMotion</span>
 					</Link>
-					<Link to="/browse">Anime</Link>
+					<Link to="/anime">Anime</Link>
 					<Link to="/manga">Manga</Link>
 					<Link to="/news">News</Link>
 					<Link to="/schedule">Schedule</Link>
