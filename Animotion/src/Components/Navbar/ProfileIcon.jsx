@@ -13,6 +13,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
+import HistoryIcon from '@mui/icons-material/History';
 import { supabase } from "../Signing/supabaseClient";
 
 function ProfileIcon() {
@@ -73,7 +74,12 @@ function ProfileIcon() {
                 <Avatar alt="Pfp" src={pfp} />
               </IconButton>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: '45px',
+              '& .MuiPaper-root': {
+                width: '18rem',
+              },
+              
+              }}
               id="menu-appbar"
               anchorEl={anchorEl}
               anchorOrigin={{
@@ -90,10 +96,11 @@ function ProfileIcon() {
             >
               <MenuItem onClick={handleCloseUserMenu}><span className="greetText1">Hi, <span className="greetText2">{name}</span> </span></MenuItem>
               <div className="greetDivider" />
+              <Link exact to={"/premium"} style={{textDecoration:"none", color:"#FFDF00"}}><MenuItem><WorkspacePremiumOutlinedIcon style={{fontSize:"1.4rem",marginRight:"0.5rem"}}/> Premium </MenuItem></Link>
               <MenuItem onClick={getGif}><AddAPhotoOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/>Random PFP</MenuItem>
               <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><AccountCircleOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> My Account </MenuItem></Link>
               <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><BookmarkBorderIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Watchlist </MenuItem></Link>
-              <Link exact to={"/premium"} style={{textDecoration:"none", color:"var(--secondary-color)"}}><MenuItem><WorkspacePremiumOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Premium </MenuItem></Link>
+              <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><HistoryIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> History </MenuItem></Link>
               <div className="greetDivider" />
               <MenuItem onClick={handleLogout}><LogoutIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Logout</MenuItem>
             </Menu>
