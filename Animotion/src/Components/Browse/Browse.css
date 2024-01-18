@@ -9,6 +9,12 @@
     min-height: 100vh;
 }
 
+.browsePageDivide{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 .browseTitle{
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
@@ -17,20 +23,27 @@
   padding-bottom: 1rem;
 }
 
-.browse2Section{
-    padding-top: 8rem;
-}
-
 .verticalDivisionLine{
     border-left: 1px solid var(--textColor);
     height: auto;
     width: 0;
 }
 
-.genreBtnGrp{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+.genreBtnBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.genreButtonGrp{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+  background-color: var(--bgColor3);
+  padding: 2rem 2rem;
+
 }
 
 .GenreBtn{
@@ -98,6 +111,7 @@
     justify-content: center;
     align-items: center;
     height: 3rem;
+    margin-bottom: 5rem;
   }
   
   .SearchAnimeInput {
@@ -108,13 +122,14 @@
     font-weight: 500;
     background-color: #53535f;
     caret-color: #f7f7f8;
-    color: #fff;
+    color: var(--secondary-color);
     padding: 7px 10px;
     border: 2px solid transparent;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     margin-right: 1px;
     transition: all .2s ease;
+    outline: none;
   }
   
   .SearchAnimeInput:hover {
@@ -122,8 +137,9 @@
   }
   
   .SearchAnimeInput:focus {
-    border: 2px solid var(--primary-color);
-    background-color: var(--bgColor2);
+    background-color: var(--bgColor3);
+    outline: none;
+
   }
   
   .searchAnime__btn {
@@ -202,4 +218,31 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+}
+
+@media only screen and (max-width: 1368px) {
+  .browsePageDivide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .genreBtnBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0rem 5rem;
+  }
+
+  .genreButtonGrp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+    background-color: var(--bgColor3);
+    padding: 1rem 1rem;
+
+  }
 }

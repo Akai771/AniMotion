@@ -1,0 +1,32 @@
+.genresBtn{
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: var(--textColor2);
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+    text-align: left;
+}
+
+.genresBtn:hover{
+    color: var(--secondary-color);
+}
+
+.browseTitle2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    padding-bottom: 1rem;;
+}
+
+@media only screen and (max-width: 1368px) {
+    .genresBtn{
+        font-size: .6rem;
+    }
+  }

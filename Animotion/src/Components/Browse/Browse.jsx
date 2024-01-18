@@ -10,12 +10,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Preloader from "../Preloader/Preloader";
+import GenresBtn from "./GenresPage/GenresBtn";
 import "./Browse.css";
 
 const Browse = () => {
     const [browse, setBrowse] = useState([]);
     const [search, setSearch] = useState("");
     const [searchTerm, setSearchTerm] = useState("popular");
+    const [genres, setGenres] = useState([]);
     const [page, setPage] = useState(1);
 
     const handleNextPage = () => {
@@ -41,14 +43,15 @@ const Browse = () => {
         setPage(1);
     }
 
-    console.log(search);
-    console.log(searchTerm);
-
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
-    console.log(browse);
+
+    useEffect(()=>{
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/genre/list`)
+        .then((res) => setGenres(res.data))
+    },[])
 
     return(<>
         <div>
@@ -62,26 +65,36 @@ const Browse = () => {
                         <SearchIcon style={{color:"white"}}/>
                     </button>
                 </form>
-                <div className="container browse2Section">
-                    <div class="row">
-                        <div>
-                            <div className="BrowseAnimeContainer">
-                                <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
-                                <div className="alignBrowseAnime">
-                                    {browse.map((seasonal) => (
-                                            <BrowseCard key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
-                                        ))
-                                    }
-                                </div>
-                                <div className="pageBtnGrp">
-                                    <button className="pageBtn" onClick={handlePrevPage}><KeyboardDoubleArrowLeftIcon/>Prev Page</button>
-                                    <button className="pageBtn" onClick={handleNextPage}>Next Page <KeyboardDoubleArrowRightIcon/></button>
-                                </div>
-                            </div>  
+                <div className="browsePageDivide">
+                    <div className="container">
+                        <div class="row">
+                            <div>
+                                <div className="BrowseAnimeContainer">
+                                    <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
+                                    <div className="alignBrowseAnime">
+                                        {browse.map((seasonal) => (
+                                                <BrowseCard key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
+                                            ))
+                                        }
+                                    </div>
+                                    <div className="pageBtnGrp">
+                                        <button className="pageBtn" onClick={handlePrevPage}><KeyboardDoubleArrowLeftIcon/>Prev Page</button>
+                                        <button className="pageBtn" onClick={handleNextPage}>Next Page <KeyboardDoubleArrowRightIcon/></button>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br/><br/>                
+                    <div className=" genreBtnBox">
+                        <span className="browseTitle">Genres</span>
+                        <div className="genreButtonGrp">
+                            {genres.map((genre) => (
+                                <GenresBtn key={genre.id} id={genre.id} title={genre.title}/>
+                            ))}
+                        </div>
+                    </div>        
+                </div> 
+                <br/><br/>       
             </div>
             <Footer/>
             <ChatbotButton/>
