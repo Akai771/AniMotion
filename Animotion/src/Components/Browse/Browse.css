@@ -188,6 +188,21 @@
         color: var(--secondary-color);
     }
 
+.genreDisplayBtn{
+  background-color: var(--primary-color);
+  border: 1px solid transparent;
+  color: var(--textColor);
+  padding: .5rem 1rem;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.genreDisplayBtn:hover{
+  transition: all 0.2s ease-in-out;
+  background-color: var(--primary-color2);
+  color: var(--textColor2);
+}
+
 @media only screen and (max-width: 768px) {
   .browseContent{
     overflow: hidden;

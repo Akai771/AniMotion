@@ -19,6 +19,16 @@ const Browse = () => {
     const [searchTerm, setSearchTerm] = useState("popular");
     const [genres, setGenres] = useState([]);
     const [page, setPage] = useState(1);
+    const [genreState, setGenreState] = useState(true);
+
+    const handleGenre = () => {
+        if (genreState == true){
+            setGenreState(false);
+        }
+        else{
+            setGenreState(true);
+        }
+    }
 
     const handleNextPage = () => {
         if(page>0){
@@ -87,11 +97,18 @@ const Browse = () => {
                     </div>
                     <div className=" genreBtnBox">
                         <span className="browseTitle">Genres</span>
+                        {genreState==true?
+                        <div className="genreButtonGrp">
+                            {genres.slice(0,20).map((genre) => (
+                                <GenresBtn key={genre.id} id={genre.id} title={genre.title}/>
+                            ))}
+                        </div>:
                         <div className="genreButtonGrp">
                             {genres.map((genre) => (
                                 <GenresBtn key={genre.id} id={genre.id} title={genre.title}/>
                             ))}
-                        </div>
+                        </div>}
+                        <button className="genreDisplayBtn" onClick={handleGenre}>{genreState==true?"Show More":"Show Less"}</button>
                     </div>        
                 </div> 
                 <br/><br/>       
