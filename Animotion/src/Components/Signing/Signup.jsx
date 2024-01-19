@@ -12,6 +12,8 @@ function Signup() {
     password: "",
   });
 
+  const preEmail = sessionStorage.getItem('email');
+
   function handleChange(e){
     setFormData((prevFormData)=>{
       return{
@@ -75,6 +77,7 @@ function Signup() {
             placeholder='Email'
             type="email"
             name="email"
+            value={preEmail}
             onChange={handleChange}
             />
           </div>

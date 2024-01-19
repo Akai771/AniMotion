@@ -9,15 +9,15 @@ import TopRedirect from "../TopRedirectButton/TopRedirect";
 
 function Welcome() {
   var color;
-  var loc = "/";
   const [ErrMsg, setErrMsg] = React.useState('');
   const [email, setEmail] = React.useState('');
+
+
 
   const clickHandler = (e) => {
     if(email===""){
       console.log("Email Address required");
       setErrMsg("*Email Address required");
-      loc = "/";
       color = "red";
       
     }
@@ -27,9 +27,10 @@ function Welcome() {
     }
     else{
       console.log("Email Address is valid");
-      loc = "/signup";
       color = "green";
     }
+
+    sessionStorage.setItem("email", email);
   }
   
   return(<>
@@ -51,7 +52,7 @@ function Welcome() {
           </Grid>
         </Grid>
         <div className="welSectCont">
-          <span className="w3-animate-opacity welcomeTitle" >The biggest Anime hits. Ready to watch here from ₹79</span>
+          <span className="w3-animate-opacity welcomeTitle" >Unleash the extraordinary with AniMotion: Your gateway to boundless anime adventures!</span>
           <span className="w3-animate-opacity welcomeSubtitle">Join <span className="welcomeSubtitle2">today</span>. Cancel <span className="welcomeSubtitle2">anytime</span>.</span>
           <div>
             <div class="GSInput-grp">
