@@ -68,7 +68,7 @@ const Routing = () => {
           {token?<Route exact path="/payment/:tag" element={<Payment/>} />:""}
           {token?<Route exact path="/manga" element={<Manga/>} />:""}
           {token?<Route exact path="/manga/details/:id" element={<MangaInfo/>} />:""}
-          {token?<Route exact path="/manga/read/:id/:chapId" element={<MangaRead/>} />:""}
+          {token?<Route exact path="/manga/read/:chapId/:lang/:chap" element={<MangaRead/>} />:""}
           {token?<Route exact path="/profile" element={<Profile  token={token}/>} />:""}
           {token?<Route exact path="/watchlist" element={<Watchlist  token={token}/>} />:""}
 

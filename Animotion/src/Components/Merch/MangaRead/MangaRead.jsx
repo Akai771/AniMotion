@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "./MangaRead.css";
 import NavBar from "../../Navbar/Navbar";
@@ -9,44 +9,33 @@ import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import Preloader from "../../Preloader/Preloader";
 
 const MangaRead = () => {
-    const {id} = useParams();
     const {chapId} = useParams();
-
+    const {lang} = useParams();
+    const {chap} = useParams();
+    const navigate = useNavigate();
     const [mangaData, setMangaData] = useState([]);
     const [chapterData, setChapterData] = useState([]);
-    const [server, setServer] = useState([])
-    const [episode, setEpisode] = useState([])
-    const [selectedOption, setSelectedOption] = useState(1);
-    const [episodeId, setEpisodeId] = useState([0]);
-    const [episodeNumber, setEpisodeNumber] = useState(1);
-    const [addData, setAddData] = useState([])
-
-    const handleOptionChange = (e) => {
-        setEpisodeNumber(e.target.value);
-        setEpisodeId(e.target.id);
-        setSelectedOption(e.target.value);
-
-      };
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/read/${chapId}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/read?chapterId=${chapId}/${lang}/${chap}`)
         .then((res) => setChapterData(res.data))
     },[chapId])
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/manga/mangadex/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/info?id=${chapId}`)
         .then((res) => setMangaData(res.data))
     },[])
+    console.log(mangaData);
 
     const chapters = [mangaData.chapters];
     const totalChapters = chapters?chapters[0]:"No Data";
-    console.log(totalChapters);
 
     return(<>
         <Preloader/>
         <NavBar />
         <div className="video-main-container">
-            <div className="video-main">
+            <div className="manga-page-info">
+                <span className="manga-info-title1">{mangaData.title} :<span className="manga-info-title2"> {chap}</span></span>
             </div>
             <br/>
             <div className="mangaImageAlign">
@@ -64,8 +53,13 @@ const MangaRead = () => {
                     <div className="chapterBoxAlign">
                         <ul className="chapterBox">
                         {totalChapters?totalChapters.map((chapter) => {
+                            const handleClick = () => {
+                                navigate(`/manga/read/${chapter.id}`);
+                                window.location.reload();
+                            }         
+
                             return(<>
-                                <Link exact to={`/manga/read/${id}/${chapter.id}`}>
+                                <Link onClick={handleClick}>
                                     <li key={chapter.id}>
                                         <span style={{color:"var(--secondary-color)", paddingRight:"1rem"}}>{chapter.chapterNumber}</span>{chapter.title}
                                     </li>

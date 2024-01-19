@@ -9,3 +9,26 @@
 .MangaChapters{
     width: 75rem;
 }
+
+.manga-page-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.manga-info-title1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    padding-bottom: 1rem;
+}
+
+.manga-info-title2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--textColor2);
+    padding-bottom: 1rem;
+}
