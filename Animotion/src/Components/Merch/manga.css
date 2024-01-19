@@ -170,3 +170,34 @@
         border: 1px solid transparent;
         color: var(--secondary-color);
     }
+
+@media only screen and (max-width: 768px) {
+  .mangaContent{
+    overflow: hidden;
+  }
+  .mangaTitle{
+    font-size: 1.5rem;
+  }
+
+  .SearchInput{
+    width: 18rem;
+    height: 80%;
+  }
+
+  .search__btn{
+    height: 80%;
+  }
+
+  .browseMangaTitle{
+    font-size: 1.5rem;
+  }
+
+  .browseMangaTitle2{
+    font-size: 1.5rem;
+  }
+
+  .alignBrowseManga{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

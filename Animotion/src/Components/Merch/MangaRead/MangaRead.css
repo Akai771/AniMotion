@@ -30,5 +30,27 @@
     font-size: 2rem;
     font-weight: 800;
     color: var(--textColor2);
-    padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .mangaImageAlign{
+        width: 150rem;
+    }
+
+    .MangaChapters{
+        width: 20rem;
+    }
+
+    .manga-page-info{
+        width: 20rem;
+    }
+
+    .manga-info-title1{
+        font-size: 1.2rem;
+        padding-bottom: 0;
+    }
+
+    .manga-info-title2{
+        font-size: 1.2rem;
+    }
 }

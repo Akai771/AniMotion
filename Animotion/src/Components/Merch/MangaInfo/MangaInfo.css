@@ -222,3 +222,73 @@ body{
     scrollbar-color: var(--sb-thumb-color) 
                      var(--sb-track-color);
 }
+
+@media only screen and (max-width:768px) {
+    .manga-info-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8rem 0 0 0;
+        margin:0;
+        overflow: hidden;
+    }
+
+    .manga-info-container img{
+        width: 60%;
+    }
+
+    .additionalMangaInfo{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0rem;
+        padding-top: 1rem;
+        background-color: #232323;
+        height:auto;
+        border: 1px solid var(--primary-color);
+    }
+
+
+    .alignVidInfo{
+        padding-top: 2rem;
+        width: 26rem;
+    }
+
+    .MangaTitle{
+        font-size: 2rem;
+    }
+
+    .AnimeInfoTitle{
+        font-size: .8rem;
+    }
+
+    .MangaDescSection{
+        margin-right: 1rem;
+    }
+
+    .MangaDesc{
+        font-size: .8rem;
+    }
+
+    .MangaDescTitle{
+        font-size: 1.3rem;
+    }
+
+    .watchButton{
+        font-size: 0.7rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        width: 10rem;
+    }
+    
+    .chapterBoxAlign{
+        max-width: 20rem;
+        max-height: 20rem;
+        margin-top: 1rem;
+    }
+
+    .chapterBox{
+        display: flex;
+        flex-direction: column-reverse;
+        text-decoration: none;
+    }
+}
