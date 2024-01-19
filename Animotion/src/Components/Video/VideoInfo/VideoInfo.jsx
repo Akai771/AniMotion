@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "./VideoInfo.css";
 import Navbar from "../../Navbar/Navbar";
@@ -27,6 +27,7 @@ const VideoInfo = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [reactWidth, setReactWidth] = useState("200px");
     const {id} = useParams();
+    const navigate = useNavigate();
     var settings = {}
 
     const handleResize = () => {
@@ -42,9 +43,11 @@ const VideoInfo = () => {
 
     let dataBasedOnScreenSize;
 
-
-
-    
+    const handleGenreRedirect = (genre) => {
+        const genreArray = genre.split(" ");
+        const newGenre = genreArray.join("-").toLowerCase();
+        navigate(`/genre/${newGenre}`);
+    }
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
@@ -116,9 +119,9 @@ const VideoInfo = () => {
                     <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"} | {addData.title?addData.title.native:"No Title"}</span></span>
                     <div className="descBoxBtnDiv">
                         <span className="AnimeInfoTitle">Genres: 
-                        {addData.genres?addData.genres.map((genre) =>{
+                        {animeData.genres?animeData.genres.map((genre) =>{
                             return(
-                                <button className="descBoxBtn">{genre}</button>
+                                <button className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
                             )
                         }):"No Data"} </span>
                     </div>
