@@ -19,6 +19,11 @@ function History() {
     },[])
     console.log(history);
 
+    const handleHistoryClick = () =>{
+        localStorage.removeItem('history')
+        window.location.reload();
+    }
+
     return(
         <div>
         <Preloader/>
@@ -26,7 +31,7 @@ function History() {
         <div className="historyContent">
             <div className="historyHeader">
                 <h1 className="historyTitle" id="browse">History</h1>
-                <button className="clearHistory" onClick={() => localStorage.removeItem('history')}><DeleteForeverOutlinedIcon style={{marginBottom:"3px", color:"white"}}/>Clear History</button>
+                <button className="clearHistory" onClick={handleHistoryClick}><DeleteForeverOutlinedIcon style={{marginBottom:"3px", color:"white"}}/>Clear History</button>
             </div>
             <div className="container">
                 <div class="row">
