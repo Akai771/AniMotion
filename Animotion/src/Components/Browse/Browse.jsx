@@ -110,8 +110,7 @@ const Browse = () => {
                         </div>}
                         <button className="genreDisplayBtn" onClick={handleGenre}>{genreState==true?"Show More":"Show Less"}</button>
                     </div>        
-                </div> 
-                <br/><br/>       
+                </div>    
             </div>
             <Footer/>
             <ChatbotButton/>
