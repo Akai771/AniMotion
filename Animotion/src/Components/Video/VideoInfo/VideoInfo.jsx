@@ -10,6 +10,7 @@ import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "../VideoMain/characterCard";
 import ReactPlayer from "react-player";
 import WatchlistButton from "./watchlistButton";
+import WatchNowButton from "./watchNowButton";
 import RecommendCard from "./recommendCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,6 +27,7 @@ const VideoInfo = () => {
     const [recommendLength, setRecommendLength] = useState(0);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [reactWidth, setReactWidth] = useState("200px");
+
     const {id} = useParams();
     const navigate = useNavigate();
     var settings = {}
@@ -76,15 +78,6 @@ const VideoInfo = () => {
         .then((res) => setRecommendPop(res.data.results))
     },[])
 
-    
-
-    useEffect(() => {
-        const storedWatchlist = localStorage.getItem('watchlist');
-        if (storedWatchlist) {
-        setWatchlist(JSON.parse(storedWatchlist));
-        }
-    }, []);
-
     if (screenWidth < 768) {
         settings = {
             dots: true,
@@ -132,10 +125,7 @@ const VideoInfo = () => {
                     <span className="AnimeInfoTitle">Season: <span className="AnimeInfo">{addData?addData.season:"No Data"}</span></span>
                     <span className="AnimeInfoTitle">Country of Origin: <span className="AnimeInfo">{addData?addData.countryOfOrigin:"No Data"}</span></span>
                     <div className="episodeBtnGrp2">
-                    <Link exact to={`/watch/${id}`}>
-                            {animeData.totalEpisodes===0?<button className="watchButtonDiabled" disabled>Watch Now</button>:<button className="watchButton">Watch Now</button>}
-                        </Link>
-                        {/* <button className="watchButton" onClick={() => handleAddToWatchlist(animeData.id, animeData.title, animeData.image)}>Watchlist {isWatchlist?<AddIcon style={{fontSize:"1.2rem"}}/>:<DoneIcon style={{fontSize:"1.2rem"}}/>} </button> */}
+                        <WatchNowButton animeId={animeData.id} animeTitle={animeData.title} animeImage={animeData.image}/>
                         <WatchlistButton animeId={animeData.id} animeTitle={animeData.title} animeImage={animeData.image}/>
                     </div>
                     <br/>
