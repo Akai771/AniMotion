@@ -100,7 +100,7 @@ function ProfileIcon() {
               <MenuItem onClick={getGif}><AddAPhotoOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/>Random PFP</MenuItem>
               <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><AccountCircleOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> My Account </MenuItem></Link>
               <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><BookmarkBorderIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Watchlist </MenuItem></Link>
-              <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><HistoryIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> History </MenuItem></Link>
+              <Link exact to={"/history"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><HistoryIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> History </MenuItem></Link>
               <div className="greetDivider" />
               <MenuItem onClick={handleLogout}><LogoutIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Logout</MenuItem>
             </Menu>
