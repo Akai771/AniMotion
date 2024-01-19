@@ -90,13 +90,42 @@
     color: var(--secondary-color);
 }
 
+.searchSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgColor2);
+}
 
 .browseSearchBox {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .dropdownSearch{
+    background-color: var(--bgColor3);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    z-index: 1;
+    margin-top: 1rem;
+  }
+
+  .dropdownSearch:empty{
+    background-color: transparent;
+    border: none;
+  }
+
+  .dropdownSearchContent{
+    cursor: pointer;
+    text-align: start;
+    margin: 2px 0;
+    color: #f7f7f8;
   }
   
   .SearchInput {
@@ -170,6 +199,7 @@
         border: 1px solid transparent;
         color: var(--secondary-color);
     }
+
 
 @media only screen and (max-width: 768px) {
   .mangaContent{
