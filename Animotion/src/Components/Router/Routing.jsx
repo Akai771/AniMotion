@@ -26,6 +26,7 @@ import MangaRead from "../Merch/MangaRead/MangaRead";
 import Manga from "../Merch/manga";
 import Watchlist from "../Watchlist/watchlist";
 import GenresPage from "../Browse/GenresPage/GenresPage";
+import History from "../History/history";
 
 
 const Routing = () => {
@@ -71,6 +72,7 @@ const Routing = () => {
           {token?<Route exact path="/manga/read/:chapId/:lang/:chap" element={<MangaRead/>} />:""}
           {token?<Route exact path="/profile" element={<Profile  token={token}/>} />:""}
           {token?<Route exact path="/watchlist" element={<Watchlist  token={token}/>} />:""}
+          {token?<Route exact path="/history" element={<History  token={token}/>} />:""}
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />

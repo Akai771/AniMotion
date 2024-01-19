@@ -1,0 +1,78 @@
+.historyContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 8rem ;
+    min-height: 100vh;
+    height:auto;
+    background-color: var(--bgColor2);
+    overflow: hidden;
+}
+
+.historyTitle{
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    color: var(--textColor);
+}
+
+.historyHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-left: 60rem;
+}
+
+.clearHistory{
+    background-color: #fc3232;
+    color: var(--textColor);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.clearHistory:hover{
+    background-color: #921e1e;
+    color: var(--textColor2);
+}
+
+@media only screen and (max-width: 1368px) {
+    .historyHeader{
+        gap: 25rem;
+        margin-left: 40rem;
+    }
+
+    .historyTitle{
+        font-size: 2rem;
+    }
+
+    .clearHistory{
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media only screen and (max-width: 768px){
+    .historyHeader{
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .historyTitle{
+        font-size: 2rem;
+    }
+
+    .clearHistory{
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
