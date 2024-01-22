@@ -33,14 +33,30 @@
     padding-bottom: 1rem;
 }
 
+.serveBoxCont1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.serveBoxCont2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 50rem;
+}
+
+
 .ServerInfoTitle{
     padding-left: 2rem;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: var(--secondary-color);
-    margin-top: 1rem;
-
 }
 
 .ServerInfo{
@@ -48,7 +64,6 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--textColor2);
-    margin-top: 1rem;
 }
 
 .video-info-cover-image{
@@ -242,6 +257,19 @@
     margin-top: 1rem;
 }
 
+.epChangeButton{
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-radius: .5rem;
+    border: none;
+    width: 5rem;
+    height: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+}
+
 @media only screen and (max-width:1366px){
     .AnimeVideoPlayer{
         width: 1024px;
@@ -250,6 +278,23 @@
 
     .ServerBox{
         width: 1024px;
+    }
+
+    .serveBoxCont1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    
+    .serveBoxCont2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-left: 35rem;
     }
 
     .VidEpisodes{
@@ -288,6 +333,37 @@
 
     .ServerBox{
         width: 350px;
+    }
+
+    .serveBoxCont1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    
+    .serveBoxCont2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .ServerInfoTitle{
+        font-size: 0.6rem;
+    }
+
+    .ServerInfo{
+        font-size: 0.6rem;
+    }
+
+    .epChangeButton{
+        width: 4rem;
+        height: 1rem;
+        font-size: .9rem;
     }
 
     .VidEpisodes{

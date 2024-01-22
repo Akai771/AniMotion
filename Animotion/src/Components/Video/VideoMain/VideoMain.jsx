@@ -8,7 +8,8 @@ import ChatbotButton from "../../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "./characterCard";
-import ReactPlayer from "react-player";
+import FastRewindIcon from '@mui/icons-material/FastRewind';
+import FastForwardIcon from '@mui/icons-material/FastForward';
 
 const VideoMain = () => {
     const {id} = useParams();
@@ -20,11 +21,7 @@ const VideoMain = () => {
     const [episodeId, setEpisodeId] = useState([0]);
     const [episodeNumber, setEpisodeNumber] = useState(1);
     const [addData, setAddData] = useState([])
-
-    useEffect(()=>{
-        axios.get(`https://api.anify.tv/search/anime/${id}`)
-        .then((res) => setAddData(res.data.results[0]))
-    },[])
+    const [epNo, setEpNo] = useState(1);
 
     const handleOptionChange = (e) => {
         setEpisodeNumber(e.target.value);
@@ -32,11 +29,40 @@ const VideoMain = () => {
         setSelectedOption(e.target.value);
       };
 
-      console.log(selectedOption);
+      const handleNextEp = () => {
+        if(epNo>0 && epNo<episode.length){
+            setEpNo(epNo+1);
+        }
+        else{
+            setEpNo(epNo);
+        }
+        setEpisodeId(animeData.id + "-" + "episode" + "-" + epNo);
+        setEpisodeNumber(epNo);
+        console.log(episodeId);
+    }
+
+    const handlePrevEp = () => {
+        if(epNo>1 && epNo<=episode.length){
+            setEpNo(epNo-1);
+        }
+        else{
+            setEpNo(epNo);
+        }
+        setEpisodeId(animeData.id + "-" + "episode" + "-" + epNo);
+        setEpisodeNumber(epNo);
+        console.log(episodeId);
+    }
+
+    useEffect(()=>{
+        axios.get(`https://api.anify.tv/search/anime/${id}`)
+        .then((res) => setAddData(res.data.results[0]))
+    },[])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisode(res.data.episodes))
+
+        console.log(episode.length);
     },[])
 
     useEffect(()=>{
@@ -56,8 +82,14 @@ const VideoMain = () => {
         <div className="video-main-container">
             <iframe className="AnimeVideoPlayer" src={server.url} title="Animotion video player" id="videoPlayer" allowfullscreen="allowfullscreen"/>
             <div className="ServerBox">
-                <span className="ServerInfoTitle">Episode: <span className="ServerInfo">{episodeNumber}</span></span>
-                <span className="ServerInfoTitle">Server: <span className="ServerInfo">{server.name}</span></span>
+                <div className="serveBoxCont1">
+                    <span className="ServerInfoTitle">Episode: <span className="ServerInfo">{episodeNumber}</span></span>
+                    <span className="ServerInfoTitle">Server: <span className="ServerInfo">{server.name}</span></span>
+                </div>
+                <div className="serveBoxCont2">
+                    <button className="epChangeButton" onClick={handlePrevEp}><FastRewindIcon style={{paddingBottom:"1px"}} />Prev</button>
+                    <button className="epChangeButton" onClick={handleNextEp}>Next<FastForwardIcon style={{paddingBottom:"1px"}}/></button>
+                </div>
             </div>
             <br/>
             <div className="VidEpisodes">
@@ -66,7 +98,7 @@ const VideoMain = () => {
                     <br/>
                     <div className="episodeBox">
                         <div className="episodeMainBtnGrp">
-                            {episode.map((anime) => {
+                            {episode.map((anime) => {       
                                 return(<>
                                     {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}
                                     <div className="episodeRadioBtnGrp">
