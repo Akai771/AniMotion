@@ -8,7 +8,7 @@ const VidCard = ({id, title, coverImage, currentEpisode}) => {
       <>
         <div class="VidCard2">
             <div className="VidCardImage2">
-              <Link exact to={`/details/${id}`}>
+              <Link exact to={`/watch/${id}`}>
                   <img className="VidImage2" src={coverImage} alt={title} />
                   <div className="playIcon">
                     <PlayArrowIcon style={{fontSize:"2.8rem"}}/>
