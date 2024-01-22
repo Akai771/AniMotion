@@ -12,7 +12,7 @@ function Signup() {
     password: "",
   });
 
-  const preEmail = sessionStorage.getItem('email');
+  var preEmail = sessionStorage.getItem('email');
 
   function handleChange(e){
     setFormData((prevFormData)=>{
