@@ -128,7 +128,6 @@ const Home = ({token}) =>{
             }
         </Slider>
         </div>
-        <br/><br/>
     </section>
     <Footer/>
     <TopRedirect/>

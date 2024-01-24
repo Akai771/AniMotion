@@ -236,6 +236,32 @@
     gap: 0.5rem;
   }
 
+  .loginButtonGrp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .OptionalLoginButton{
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem 3rem;
+    background-color: var(--bgColor3);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .OptionalLoginButton:hover{
+    background-color: var(--primary-color);
+  }
+
+  .OptionalLoginButton img{
+    width: 2rem;
+    height: 2rem;
+  }
+
   @media all and (max-width: 500px){
     .signUpTitle{
         color: var(--textColor);

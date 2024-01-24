@@ -39,6 +39,24 @@ function Signin({setToken}) {
     }
   }
 
+  async function handleDiscordLogin(){
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'discord',
+      })
+  }
+
+  async function handleGoogleLogin(){
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+    })
+  }
+
+  async function handleFacebookLogin(){
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'facebook',
+    })
+  }
+
   function handlePasswordClick(){
     if (passType === "password"){
       setPassType("text");
@@ -80,6 +98,11 @@ function Signin({setToken}) {
           </div>
           <button type='submit' className='signUpButton'>Login</button>
         </form>
+        <div className='loginButtonGrp'>
+          <button className='OptionalLoginButton' onClick={handleGoogleLogin}><img src="https://i.postimg.cc/85YqH1P0/white-google-logo.png"/></button>
+          <button className='OptionalLoginButton' onClick={handleFacebookLogin}><img src="https://i.postimg.cc/DzTpdxkL/facebook-icon-white-png.png"/></button>
+          <button className='OptionalLoginButton' onClick={handleDiscordLogin}><img src="https://i.postimg.cc/bwFBX5Lk/discord-white-icon.webp"/></button>
+        </div>
           <span className='signLink'>Don't have a account? <Link exact to="/signup">Sign Up</Link></span>
           <span className='signLink'><Link exact to="/forgot-password">Forgot Password?</Link></span>
       </div>
