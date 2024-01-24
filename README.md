@@ -24,7 +24,7 @@ Animotion is a culmination of my final year college project, leveraging a stack 
 
 ### APIs Integrated:
 
-- **NEWS API**: Fetches the latest anime news for users to stay informed.
+- **Anime NEWS Network API**: Fetches the latest anime news for users to stay informed.
 - **ChatGPT API**: Powers Hiro, the AI Chatbot, offering personalized recommendations and information.
 - **Consumet API & Anify API**: Provides a seamless catalog of anime and manga titles.
 
