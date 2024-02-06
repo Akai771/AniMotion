@@ -16,7 +16,7 @@ const Manga = () => {
     const [searchTerm, setSearchTerm] = useState("popular");
 
     const handleChange = (e) => {
-        setSearch(e.target.value.toLowerCase());
+        setSearch(e.target.value);
     }
 
     const handleSubmit = (e) => {
