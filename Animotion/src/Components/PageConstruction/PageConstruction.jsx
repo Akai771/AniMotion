@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./PageConstruction.css";
+import { supabase } from "../Signing/supabaseClient";
 
 function PageConstruction() {
     return(
@@ -11,7 +12,7 @@ function PageConstruction() {
                 <span className="MerchTitle">Page under </span>
                 <span className="MerchTitle2">construction</span>
                 <span className="ErrorText2">Stay Tuned - Exciting Changes Coming Soon!</span>
-                <Link exact to="/home"><button className="ErrorBtn">Back to homepage</button></Link>
+                <button className="ErrorBtn">Back to homepage</button>
             </div>
         </div>
         </>
