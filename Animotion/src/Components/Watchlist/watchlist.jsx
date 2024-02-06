@@ -7,10 +7,15 @@ import TopRedirect from "../TopRedirectButton/TopRedirect";
 import Preloader from "../Preloader/Preloader";
 import BrowseCard from "../Browse/BrowseCard/BrowseCard";
 import axios from "axios";
+import { supabase } from "../Signing/supabaseClient";
 
 
 function Watchlist() {
     const [watchlist, setWatchlist] = useState([]);
+
+    const token = localStorage.getItem('token');
+    const tokenData = JSON.parse(token);
+    const userId = tokenData.user.id
 
     useEffect(()=>{
         localStorage.getItem('watchlist');

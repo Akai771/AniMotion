@@ -20,13 +20,12 @@ const VideoInfo = () => {
     const [animeData, setAnimeData] = useState([]);
     const [addData, setAddData] = useState([])
     const [recommend, setRecommend] = useState([]);
-    const [watchlist, setWatchlist] = useState([]);
     const [episodes, setEpisodes] = useState([]);
     const [recommendPop, setRecommendPop] = useState([]);
     const [recommendTitle, setRecommendTitle] = useState("");
     const [recommendLength, setRecommendLength] = useState(0);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [reactWidth, setReactWidth] = useState("200px");
+    const [animeStatus, setAnimeStatus] = useState();
 
     const {id} = useParams();
     const navigate = useNavigate();
@@ -54,24 +53,24 @@ const VideoInfo = () => {
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setAnimeData(res.data))
-    },[])
+    },[id])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisodes(res.data.episodes))
-    },[])
+    },[id])
 
     useEffect(()=>{
         axios.get(`https://api.anify.tv/search/anime/${id}`)
         .then((res) => setAddData(res.data.results[0]))
         setRecommendTitle(addData.title?addData.title.english:"popular");
-    },[])
+    },[id])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${recommendTitle}`)
         .then((res) => setRecommend(res.data.results))
         setRecommendLength(recommend?recommend.length:0);
-    },[])
+    },[recommendTitle])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
@@ -92,7 +91,7 @@ const VideoInfo = () => {
             dots: true,
             infinite: true,
             speed: 400,
-            slidesToShow: 8,
+            slidesToShow: 7,
             slidesToScroll: 2
         };
     }
@@ -161,7 +160,7 @@ const VideoInfo = () => {
             <div className="recommendedSection">
                     <span className="AnimeTitle2">Recommended for you:</span>
                         <div className="alignRecommendAnime">
-                            {recommendLength>8?
+                            {recommendLength>7?
                             <Slider {...settings}>
                                 {recommend.map((recom) => (
                                     <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>

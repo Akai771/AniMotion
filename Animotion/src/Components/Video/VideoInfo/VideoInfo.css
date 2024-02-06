@@ -14,6 +14,14 @@
     margin:0;
 }
 
+.video-info-container img{
+    transition: all 0.3s ease-in-out;
+}
+
+.video-info-container img:hover{
+    transform: scale(1.05);
+}
+
 .additionalAnimeInfo{
     display: flex;
     flex-direction: column;
@@ -101,24 +109,38 @@
     margin-top: 1rem;
 }
 
-.watchButton{
+.watchButton2{
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: transparent;
     color: var(--textColor);
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    border: none;
+    border: 3px solid var(--primary-color);
     margin-top: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.watchButton:hover{
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+.watchButton2:hover{
+    background-color: var(--primary-color);
+}
+
+.watchButton3{
+    text-align: center;
+    background-color: var(--primary-color2);
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 3px solid var(--primary-color2);
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .watchButtonDiabled{    
@@ -330,7 +352,7 @@
     }
 
     .AnimeDesc{
-        font-size: .8rem;
+        font-size: .7rem;
     }
 
     .AnimeDescTitle{
