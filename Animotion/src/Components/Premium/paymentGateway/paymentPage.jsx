@@ -59,10 +59,10 @@ function Payment() {
                         </div>
                         {isActive2 && <div className="accordion-content">
                             <div className="creditCardInputs">
-                                <input type="text" placeholder="Enter Card number" className="paymentInput"/>
+                                <input type="number" placeholder="Enter Card number" className="paymentInput"/>
                                 <div className="creditInfo">
-                                    <input type="text" placeholder="MM/YY" className="paymentInput2"/>
-                                    <input type="text" placeholder="CVV" className="paymentInput2"/>
+                                    <input type="number" placeholder="MM/YY" className="paymentInput2"/>
+                                    <input type="number" placeholder="CVV" className="paymentInput2"/>
                                 </div>
                                 <button className="creditCardBtn">Start Membership</button>
                             </div>

@@ -68,6 +68,12 @@
     color: var(--textColor2);
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .paymentInput::placeholder{
   font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
