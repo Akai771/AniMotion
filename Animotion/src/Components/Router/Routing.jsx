@@ -73,6 +73,7 @@ const Routing = () => {
           {token?<Route exact path="/profile" element={<Profile  token={token}/>} />:""}
           {token?<Route exact path="/watchlist" element={<Watchlist  token={token}/>} />:""}
           {token?<Route exact path="/history" element={<History  token={token}/>} />:""}
+          <Route exact path="/test" element={<PageConstruction/>} />
 
           <Route exact path="/dmca" element={<Dmca/>} />
           <Route exact path="/contact" element={<Contact/>} />
