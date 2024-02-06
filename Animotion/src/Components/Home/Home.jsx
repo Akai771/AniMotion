@@ -12,6 +12,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Preloader from "../Preloader/Preloader.jsx";
+import { Link } from "react-router-dom";
 
 const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
@@ -115,6 +116,16 @@ const Home = ({token}) =>{
                 ))
             }
         {/* </Slider> */}
+        </div>
+        <br/><br/>
+        <div className="AnimePromotion">
+            <Link to="/details/ore-dake-level-up-na-ken">
+                <img
+                    src="https://i.postimg.cc/HkyBJQp2/Solo-Leveling-Watch-Now-AD.png"
+                    alt="Anime Promotion"
+                    className="AnimePromotionImg"
+                />
+            </Link>
         </div>
         <br/><br/>
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>New on Animotion</h3></div>
