@@ -33,7 +33,7 @@ function WatchNowButton({animeId, animeTitle, animeImage}) {
 }
 
     return(
-        <button className="watchButton" onClick={() => handleWatchButton(animeId, animeTitle, animeImage )}>Watch Now</button>
+        <button className="watchNowButton" onClick={() => handleWatchButton(animeId, animeTitle, animeImage )}>Watch Now</button>
     );
 }
 

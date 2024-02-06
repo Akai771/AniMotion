@@ -109,6 +109,27 @@
     margin-top: 1rem;
 }
 
+.watchNowButton{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--textColor);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.watchNowButton:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
 .watchButton2{
     text-align: center;
     background-color: transparent;
