@@ -54,6 +54,7 @@ const Home = ({token}) =>{
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
     },[])
+    console.log(screenWidth);
 
     if (screenWidth < 768) {
         settings = {
@@ -61,6 +62,15 @@ const Home = ({token}) =>{
             infinite: true,
             speed: 400,
             slidesToShow: 2,
+            slidesToScroll: 2
+        };
+    }
+    else if (screenWidth < 1520) {
+        settings = {
+            dots: true,
+            infinite: true,
+            speed: 400,
+            slidesToShow: 6,
             slidesToScroll: 2
         };
     } 
@@ -128,6 +138,7 @@ const Home = ({token}) =>{
             }
         </Slider>
         </div>
+        <br/><br/>
     </section>
     <Footer/>
     <TopRedirect/>

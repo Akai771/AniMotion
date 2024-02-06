@@ -16,7 +16,7 @@ const VidCard = ({id, title, coverImage, currentEpisode}) => {
               </Link>
             </div>
             <div class="VidCard-info2">
-              <span class="VidCardTitle2">{title.slice(0,20)}...</span>
+              <span class="VidCardTitle2">{title.slice(0,30)}...</span>
               <div className="vidInfo2">
                 <span className="vidInfoCont2">EP {currentEpisode}</span>
               </div>

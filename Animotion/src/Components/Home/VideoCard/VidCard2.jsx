@@ -6,19 +6,17 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 const VidCard2 = ({id, title, coverImage}) => {
     return (
       <>
-        <div class="VidCard">    
-          <div className="VidCardImage">
+        <div class="VidCard1">    
+          <div className="VidCardImage1">
               <Link exact to={`/details/${id}`}>
-                  <img className="VidImage" src={coverImage} alt={title} />
+                  <img className="VidImage1" src={coverImage} alt={title} />
                   <div className="playIcon">
                     <PlayArrowIcon style={{fontSize:"2.8rem"}}/>
                   </div>
               </Link>
             </div>
-            <div class="VidCard-info">
+            <div class="VidCard-info1">
               <span class="VidCardTitle">{title.slice(0,20)}...</span>
-              <div className="vidInfo">
-              </div>
             </div>
         </div>
       </>

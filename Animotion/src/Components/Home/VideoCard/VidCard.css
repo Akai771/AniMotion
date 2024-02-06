@@ -1,4 +1,4 @@
-.VidCard {
+.VidCard1 {
   display: flex;
   flex-direction: column;
   width: 14rem;
@@ -10,39 +10,39 @@
   overflow: visible;
 }
 
-.VidCard:hover {
+.VidCard1:hover {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
-.VidCard-info {
+.VidCard-info1 {
   padding-top: 5px;
   height: auto;
 }
   
-.vidInfo{
+.vidInfo1{
   display: flex;
   flex-direction: row;
   gap: 0.4rem;
 }
 
-.vidInfoCont{
+.vidInfoCont1{
   font-size: 0.6rem;
   font-family: "montserrat", sans-serif;
   font-weight: 400;
   color: var(--secondary-color);
 }
 
-.VidCardTitle{
+.VidCardTitle1{
   font-family: "montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.VidImage{
-  width: 12rem;
-  height: 18rem;
+.VidImage1{
+  width: 13rem;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .VidImage2{
-  width: 12rem;
+  width: 13rem;
   height: 18rem;
   object-fit: cover;
 }
