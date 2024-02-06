@@ -192,6 +192,12 @@
     height: 3rem;
 }
 
+.episodeRadioBtnGrp .episodeBtnLabel input:hover + .episodeRadioSpan{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
 .characterSection{
     margin-top: 3rem;
     margin-bottom: 15rem;
