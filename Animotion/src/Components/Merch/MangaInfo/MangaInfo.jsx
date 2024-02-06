@@ -33,8 +33,8 @@ const MangaInfo = () => {
                 <span className="MangaInfoTitle">Genres: <span className="AnimeInfo">{mangaData.genres?mangaData.genres.join(", "):"NoData"}</span> </span>
                 <span className="MangaInfoTitle">Total Chapters: <span className="AnimeInfo">{chapterLength}</span></span>
                 <div className="episodeBtnGrp2">
-                    <Link exact to={`/manga/read/${id}/${readLatestBtn}`}><button className="watchButton">Read Latest Chapter</button></Link>
-                    <Link exact to={`/manga/read/${id}/${readNewBtn}`}><button className="watchButton">Read First Chapter</button></Link>
+                    <Link exact to={`/manga/read/${readLatestBtn}`}><button className="watchButton">Read Latest Chapter</button></Link>
+                    <Link exact to={`/manga/read/${readNewBtn}`}><button className="watchButton">Read First Chapter</button></Link>
                 </div>
                 <br/>
                 <div className="MangaDescSection">
