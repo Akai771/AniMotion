@@ -55,7 +55,6 @@ const Home = ({token}) =>{
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
     },[])
-    console.log(screenWidth);
 
     if (screenWidth < 768) {
         settings = {
