@@ -100,7 +100,6 @@ const VideoMain = () => {
                         <div className="episodeMainBtnGrp">
                             {episode.map((anime) => {       
                                 return(<>
-                                    {/* <button className="episodeBtn" key={anime.id} value={anime.number} id={anime.id} onClick={handleClickedEpisode}>{anime.number}</button> */}
                                     <div className="episodeRadioBtnGrp">
                                         <label className="episodeBtnLabel" key={anime.id} htmlFor={anime.id}>
                                             <input  className="episodeRadioBtn" type="radio" name={anime.number} id={anime.id} value={anime.number} checked={selectedOption == anime.number} onChange={handleOptionChange}/>
