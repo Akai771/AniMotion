@@ -117,7 +117,7 @@
     box-sizing: border-box;
     --sb-track-color: var(--bgColor);
     --sb-thumb-color: #86ff84;
-    --sb-size: 10px;
+    --sb-size: 14px;
 
     scrollbar-color: var(--sb-thumb-color) 
                      var(--sb-track-color);
