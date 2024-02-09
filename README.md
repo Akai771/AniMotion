@@ -1,6 +1,6 @@
 # Animotion - Anime Streaming Platform
 
-Animotion is a comprehensive Anime Streaming Platform designed to cater to anime enthusiasts' needs. It offers an immersive experience for watching anime, reading manga, staying updated with the latest anime-related news, and interacting with Hiro, an AI Chatbot providing recommendations and valuable anime-related information.
+Animotion is a comprehensive Anime Streaming Platform designed to cater to anime enthusiasts' needs. It offers an immersive experience for watching anime, reading manga, staying updated with the latest anime-related news, and interacting with Hiro, an AI Chatbot that provides recommendations and valuable anime-related information.
 
 ## Key Features
 
@@ -26,7 +26,7 @@ Animotion is a culmination of my final year college project, leveraging a stack 
 
 - **Anime News Network API**: Fetches the latest anime news for users to stay informed.
 - **OpenAI API**: Powers Hiro, the AI Chatbot, offers personalized recommendations and information.
-- **Consumet API(https://github.com/consumet) & Anify API(https://docs.anify.tv/)**: Provides a seamless catalog of anime and manga titles.
+- **[Consumet API](https://github.com/consumet) & [Anify API](https://docs.anify.tv/)**: Provides a seamless catalog of anime and manga titles.
 
 **Note**: The platform is a work in progress, and ongoing efforts are dedicated to resolving any existing bugs for an optimized user experience.
 
