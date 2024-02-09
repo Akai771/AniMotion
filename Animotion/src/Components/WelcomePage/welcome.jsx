@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Grid from '@mui/material/Unstable_Grid2';
 import {Link} from "react-router-dom";
 import Accordion  from "./accordion";
@@ -9,10 +9,11 @@ import TopRedirect from "../TopRedirectButton/TopRedirect";
 
 function Welcome() {
   var color;
-  const [ErrMsg, setErrMsg] = React.useState('');
-  const [email, setEmail] = React.useState('');
-
-
+  const [ErrMsg, setErrMsg] = useState('');
+  const [email, setEmail] = useState('');
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  let dataBasedOnScreenSize;
+  let TimeIcon;
 
   const clickHandler = (e) => {
     if(email===""){
@@ -31,6 +32,24 @@ function Welcome() {
     }
 
     sessionStorage.setItem("email", email);
+  }
+
+  const handleResize = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  if (screenWidth < 768) {
+    TimeIcon = <div style={{paddingRight:"2rem"}}><AccessTimeIcon style={{fontSize:"9rem", color:"#4F4F4F"}} /></div>;
+  }
+  else if (screenWidth > 768) {
+    TimeIcon = <AccessTimeIcon style={{fontSize:"25rem", color:"#4F4F4F"}} />;
   }
   
   return(<>
@@ -71,9 +90,7 @@ function Welcome() {
             <h1 className="sectContTitle">Enjoy anytime</h1>
             <span className="sectContSubtitle">New Episodes released everyday shortly after Japan</span>
           </div>
-          <div style={{paddingTop:"4rem"}}>
-            <AccessTimeIcon style={{fontSize:"25rem", color:"#4F4F4F"}} />
-          </div>
+            {TimeIcon}
         </div>
       </div>
       <div className="sectSide1">

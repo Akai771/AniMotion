@@ -12,7 +12,11 @@ function Signup() {
     password: "",
   });
 
-  var preEmail = sessionStorage.getItem('email');
+  let preEmail = sessionStorage.getItem('email');
+
+  function handlePreEmail(){
+    sessionStorage.removeItem('email');
+    }
 
   function handleChange(e){
     setFormData((prevFormData)=>{
@@ -79,6 +83,7 @@ function Signup() {
             name="email"
             value={preEmail}
             onChange={handleChange}
+            onFocus={handlePreEmail}
             />
           </div>
           <div className='textBoxSign'>
