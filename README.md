@@ -10,6 +10,24 @@ Animotion is a comprehensive Anime Streaming Platform designed to cater to anime
 - **Hiro - AI Chatbot**: Interact with Hiro for personalized recommendations and in-depth anime information.
 - **Random PFP Generator**: Enjoy a fun feature to randomly generate Profile Pictures.
 
+### Home Page
+![image](https://github.com/Akai771/AniMotion/assets/90311912/4e328160-4923-41e8-8632-df22ee99634d)
+
+<details>
+<summary>View more</summary>
+   
+### Splash Page
+![image](https://github.com/Akai771/AniMotion/assets/90311912/d1800459-acc8-4061-abbd-6a0764789868)
+
+### Anime Info Page
+![image](https://github.com/Akai771/AniMotion/assets/90311912/fc12b55f-3a74-426b-ad81-e40260347d1d)
+
+### Anime Watch Page
+![image](https://github.com/Akai771/AniMotion/assets/90311912/9395a5c2-f991-4d39-a1a0-f50210abb7eb)
+
+
+</details>
+
 ## Project Overview
 
 Animotion is a culmination of my final year college project, leveraging a stack of cutting-edge technologies to create an exceptional anime-centric platform:
