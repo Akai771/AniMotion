@@ -67,6 +67,10 @@ Access the live website to experience Animotion:
 
 Browse through the extensive collection of anime titles and enjoy watching your favorite shows or delve into captivating manga reads effortlessly.
 
----
+## For Local Development
 
-Feel free to further customize this README by adding specific usage guidelines, troubleshooting tips, or any other relevant information based on your project's unique aspects and requirements.
+Please be aware that self-hosting this application is strictly limited to personal use only. Commercial utilization is prohibited, and the inclusion of advertisements on your self-hosted website may lead to consequences, including potential site takedown measures.
+
+## Bug Report
+
+If you encounter any issues or bug on the site please head to [issues](https://github.com/Akai771/AniMotion/issues) and create a bug report there.
