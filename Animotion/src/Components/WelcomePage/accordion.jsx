@@ -52,7 +52,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div style={{fontSize:"2rem"}}>
+    <div style={{fontSize:"2rem"}} className='accordion'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography sx={{fontSize:"1rem", fontFamily:"Montserrat", fontWeight:"600",color:"var(--textColor2)"}}>What is Animotion?</Typography>

@@ -76,3 +76,28 @@
     text-decoration: none;
     color: var(--secondary-color);
 }
+
+@media only screen and (max-width: 768px){
+    .footerNew{
+        padding: 20px;
+    }
+    .tline{
+        width: 80%;
+    }
+    .footerDesc{
+        font-size: 10px;
+    }
+    .footerDescHighlight{
+        font-size: 10px;
+    }
+    .footerDisclaimer{
+        font-size: 5px;
+    }
+    .footerLinks{
+        gap: 20px;
+    }
+
+    .footerLinks a{
+        font-size: 15px;
+    }
+}

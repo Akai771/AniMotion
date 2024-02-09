@@ -95,10 +95,40 @@
 }
 
 @media screen and (max-width: 768px){
-  .VidCard {
+  .VidCard1 {
     width: 8.5rem;
-    height: 15rem;
+    height: 18rem;
     padding: .4em;
+  }
+  
+  .VidCard-info1 {
+    padding-top: 1px;
+    height: auto;
+  }
+    
+  .vidInfo1{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+  
+  .vidInfoCont1{
+    font-size: 0.4rem;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    color: var(--secondary-color);
+  }
+  
+  .VidCardTitle1{
+    font-family: "montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .VidImage1{
+    width: 10rem;
+    height: 14rem;
+    object-fit: cover;
   }
 
   .VidCard2 {

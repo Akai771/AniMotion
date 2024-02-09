@@ -274,7 +274,7 @@
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 50px;
+  font-size: 3rem;
 
 }
 
@@ -641,7 +641,7 @@
   .sectContent{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     margin: 5rem 0rem 2rem 0rem;

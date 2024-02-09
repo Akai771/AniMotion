@@ -92,13 +92,19 @@ body{
 
 @media only screen and (max-width: 768px){
     .alignHomeItems1{
-        padding-left:30px;
+        padding-left:25px;
     }
 
     .alignCardMargin2{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         overflow: hidden;
+    }
+
+    .AnimePromotionImg{
+        width: 20rem;
+        height: 7rem;
+        border-radius: 10px;
     }
 
     
