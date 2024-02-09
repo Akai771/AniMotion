@@ -24,11 +24,11 @@ Animotion is a culmination of my final year college project, leveraging a stack 
 
 ### APIs Integrated:
 
-- **Anime NEWS Network API**: Fetches the latest anime news for users to stay informed.
-- **ChatGPT API**: Powers Hiro, the AI Chatbot, offering personalized recommendations and information.
-- **Consumet API & Anify API**: Provides a seamless catalog of anime and manga titles.
+- **Anime News Network API**: Fetches the latest anime news for users to stay informed.
+- **OpenAI API**: Powers Hiro, the AI Chatbot, offers personalized recommendations and information.
+- **Consumet API(https://github.com/consumet) & Anify API(https://docs.anify.tv/)**: Provides a seamless catalog of anime and manga titles.
 
-**Note**: The platform is a work-in-progress, and ongoing efforts are dedicated to resolving any existing bugs for an optimized user experience.
+**Note**: The platform is a work in progress, and ongoing efforts are dedicated to resolving any existing bugs for an optimized user experience.
 
 ## Setup Instructions
 
