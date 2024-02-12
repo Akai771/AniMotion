@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
 import Preloader from "../Preloader/Preloader";
-import BrowseCard from "../Browse/BrowseCard/BrowseCard";
+import HistoryCard from "./historyCard/historyCard";
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 import axios from "axios";
 
@@ -41,11 +41,13 @@ function History() {
                         <div className="BrowseAnimeContainer">
                             <div className="alignBrowseAnime">
                                 {history?history.map((anime) => (
-                                    <BrowseCard
+                                    console.log(anime.animeEpisodeId),
+                                    <HistoryCard
                                         key={anime.animeId}
                                         id={anime.animeId}
                                         title={anime.animeTitle}
                                         coverImage={anime.animeImage}
+                                        episodeId={anime.animeEpisodeId}
                                     />
                                 )):null}
                             </div>
