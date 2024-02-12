@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { supabase } from "../Signing/supabaseClient";
 import "./signing2.css";
 
@@ -11,8 +11,14 @@ function Signup() {
     email: "",
     password: "",
   });
+  const [preEmail, setPreEmail] = useState("");
+  const location = useLocation();
 
-  let preEmail = sessionStorage.getItem('email');
+  useEffect(()=>{
+    if(location.state && location.state.email){
+      setPreEmail(location.state.email);
+    }
+  }, [location.state]);
 
   function handlePreEmail(){
     sessionStorage.removeItem('email');

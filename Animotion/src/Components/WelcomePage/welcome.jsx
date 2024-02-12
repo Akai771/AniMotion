@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Grid from '@mui/material/Unstable_Grid2';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Accordion  from "./accordion";
 import "./welcome.css";
 import "../fonts.css";
@@ -14,6 +14,8 @@ function Welcome() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   let dataBasedOnScreenSize;
   let TimeIcon;
+
+  const navigate = useNavigate();
 
   const clickHandler = (e) => {
     if(email===""){
@@ -30,8 +32,8 @@ function Welcome() {
       console.log("Email Address is valid");
       color = "green";
     }
+    navigate("/signup", {state: {email: email}});
 
-    sessionStorage.setItem("email", email);
   }
 
   const handleResize = () => {
@@ -76,9 +78,9 @@ function Welcome() {
           <div>
             <div class="GSInput-grp">
               <input type="text" class="GetSInput" style={{borderColor:{color}}} id="Email" name="Email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}/>
-              <Link exact to="/signup">
+              {/* <Link exact to="/signup"> */}
                 <button class="GSInputButton" onClick={clickHandler}>Get Started</button>
-              </Link>
+              {/* </Link> */}
             </div>
             {ErrMsg && <div className="errMsg" style={{color:"red",display:"flex", flexDirection:"row"}}>{ErrMsg}</div>}
           </div>
