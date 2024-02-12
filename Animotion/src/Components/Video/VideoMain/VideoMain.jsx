@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams, useNavigate} from 'react-router-dom';
 import axios from "axios";
 import "./VideoMain.css";
 import NavBar from "../../Navbar/Navbar";
@@ -13,44 +13,49 @@ import FastForwardIcon from '@mui/icons-material/FastForward';
 
 const VideoMain = () => {
     const {id} = useParams();
+    const [searchParams, setSearchParams] = useSearchParams()
+    const histEpisodeId = searchParams.get('epId')
+    const histEpisodeNumber = histEpisodeId?parseInt(histEpisodeId.split("-").pop()):1
 
     const [animeData, setAnimeData] = useState([]);
     const [server, setServer] = useState([])
     const [episode, setEpisode] = useState([])
-    const [selectedOption, setSelectedOption] = useState();
-    const [episodeId, setEpisodeId] = useState([0]);
-    const [episodeNumber, setEpisodeNumber] = useState(1);
-    const [addData, setAddData] = useState([])
-    const [epNo, setEpNo] = useState(1);
+    const [selectedOption, setSelectedOption] = useState(histEpisodeNumber);
+    const [episodeId, setEpisodeId] = useState(histEpisodeId);
+    const [episodeNumber, setEpisodeNumber] = useState(histEpisodeNumber);
+    const [addData, setAddData] = useState([]);
+    const [epNo, setEpNo] = useState(histEpisodeNumber);
 
+    const navigate = useNavigate();
     const handleOptionChange = (e) => {
         setEpisodeNumber(e.target.value);
-        setEpisodeId(e.target.id);
         setSelectedOption(e.target.value);
+        navigate(`/watch/${id}?epId=${e.target.id}`)
+        window.location.reload();
       };
 
-      const handleNextEp = () => {
-        if(epNo>0 && epNo<episode.length){
-            setEpNo(epNo+1);
+    const handleNextEp = () => {
+        if(epNo>0 && epNo <= episode.length){
+            setEpNo(parseInt(epNo) + 1);
+            console.log(epNo);
         }
         else{
             setEpNo(epNo);
         }
-        setEpisodeId(animeData.id + "-" + "episode" + "-" + epNo);
-        setEpisodeNumber(epNo);
-        console.log(episodeId);
+        navigate(`/watch/${id}?epId=${animeData.id + "-" + "episode" + "-" + epNo}`)
+        window.location.reload()
     }
 
     const handlePrevEp = () => {
         if(epNo>1 && epNo<=episode.length){
-            setEpNo(epNo-1);
+            setEpNo(parseInt(epNo)-1);
+            console.log(epNo);
         }
         else{
             setEpNo(epNo);
         }
         setEpisodeId(animeData.id + "-" + "episode" + "-" + epNo);
         setEpisodeNumber(epNo);
-        console.log(episodeId);
     }
 
     useEffect(()=>{
@@ -61,8 +66,6 @@ const VideoMain = () => {
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisode(res.data.episodes))
-
-        console.log(episode.length);
     },[])
 
     useEffect(()=>{
@@ -75,6 +78,22 @@ const VideoMain = () => {
         .then((res) => setServer(res.data[0]))
     },[episodeId])
 
+    var specificAnimeID = JSON.parse(localStorage.getItem('history'))
+    if (Array.isArray(specificAnimeID)) {
+        var targetAnimeId = id;
+        var targetIndex = specificAnimeID.findIndex(function(anime) {
+          return anime.animeId === targetAnimeId;
+        });
+        if (targetIndex !== -1) {
+          specificAnimeID[targetIndex].animeEpisodeId = episodeId;
+        } else {
+          console.error("AnimeId not found in 'history'");
+        }
+        localStorage.setItem('history', JSON.stringify(specificAnimeID));
+    } 
+    else {
+        console.error("Invalid data format in 'history'");
+    }
 
     return(<>
         <Preloader/>

@@ -7,7 +7,6 @@ import "./VideoInfo.css";
 function WatchNowButton({animeId, animeTitle, animeImage}) {
     const navigate = useNavigate();
     const [history, setHistory] = useState([]);
-
   useEffect(() => {
     const storedHistory = localStorage.getItem("history");
     if (storedHistory) {
@@ -29,7 +28,7 @@ function WatchNowButton({animeId, animeTitle, animeImage}) {
       setHistory(updatedHistory);
       localStorage.setItem("history", JSON.stringify(updatedHistory));
     }
-    navigate(`/watch/${animeId}`);
+    navigate(`/watch/${animeId}?epId=${animeId}-episode-1`);
 }
 
     return(
