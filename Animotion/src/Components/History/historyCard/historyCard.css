@@ -1,0 +1,84 @@
+.historyCard {
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    height: 22rem;
+    padding: .8em;
+    background: var(--bgColor2);
+    color: #ffffff  ;
+    position: relative;
+    overflow: visible;
+  }
+  
+  .historyCard:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .historyCard-info {
+    padding-top: 5px;
+    height: auto;
+  }
+    
+  .historyVidInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+  
+  .historyVidInfoCont{
+    font-size: 0.6rem;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    color: var(--secondary-color);
+  }
+  
+  .historyCardTitle{
+    font-family: "montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .historyCardImage{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .historyImage{
+    width: 12rem;
+    height: 16rem;
+    object-fit: cover;
+  }
+
+  .playIcon{
+    color: var(--textColor);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -10%;
+    opacity: 0;
+  }
+
+  .historyCard:hover .playIcon{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+
+  .historyCard:hover .historyImage{
+    text-align: center;
+    opacity: 0.5;
+    filter: blur(2px);
+    transition: 0.5s ease-in-out;
+  }
+
+  .transButton{
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  
