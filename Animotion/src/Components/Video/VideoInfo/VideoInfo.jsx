@@ -55,6 +55,8 @@ const VideoInfo = () => {
         .then((res) => setAnimeData(res.data))
     },[id])
 
+    console.log(addData);
+
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisodes(res.data.episodes))
@@ -117,6 +119,7 @@ const VideoInfo = () => {
                             )
                         }):"No Data"} </span>
                     </div>
+                    <span className="AnimeInfoTitle">Format: <span className="AnimeInfo">{animeData.subOrDub}</span></span>
                     <span className="AnimeInfoTitle">Release Date: <span className="AnimeInfo">{animeData.releaseDate}</span></span>
                     <span className="AnimeInfoTitle">Status: <span className="AnimeInfo">{animeData.status}</span></span>
                     <span className="AnimeInfoTitle">Total Episodes: <span className="AnimeInfo">{animeData.totalEpisodes}</span></span>
