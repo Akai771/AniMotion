@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Preloader from "../Preloader/Preloader.jsx";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
@@ -90,6 +91,17 @@ const Home = ({token}) =>{
 
     <Preloader/>
     <Navbar/>
+    <div>
+        <Helmet>
+            <title>Animotion</title>
+            <meta property="og:title" content="Animotion" />
+            <meta property="og:description" content="Description of your website content." />
+            <meta property="og:image" content="https://via.placeholder.com/400x200" />
+            <meta property="og:url" content="http://animotion-two.vercel.app/home" />
+            <meta property="og:type" content="website" />
+        </Helmet>
+    </div>
+
     <div id="topCarousel">
         <CarouselHome />
     </div>
