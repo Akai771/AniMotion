@@ -20,7 +20,7 @@ header {
 	color: var(--textColor);
 	box-shadow: 5px 5px 25px rgba(26, 2, 36, 0.176);
 	position: fixed;
-	z-index: 3;
+	z-index: 4;
 }
 
 .greetBox{
@@ -94,42 +94,6 @@ nav {
 	align-items: center;
 }
 
-@media only screen and (max-width: 768px) {
-	header .nav-btn {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	header nav {
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: var(--mainColor);
-		transition: 1s;
-	}
-
-	header .responsive_nav {
-		transform: translateY(100vh);
-	}
-
-	nav .nav-close-btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
-
-	nav a {
-		font-size: 1.5rem;
-	}
-}
-
 .navLogo{
     font-family: 'Another Danger';
     font-weight: 100;
@@ -153,3 +117,49 @@ nav {
 	justify-content: center;
 	gap: 0.5rem;
 }
+
+#mobile {
+    display: none;
+  }
+  
+  #mobile i {
+    color: #fff;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 769px) {
+    #navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 80px;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background: var(--primary-color2);
+      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+      padding: 40px 0 0 10px;
+      transition: 0.3s ease-in-out;
+      z-index: -1;
+    }
+  
+    #navbar.active {
+      right: 0px;
+    }
+  
+    #navbar li {
+      margin-bottom: 25px;
+    }
+  
+    #mobile {
+      display: block;
+    }
+  
+    #mobile i {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  

@@ -33,8 +33,6 @@ body{
 }
 
 
-
-
 .vl {
   border-left: 6px solid var(--primary-color);
   height: 35px;
@@ -83,8 +81,14 @@ body{
 
     .alignCardMargin2{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         overflow: hidden;
+    }
+
+    .AnimePromotionImg{
+        width: 60rem;
+        height: 19rem;
+        border-radius: 10px;
     }
 
     

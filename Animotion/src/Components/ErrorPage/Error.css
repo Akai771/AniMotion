@@ -79,3 +79,58 @@
     background: var(--primary-color2);
     color: var(--textColor);
 }
+
+@media only screen and (max-width: 768px){
+    .ErrorPage{
+        overflow: hidden;
+        flex-direction: column;
+    }
+    
+    .ErrorPage img{
+        width: 40%;
+        height: 20%;
+    
+    }
+    
+    .ErrorPageContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ErrorTitle{
+        font-size: 8rem;
+    }
+    
+    .ErrorTitle2{
+        font-size: 8rem;
+    }
+    
+    .ErrorText{
+        font-size: 1rem;
+    }
+    
+    .ErrorText2{
+        font-size: 0.6rem;
+    }
+    
+    .ErrorBtn{
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        background: var(--primary-color);
+        color: var(--textColor);
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .ErrorBtn:hover{
+        background: var(--primary-color2);
+        color: var(--textColor);
+    }
+}

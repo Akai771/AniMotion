@@ -25,7 +25,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: var(--sb-track-color);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 body::-webkit-scrollbar-thumb {
