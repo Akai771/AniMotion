@@ -13,7 +13,7 @@ function WatchlistButton({animeId, animeTitle, animeImage}) {
     const checkWatchlistString = localStorage.getItem("watchlist");
     const checkWatchlist = JSON.parse(checkWatchlistString);
     const targetAnimeId = animeId;
-    const targetAnime = checkWatchlist.find(anime => anime.animeId === targetAnimeId);
+    const targetAnime = checkWatchlist?checkWatchlist.find(anime => anime.animeId === targetAnimeId):null;
 
     const token = localStorage.getItem('token');
     const tokenData = JSON.parse(token);
