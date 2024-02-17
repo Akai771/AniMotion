@@ -21,7 +21,6 @@ function Watchlist() {
         localStorage.getItem('watchlist');
         setWatchlist(JSON.parse(localStorage.getItem('watchlist')));
     },[])
-    console.log(watchlist);
 
     return(
         <div>

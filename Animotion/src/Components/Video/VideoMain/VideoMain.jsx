@@ -49,7 +49,6 @@ const VideoMain = () => {
     const handlePrevEp = () => {
         if(epNo>1 && epNo<=episode.length){
             setEpNo(parseInt(epNo)-1);
-            console.log(epNo);
         }
         else{
             setEpNo(epNo);

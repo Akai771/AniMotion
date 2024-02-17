@@ -50,34 +50,37 @@ const VideoInfo = () => {
         navigate(`/genre/${newGenre}`);
     }
 
-    useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
-        .then((res) => setAnimeData(res.data))
-    },[id])
+    try{
+        useEffect(()=>{
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
+            .then((res) => setAnimeData(res.data))
+        },[id])
+        
+        useEffect(()=>{
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
+            .then((res) => setEpisodes(res.data.episodes))
+        },[id])
 
-    console.log(addData);
+        useEffect(()=>{
+            axios.get(`https://api.anify.tv/search/anime/${id}`)
+            .then((res) => setAddData(res.data.results[0]))
+            setRecommendTitle(addData.title?addData.title.english:"popular");
+        },[id])
 
-    useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
-        .then((res) => setEpisodes(res.data.episodes))
-    },[id])
+        useEffect(()=>{
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${recommendTitle}`)
+            .then((res) => setRecommend(res.data.results))
+            setRecommendLength(recommend?recommend.length:0);
+        },[recommendTitle])
 
-    useEffect(()=>{
-        axios.get(`https://api.anify.tv/search/anime/${id}`)
-        .then((res) => setAddData(res.data.results[0]))
-        setRecommendTitle(addData.title?addData.title.english:"popular");
-    },[id])
-
-    useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${recommendTitle}`)
-        .then((res) => setRecommend(res.data.results))
-        setRecommendLength(recommend?recommend.length:0);
-    },[recommendTitle])
-
-    useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
-        .then((res) => setRecommendPop(res.data.results))
-    },[])
+        useEffect(()=>{
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
+            .then((res) => setRecommendPop(res.data.results))
+        },[])
+    }
+    catch(err){
+        console.log(err);
+    }
 
     if (screenWidth < 768) {
         settings = {
@@ -115,7 +118,7 @@ const VideoInfo = () => {
                         <span className="AnimeInfoTitle">Genres: 
                         {animeData.genres?animeData.genres.map((genre) =>{
                             return(
-                                <button className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
+                                <button key={genre} className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
                             )
                         }):"No Data"} </span>
                     </div>

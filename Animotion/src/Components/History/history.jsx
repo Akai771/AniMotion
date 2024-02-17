@@ -17,7 +17,6 @@ function History() {
         localStorage.getItem('history');
         setHistory(JSON.parse(localStorage.getItem('history')));
     },[])
-    console.log(history);
 
     const handleHistoryClick = () =>{
         localStorage.removeItem('history')

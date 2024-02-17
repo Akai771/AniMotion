@@ -43,7 +43,6 @@ function Profile({token}) {
     function handleChangeEmail(e){
         setChangeEmail(e.target.value);
     }
-    console.log(changeEmail);
 
     async function handleChangeEmailButton(){
         try{

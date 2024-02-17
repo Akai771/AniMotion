@@ -35,7 +35,6 @@ function ProfileIcon() {
     try {
       const response = await axios.request(options);
       setPfp(response.data.images[0]);
-      console.log(response.data);
     } catch (error) {
       console.error(error);
     }

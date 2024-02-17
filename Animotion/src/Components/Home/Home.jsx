@@ -85,23 +85,20 @@ const Home = ({token}) =>{
         };
     }
     
-    
-    
     return(<>
 
     <Preloader/>
     <Navbar/>
-    <div>
+    {/* <div>
         <Helmet>
             <title>Animotion</title>
             <meta property="og:title" content="Animotion" />
             <meta property="og:description" content="Description of your website content." />
             <meta property="og:image" content="https://via.placeholder.com/400x200" />
-            <meta property="og:url" content="http://animotion-two.vercel.app/home" />
+            <meta property="og:url" content="https://animotion-two.vercel.app/home" />
             <meta property="og:type" content="website" />
         </Helmet>
-    </div>
-
+    </div> */}
     <div id="topCarousel">
         <CarouselHome />
     </div>
@@ -121,12 +118,10 @@ const Home = ({token}) =>{
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
         <br/>
         <div className="alignCardMargin2">
-        {/* <Slider {...settings}> */}
             {recentEp.map((recentEp) => (
                 <VidCard key={recentEp.id} id={recentEp.id} title={recentEp.title} coverImage={recentEp.image} currentEpisode={recentEp.episodeNumber}/>
                 ))
             }
-        {/* </Slider> */}
         </div>
         <br/><br/>
         <div className="AnimePromotion">

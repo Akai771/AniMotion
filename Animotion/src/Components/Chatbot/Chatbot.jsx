@@ -10,7 +10,6 @@ const watchlistArray = JSON.parse(watchlist)
 const displayedWatchlist = watchlistArray?watchlistArray.map((item) => {
   return item.animeTitle
 }).join(" ,"):"No Anime in Watchlist";
-console.log(displayedWatchlist);
 
 const API_KEY = import.meta.env.VITE_OPENAI_API;
 const systemMessage = {
