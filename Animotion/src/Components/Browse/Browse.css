@@ -213,6 +213,7 @@
   .alignBrowseAnime{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-right: .8rem;
   }
 
 }

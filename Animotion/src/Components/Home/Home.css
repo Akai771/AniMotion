@@ -96,7 +96,11 @@ body{
 
 @media only screen and (max-width: 768px){
     .alignHomeItems1{
-        padding-left:25px;
+        padding-left:1rem;
+    }
+
+    .alignCardMargin{
+        margin-left: 2rem;
     }
 
     .alignCardMargin2{
