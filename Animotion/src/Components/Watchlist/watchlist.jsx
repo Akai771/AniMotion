@@ -6,21 +6,32 @@ import ChatbotButton from "../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../TopRedirectButton/TopRedirect";
 import Preloader from "../Preloader/Preloader";
 import BrowseCard from "../Browse/BrowseCard/BrowseCard";
-import axios from "axios";
 import { supabase } from "../Signing/supabaseClient";
 
 
 function Watchlist() {
-    const [watchlist, setWatchlist] = useState([]);
-
+    // const [watchlist, setWatchlist] = useState([]);
+    const [watchlist2, setWatchlist2] = useState([]);
     const token = localStorage.getItem('token');
     const tokenData = JSON.parse(token);
     const userId = tokenData.user.id
 
-    useEffect(()=>{
-        localStorage.getItem('watchlist');
-        setWatchlist(JSON.parse(localStorage.getItem('watchlist')));
-    },[])
+    // Fetches the watchlist from the database
+    useEffect(() => {
+      getWatchlist2();
+    }, []);
+
+    async function getWatchlist2() {
+      const { data } = await supabase.from("watchlistAnimotion").select();
+      const userData = data.filter((data) => data.userID === userId);
+      setWatchlist2(userData);
+    }
+
+    // Fetches the watchlist from the local storage
+    // useEffect(()=>{
+    //     localStorage.getItem('watchlist');
+    //     setWatchlist(JSON.parse(localStorage.getItem('watchlist')));
+    // },[])
 
     return(
         <div>
@@ -30,12 +41,10 @@ function Watchlist() {
             <h1 className="browseTitle" id="browse">Watchlist</h1>
             <div className="container">
                 <div class="row">
-                    <div 
-                    // className="col-8"
-                    >
+                    <div>
                         <div className="BrowseAnimeContainer">
                             <div className="alignBrowseAnime">
-                                {watchlist?watchlist.map((anime) => (
+                                {watchlist2?watchlist2.map((anime) => (
                                     <BrowseCard
                                         key={anime.animeId}
                                         id={anime.animeId}
