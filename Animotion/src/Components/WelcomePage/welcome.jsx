@@ -78,9 +78,7 @@ function Welcome() {
           <div>
             <div class="GSInput-grp">
               <input type="text" class="GetSInput" style={{borderColor:{color}}} id="Email" name="Email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)}/>
-              {/* <Link exact to="/signup"> */}
-                <button class="GSInputButton" onClick={clickHandler}>Get Started</button>
-              {/* </Link> */}
+              <button class="GSInputButton" onClick={clickHandler}>Get Started</button>
             </div>
             {ErrMsg && <div className="errMsg" style={{color:"red",display:"flex", flexDirection:"row"}}>{ErrMsg}</div>}
           </div>
