@@ -49,6 +49,7 @@ function Signup() {
           }
         }
       )
+      console.log("email:", formData.email);
       alert("Check your email for verification")
     } 
     catch (error) {
@@ -87,7 +88,7 @@ function Signup() {
             placeholder='Email'
             type="email"
             name="email"
-            value={preEmail}
+            // value={preEmail}
             onChange={handleChange}
             onFocus={handlePreEmail}
             />
