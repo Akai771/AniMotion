@@ -14,6 +14,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 import HistoryIcon from '@mui/icons-material/History';
+import ShuffleRoundedIcon from '@mui/icons-material/ShuffleRounded';
 import { supabase } from "../Signing/supabaseClient";
 
 function ProfileIcon() {
@@ -64,6 +65,21 @@ function ProfileIcon() {
     },
   });
 
+  const [randomAnime, setRandomAnime] = React.useState([]);
+
+  React.useEffect(()=>{
+    axios.get("https://animotion-random-anime.up.railway.app/anime")
+    .then((res) => setRandomAnime(res.data))
+  },[])
+
+  const randomNum = Math.floor(Math.random()*randomAnime.length);
+  const randomAnimeData = randomAnime[randomNum];
+  
+  const handleRandomAnime = () => {
+    navigate(`/details/${randomAnimeData.id}`);
+    window.location.reload();
+  }
+
     return (
       <>
         <div className="ProfileIcon">
@@ -97,6 +113,7 @@ function ProfileIcon() {
               <div className="greetDivider" />
               <Link exact to={"/premium"} style={{textDecoration:"none", color:"#FFDF00"}}><MenuItem><WorkspacePremiumOutlinedIcon style={{fontSize:"1.4rem",marginRight:"0.5rem"}}/> Premium </MenuItem></Link>
               <MenuItem onClick={getGif}><AddAPhotoOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/>Random PFP</MenuItem>
+              <MenuItem onClick={handleRandomAnime}><ShuffleRoundedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Random Anime </MenuItem>
               <Link exact to={"/profile"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><AccountCircleOutlinedIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> My Account </MenuItem></Link>
               <Link exact to={"/watchlist"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><BookmarkBorderIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> Watchlist </MenuItem></Link>
               <Link exact to={"/history"} style={{textDecoration:"none", color:"var(--textColor)"}}><MenuItem><HistoryIcon style={{fontSize:"1.2rem",marginRight:"0.5rem"}}/> History </MenuItem></Link>
