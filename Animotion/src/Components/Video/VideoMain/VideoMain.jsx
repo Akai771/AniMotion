@@ -27,6 +27,7 @@ const VideoMain = () => {
     const [epNo, setEpNo] = useState(histEpisodeNumber);
 
     const navigate = useNavigate();
+    
     const handleOptionChange = (e) => {
         setEpisodeNumber(e.target.value);
         setSelectedOption(e.target.value);
@@ -34,27 +35,24 @@ const VideoMain = () => {
         window.location.reload();
       };
 
-    const handleNextEp = () => {
-        if(epNo>0 && epNo <= episode.length){
-            setEpNo(parseInt(epNo) + 1);
-            console.log(epNo);
-        }
-        else{
+      const handleNextEp = () => {
+        if (epNo >= 1 && epNo < episode.length) {
+            setEpNo(epNo + 1);
+            navigate(`/watch/${id}?epId=${animeData.id + "-" + "episode" + "-" + epNo}`);
+            window.location.reload();
+        } else {
             setEpNo(epNo);
         }
-        navigate(`/watch/${id}?epId=${animeData.id + "-" + "episode" + "-" + epNo}`)
-        window.location.reload()
     }
-
+    
     const handlePrevEp = () => {
-        if(epNo>1 && epNo<=episode.length){
-            setEpNo(parseInt(epNo)-1);
-        }
-        else{
+        if (epNo > 1) {
+            setEpNo(epNo - 1);
+            navigate(`/watch/${id}?epId=${animeData.id + "-" + "episode" + "-" + epNo}`);
+            window.location.reload();
+        } else {
             setEpNo(epNo);
         }
-        setEpisodeId(animeData.id + "-" + "episode" + "-" + epNo);
-        setEpisodeNumber(epNo);
     }
 
     useEffect(()=>{

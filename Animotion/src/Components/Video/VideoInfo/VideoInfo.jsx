@@ -137,7 +137,7 @@ const VideoInfo = () => {
                     <div className="AnimeDescSection">
                         <span className="AnimeDescTitle">Synopsis: </span>
                         <br/>   
-                        <span className="AnimeDesc">{animeData.description}</span>
+                        <span className="AnimeDesc">{addData.description}</span>
                     </div>
                     <br/>
                     <div className="characters">
