@@ -223,6 +223,9 @@ body{
                      var(--sb-track-color);
 }
 
+
+
+
 @media only screen and (max-width:768px) {
     .manga-info-container{
         display: flex;
@@ -254,10 +257,10 @@ body{
     }
 
     .MangaTitle{
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
-    .AnimeInfoTitle{
+    .MangaInfoTitle{
         font-size: .8rem;
     }
 
@@ -266,11 +269,11 @@ body{
     }
 
     .MangaDesc{
-        font-size: .8rem;
+        font-size: .7rem;
     }
 
     .MangaDescTitle{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .watchButton{
@@ -281,8 +284,8 @@ body{
     }
     
     .chapterBoxAlign{
-        max-width: 20rem;
-        max-height: 20rem;
+        max-width: 22rem;
+        max-height: 22rem;
         margin-top: 1rem;
     }
 
