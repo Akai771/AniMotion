@@ -2,6 +2,11 @@
     position: relative;
 }
 
+.carouselImageSize{
+    height:900px;
+    object-fit :cover;
+}
+
 .carouselImage::before{
     content: "";
     background-color: var(--bgColor);
@@ -87,6 +92,11 @@
 }
 
 @media screen and (max-width: 768px) {
+    .carouselImageSize{
+        height:700px;
+        object-fit :cover;
+    }
+
     .carouselImage{
         position: relative;
     }
@@ -118,8 +128,8 @@
         padding: 0 28rem 0 28rem;
         position: absolute;
         text-align: left;
-        top: 50%;
-        transform: translate(2%, -100%);
+        top: 100%;
+        transform: translate(2%, -70%);
     }
     
     .carouselContent h1{

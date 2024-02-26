@@ -18,8 +18,8 @@ function CarouselHome() {
           <Carousel.Item interval={4000}>       
             <div className='carouselImage'>
               <img
-                style={{height:"900px", objectFit:"cover"}}
-                className="d-block w-100"
+                // style={{height:"900px", objectFit:"cover"}}
+                className="d-block w-100 carouselImageSize"
                 src={slide.imageUrl}
                 alt="slider image"
               />
