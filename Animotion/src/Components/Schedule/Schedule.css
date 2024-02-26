@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
+    margin-top: 3rem;
     gap: 3rem;
 }
 
@@ -72,7 +73,6 @@
     align-items: center;
     height: 0.1rem;
     background-color: #232323;
-    margin-bottom: 3rem;
 }
 
 .ScheduleCard{
@@ -185,7 +185,36 @@
 
   @media only screen and (max-width: 768px) {
     .radio-inputs {
-      width: 20rem;
+        padding: 0.25rem;
+        width: 25rem;
+        font-size: 1rem;
+      }
+      
+      .radio-inputs .radio .name {
+        font-size: .6rem;
+        padding: .5rem .5rem;
+      }
+      
+      .radio-inputs .radio input:checked + .name {
+        font-size: .6rem;
+      }
+
+    .scheduleTitle{
+        font-size: 2rem;
+    }
+
+    .scheduleDayTxt{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .scheduleDayTxt2{
+        font-size: 1.5rem;
+    }
+
+    .scheduleDayBtnGrp{
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
     }
     
     .scheduleDayTxt{
@@ -196,4 +225,16 @@
         margin: 1rem 2rem 1rem 2rem;
     }
 
+    .ScheduleCardImg{
+        width: 5rem;
+        height: 7rem;
+    }
+
+    .scheduleTitleTxt{
+        font-size: .9rem;
+    }
+
+    .scheduleTimeTxt{
+        font-size: .6rem;
+    }
   }
