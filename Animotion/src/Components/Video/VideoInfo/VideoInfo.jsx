@@ -14,7 +14,6 @@ import WatchNowButton from "./watchNowButton";
 import RecommendCard from "./recommendCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 
 const VideoInfo = () => {
     const [animeData, setAnimeData] = useState([]);
@@ -68,10 +67,9 @@ const VideoInfo = () => {
         },[id])
 
         useEffect(()=>{
-            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${recommendTitle}`)
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${id.slice(0, 15)}`)
             .then((res) => setRecommend(res.data.results))
-            setRecommendLength(recommend?recommend.length:0);
-        },[recommendTitle])
+        },[id])
 
         useEffect(()=>{
             axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
@@ -101,8 +99,6 @@ const VideoInfo = () => {
         };
     }
 
-    
-
     return(<>
         <Preloader/>
         <Navbar />
@@ -112,7 +108,6 @@ const VideoInfo = () => {
                 <div className="alignVidInfo">
                     <span className="AnimeTitle">{animeData.title}</span>
                     <span className="AnimeTags2"><span className="AnimeTags">{addData?addData.format:"No Data"}</span> | <span className="AnimeTags">{addData?addData.type:"No Data"}</span> | <span className="AnimeTags">{addData?addData.duration:"No Data"}m</span></span>
-                    {/* <span className="AnimeAlternateTitle">Other Names: {addData.title}</span> */}
                     <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"} | {addData.title?addData.title.native:"No Title"}</span></span>
                     <div className="descBoxBtnDiv">
                         <span className="AnimeInfoTitle">Genres: 
@@ -166,19 +161,13 @@ const VideoInfo = () => {
             <div className="recommendedSection">
                     <span className="AnimeTitle2">Recommended for you:</span>
                         <div className="alignRecommendAnime">
-                            {recommendLength>7?
-                            <Slider {...settings}>
-                                {recommend.map((recom) => (
+                                {recommend?recommend.map((recom) => (
                                     <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
+                                    )): 
+                                    recommendPop.map((recom) => (
+                                        <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
                                     ))
                                 }
-                            </Slider>:
-                            <Slider {...settings}>
-                            {recommendPop.map((recom) => (
-                                <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
-                                ))
-                            }
-                        </Slider>}
                         </div>
                 </div>
         </div>

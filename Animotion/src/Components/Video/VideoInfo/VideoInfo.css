@@ -277,6 +277,11 @@
 .alignRecommendAnime{
     width: 100rem;
     max-width: 100rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
 }
 
 .recommendedSection{
