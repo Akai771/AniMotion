@@ -37,42 +37,46 @@ const VideoMain = () => {
 
       const handleNextEp = () => {
         if (epNo >= 1 && epNo < episode.length) {
-            setEpNo(epNo + 1);
-            navigate(`/watch/${id}?epId=${animeData.id + "-" + "episode" + "-" + epNo}`);
+            const newEpNo = epNo + 1;
+            setEpNo(newEpNo);
+            const newEpId = `${id}-episode-${newEpNo}`
+            setEpisodeId(newEpId);
+            navigate(`/watch/${id}?epId=${newEpId}`);
             window.location.reload();
-        } else {
-            setEpNo(epNo);
         }
     }
     
     const handlePrevEp = () => {
         if (epNo > 1) {
-            setEpNo(epNo - 1);
-            navigate(`/watch/${id}?epId=${animeData.id + "-" + "episode" + "-" + epNo}`);
+            const newEpNo = epNo - 1;
+            setEpNo(newEpNo);
+            const newEpId = `${id}-episode-${newEpNo}`
+            setEpisodeId(newEpId);
+            navigate(`/watch/${id}?epId=${newEpId}`);
             window.location.reload();
-        } else {
-            setEpNo(epNo);
-        }
+        } 
     }
 
     useEffect(()=>{
         axios.get(`https://api.anify.tv/search/anime/${id}`)
         .then((res) => setAddData(res.data.results[0]))
-    },[])
+    },[id])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setEpisode(res.data.episodes))
-    },[])
+    },[id])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => setAnimeData(res.data))
-    },[])
+    },[id])
 
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/servers/${episodeId}`)
-        .then((res) => setServer(res.data[0]))
+        .then((res) => {
+            setServer(res.data[0])})
+        .catch((err) => console.error("Error fetching server data:", err))
     },[episodeId])
 
     var specificAnimeID = JSON.parse(localStorage.getItem('history'))
