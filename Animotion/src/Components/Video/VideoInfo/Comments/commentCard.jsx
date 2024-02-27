@@ -2,6 +2,7 @@ import React from "react";
 import "./comment.css";
 import Avatar from '@mui/material/Avatar';
 import { supabase } from "../../../Signing/supabaseClient";
+import { DeleteForeverOutlined } from "@mui/icons-material";
 
 function CommentCard({comment, user, date}) {
     // Delete comment from the database
@@ -28,7 +29,7 @@ function CommentCard({comment, user, date}) {
                 <p className="commentFont">{comment}</p>
             </div>
             <div className="commentDelete">
-                <button className="deleteCommentBtn" onClick={deleteComment}>Delete</button>
+                <button className="deleteCommentBtn" onClick={deleteComment}><DeleteForeverOutlined/>Delete</button>
             </div>
         </div>
     );
