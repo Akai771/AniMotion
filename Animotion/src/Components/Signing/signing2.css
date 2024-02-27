@@ -1,11 +1,11 @@
 .sign{
-    width: 100%;
     height: 100vh;
     background: var(--bgColor2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .signUpTitle{
@@ -262,14 +262,13 @@
     height: 2rem;
   }
 
-  @media all and (max-width: 500px){
+  @media only screen and (max-width: 768px){
     .signUpTitle{
         color: var(--textColor);
         font-family: "Montserrat", sans-serif;
         font-weight: 800;
         font-size: 1.5rem;
         padding-bottom: 1rem;
-    
     }
     
     .signUpCard{
@@ -278,7 +277,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1.5rem;
         border-radius: 1rem;
     }
     
@@ -294,6 +293,7 @@
         flex-direction: column;
         padding-bottom: 1rem;
     }
+
     .textBoxSign label{
         color: var(--secondary-color);
         font-family: "Montserrat", sans-serif;
@@ -393,29 +393,6 @@
         text-decoration: none;
     }
     
-    .resetPassDescDiv{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 22rem;
-        text-align: center;
-    }
-    
-    .resetPassDesc{
-        color: var(--textColor3);
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-size: 0.5rem;
-    }
-    
-    .resetTitle{
-        color: var(--textColor);
-        font-family: "Montserrat", sans-serif;
-        font-weight: 800;
-        font-size: 1.5rem;
-    }
-    
     .alignLabelReset{
         padding-bottom: 0.5rem;
     }
@@ -490,4 +467,32 @@
         padding-bottom: 1rem;
         gap: 0.5rem;
       }
+
+      .loginButtonGrp{
+        display: none; /* Temporarily disabling login buttons*/
+      }
+    
+      .OptionalLoginButton{
+        padding: .5rem 2rem;
+      }
+      
+      .OptionalLoginButton img{
+        width: 1.5rem;
+        height: auto;
+      }
+
+      .resetPassDescDiv{
+        width: 18rem;
+      }
+
+        .resetPassDesc{
+            font-size: 0.6rem;
+        }
+
+        .resetTitle{
+            font-size: 1.5rem;
+        }
+
+        
+    
   }
