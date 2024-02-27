@@ -92,7 +92,8 @@
     align-items: center;
 }
 
-.deleteCommentBtn{
+.deleteCommentVisible{
+    display: flex;
     background-color: transparent;
     color: #FF0000;
     padding: .5rem 1rem;
@@ -102,6 +103,10 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 600;
+}
+
+.deleteCommentHidden{
+    display: none;
 }
 
 .dateFont{

@@ -56,7 +56,7 @@ function Comment({animeId}) {
             </form>
 
             {comments?comments.map((anime) => (
-                <CommentCard user = {anime.userName} comment = {anime.comment} date={anime.created_date}/>
+                <CommentCard key={anime.userId} user = {anime.userName} comment = {anime.comment} date={anime.created_date} userID={anime.userId} onCommentDelete={getComments}/>
                 )):null}
         </div>
     );
