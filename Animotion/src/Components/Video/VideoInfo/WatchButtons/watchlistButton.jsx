@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./VideoInfo.css";
+import "../VideoInfo.css";
 import AddIcon from '@mui/icons-material/Add';
 import DoneIcon from '@mui/icons-material/Done';
-import { supabase } from "../../Signing/supabaseClient";
+import { supabase } from "../../../Signing/supabaseClient";
 
 
 function WatchlistButton({animeId, animeTitle, animeImage}) {

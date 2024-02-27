@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./VideoInfo.css";
+import "../VideoInfo.css";
 
 
 function WatchNowButton({animeId, animeTitle, animeImage}) {
