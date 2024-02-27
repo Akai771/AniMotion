@@ -1,0 +1,112 @@
+.comment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100rem;
+    border-radius: 5px;
+    background-color: #242428;
+    margin-bottom: 5rem;
+}
+
+.commentCard{
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+    padding: 20px 20px 10px 20px;
+    width: 95rem;
+    border-radius: .7rem;
+    background-color: #3A3A3E;
+}
+
+.commentUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: .5rem ;
+}
+
+.commentText{
+    display: flex;
+    flex-wrap: wrap;
+    color: antiquewhite;
+    margin-left: 3.7rem;
+}
+
+.userFont{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.commentFont{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.commentInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+    margin: 1rem 0rem 1rem 5rem;
+    width: 100rem;
+    border-radius: 5px;
+}
+
+.commentPara{
+    background-color: #4C4F57;
+    color: antiquewhite;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    width: 95rem;
+    height: 8rem;
+    border-radius: .7rem;
+}
+
+.commentsBtn{
+    background-color: var(--primary-color);
+    color: white;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.commentDelete{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.deleteCommentBtn{
+    background-color: transparent;
+    color: #FF0000;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.dateFont{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #949494;
+}

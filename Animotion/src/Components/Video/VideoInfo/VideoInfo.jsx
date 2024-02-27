@@ -9,11 +9,12 @@ import Footer from "../../Footer/Footer";
 import Preloader from "../../Preloader/Preloader";
 import CharacterCard from "../VideoMain/characterCard";
 import ReactPlayer from "react-player";
-import WatchlistButton from "./watchlistButton";
-import WatchNowButton from "./watchNowButton";
-import RecommendCard from "./recommendCard";
+import WatchlistButton from "./WatchButtons/watchlistButton";
+import WatchNowButton from "./WatchButtons/watchNowButton";
+import RecommendCard from "./RecommendCard/recommendCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Comment from "./Comments/comment";
 
 const VideoInfo = () => {
     const [animeData, setAnimeData] = useState([]);
@@ -111,7 +112,7 @@ const VideoInfo = () => {
                     <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"} | {addData.title?addData.title.native:"No Title"}</span></span>
                     <div className="descBoxBtnDiv">
                         <span className="AnimeInfoTitle">Genres: 
-                        {animeData.genres?animeData.genres.map((genre) =>{
+                        {addData.genres?addData.genres.map((genre) =>{
                             return(
                                 <button key={genre} className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
                             )
@@ -159,17 +160,21 @@ const VideoInfo = () => {
                 </div>
             </div>
             <div className="recommendedSection">
-                    <span className="AnimeTitle2">Recommended for you:</span>
-                        <div className="alignRecommendAnime">
-                                {recommend?recommend.map((recom) => (
-                                    <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
-                                    )): 
-                                    recommendPop.map((recom) => (
-                                        <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
-                                    ))
-                                }
-                        </div>
-                </div>
+                <span className="AnimeTitle">Recommended for you:</span>
+                    <div className="alignRecommendAnime">
+                        {recommend?recommend.map((recom) => (
+                            <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
+                                )): 
+                            recommendPop.map((recom) => (
+                            <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
+                                ))
+                        }
+                    </div>
+            </div>
+            <div className="commentSection">
+                <span className="AnimeTitle">Comments:</span>
+                <Comment animeId={id}/>
+            </div>
         </div>
         <Footer />
         <ChatbotButton />
