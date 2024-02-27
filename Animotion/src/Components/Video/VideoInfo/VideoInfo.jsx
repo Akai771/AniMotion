@@ -160,7 +160,7 @@ const VideoInfo = () => {
                 </div>
             </div>
             <div className="recommendedSection">
-                <span className="AnimeTitle">Recommended for you:</span>
+                <span className="AnimeTitle">You may also like:</span>
                     <div className="alignRecommendAnime">
                         {recommend?recommend.map((recom) => (
                             <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
@@ -171,7 +171,7 @@ const VideoInfo = () => {
                         }
                     </div>
             </div>
-            <div className="commentSection">
+            <div className="recommendedSection">
                 <span className="AnimeTitle">Comments:</span>
                 <Comment animeId={id}/>
             </div>

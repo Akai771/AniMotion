@@ -115,3 +115,113 @@
     font-weight: 500;
     color: #949494;
 }
+
+@media screen and (max-width: 1368px){
+    .comment{
+        width: 80rem;
+    }
+
+    .commentCard{
+        width: 75rem;
+    }
+
+    .commentUser{
+        padding-bottom: 0;
+    }
+
+    .commentText{
+        margin-left: 3.7rem;
+
+    }
+
+    .commentInputs{
+        margin: 1rem 0rem 1rem 4rem;
+        width: 100%;
+    }
+
+    .commentPara{
+        width: 75rem;
+        font-size: .8rem;
+    }
+
+    .commentPara::placeholder{
+        font-size: .8rem;
+    }
+
+    .commentDelete{
+        justify-content: flex-end;
+    }
+
+    .dateFont{
+        font-size: .7rem;
+    }
+
+    .userFont{
+        font-size: 1.2rem;
+    }
+
+    .commentFont{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .comment{
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .commentCard{
+        width: 100%;
+    }
+
+    .commentUser{
+        padding-bottom: 0;
+    }
+
+    .commentText{
+        margin-left: 3.5rem;
+
+    }
+
+    .commentInputs{
+        margin: 0;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .commentPara{
+        width: 100%;
+        font-size: .8rem;
+    }
+
+    .commentPara::placeholder{
+        font-size: .8rem;
+    }
+
+    .commentsBtn{
+        width: 100%;
+    }
+
+    .commentDelete{
+        padding-left: 10rem;
+    }
+
+    .deleteCommentVisible{
+        width: 100%;
+    }
+
+    .dateFont{
+        font-size: .6rem;
+    }
+
+    .userFont{
+        font-size: 1rem;
+    }
+
+    .commentFont{
+        font-size: .8rem;
+    }
+
+    
+}
