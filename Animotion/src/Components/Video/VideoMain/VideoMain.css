@@ -334,8 +334,9 @@
 
     .AnimeVideoPlayer{
         width: 350px;
-        height: 235px;
-        object-fit: contain;
+        height: 240px;
+        object-fit: cover;
+
     }
 
     .ServerBox{

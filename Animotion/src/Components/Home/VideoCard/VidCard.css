@@ -46,7 +46,7 @@
   object-fit: cover;
 }
 
-.VidCard2 {
+.recentEpCard {
   display: flex;
   flex-direction: column;
   width: 14rem;
@@ -58,37 +58,37 @@
   overflow: visible;
 }
 
-.VidCard2:hover {
+.recentEpCardrecentEp:hover {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
-.VidCard-info2 {
+.recentEp-info {
   padding-top: 5px;
   height: auto;
 }
   
-.vidInfo2{
+.recentEpInfo{
   display: flex;
   flex-direction: row;
   gap: 0.4rem;
 }
 
-.vidInfoCont2{
+.recentEpInfoCont{
   font-size: 0.6rem;
   font-family: "montserrat", sans-serif;
   font-weight: 400;
   color: var(--secondary-color);
 }
 
-.VidCardTitle2{
+.recentEpTitle{
   font-family: "montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.VidImage2{
+.recentEpImage{
   width: 13rem;
   height: 18rem;
   object-fit: cover;
@@ -131,45 +131,45 @@
     object-fit: cover;
   }
 
-  .VidCard2 {
+  .recentEpCard {
     width: 8.5rem;
-    height: 15rem;
+    height: 20rem;
     padding: .4em;
   }
   
-  .VidCard2:hover {
+  .recentEpCard:hover {
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
     cursor: pointer;
   }
   
-  .VidCard-info2 {
+  .recentEp-info {
     padding-top: 1px;
     height: auto;
   }
     
-  .vidInfo2{
+  .recentEpInfo{
     display: flex;
     flex-direction: row;
     gap: 0.4rem;
   }
   
-  .vidInfoCont2{
+  .recentEpInfoCont{
     font-size: 0.4rem;
     font-family: "montserrat", sans-serif;
     font-weight: 400;
     color: var(--secondary-color);
   }
   
-  .VidCardTitle2{
+  .recentEpTitle{
     font-family: "montserrat", sans-serif;
     font-size: 0.7rem;
     font-weight: 600;
   }
   
-  .VidImage2{
-    width: 8rem;
-    height: 12rem;
+  .recentEpImage{
+    width: 10rem;
+    height: 14rem;
     object-fit: cover;
   }
 }

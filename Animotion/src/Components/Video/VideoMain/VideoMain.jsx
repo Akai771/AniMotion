@@ -79,6 +79,8 @@ const VideoMain = () => {
         .catch((err) => console.error("Error fetching server data:", err))
     },[episodeId])
 
+    console.log("Server Data:", server)
+
     var specificAnimeID = JSON.parse(localStorage.getItem('history'))
     if (Array.isArray(specificAnimeID)) {
         var targetAnimeId = id;
