@@ -14,7 +14,8 @@ import FastForwardIcon from '@mui/icons-material/FastForward';
 const VideoMain = () => {
     const {id} = useParams();
     const [searchParams, setSearchParams] = useSearchParams()
-    const histEpisodeId = searchParams.get('epId')
+    const defaultEpisodeId = `${id}-episode-1`
+    const histEpisodeId = searchParams?searchParams.get('epId'): defaultEpisodeId;
     const histEpisodeNumber = histEpisodeId?parseInt(histEpisodeId.split("-").pop()):1
 
     const [animeData, setAnimeData] = useState([]);
@@ -77,7 +78,7 @@ const VideoMain = () => {
         .then((res) => {
             setServer(res.data[0])})
         .catch((err) => console.error("Error fetching server data:", err))
-    },[episodeId])
+    },[episodeId, id])
 
     console.log("Server Data:", server)
 

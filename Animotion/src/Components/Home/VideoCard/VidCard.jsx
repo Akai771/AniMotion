@@ -4,11 +4,12 @@ import "./VidCard.css";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 const VidCard = ({id, title, coverImage, currentEpisode}) => {
+    const redirectEpisodeId = `${id}-episode-${currentEpisode}`
     return (
       <>
         <div class="recentEpCard">
             <div className="recentEpCardImage">
-              <Link exact to={`/watch/${id}`}>
+              <Link exact to={`/watch/${id}?epId=${redirectEpisodeId}`}>
                   <img className="recentEpImage" src={coverImage} alt={title} />
                   <div className="playIcon">
                     <PlayArrowIcon style={{fontSize:"2.8rem"}}/>
