@@ -5,7 +5,7 @@
     height: auto;
     margin: 10px 0;
     padding: 10px;
-    width: 100rem;
+    width: 90rem;
     border-radius: 5px;
     background-color: #242428;
     margin-bottom: 5rem;
@@ -16,7 +16,7 @@
     flex-direction: column;
     margin: 8px 0;
     padding: 20px 20px 10px 20px;
-    width: 95rem;
+    width: 85rem;
     border-radius: .7rem;
     background-color: #3A3A3E;
 }
@@ -56,8 +56,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: .5rem;
-    margin: 1rem 0rem 1rem 5rem;
-    width: 100rem;
+    margin: 1rem 0rem 1rem 1rem;
+    width: 85rem;
     border-radius: 5px;
 }
 
@@ -68,9 +68,10 @@
     font-weight: 600;
     border: none;
     padding: 1rem;
-    width: 95rem;
+    width: 85rem;
     height: 8rem;
     border-radius: .7rem;
+    outline: none;
 }
 
 .commentsBtn{
@@ -118,11 +119,11 @@
 
 @media screen and (max-width: 1368px){
     .comment{
-        width: 80rem;
+        width: 70rem;
     }
 
     .commentCard{
-        width: 75rem;
+        width: 65rem;
     }
 
     .commentUser{
@@ -140,7 +141,7 @@
     }
 
     .commentPara{
-        width: 75rem;
+        width: 65rem;
         font-size: .8rem;
     }
 

@@ -156,7 +156,6 @@ const VideoInfo = () => {
                         <span className="characterTitle2">Trailer:</span>
                         <ReactPlayer className="reactTrailerPlayer" url={addData.trailer?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
                     </div>
-                    <br/><br/>
                 </div>
             </div>
             <div className="recommendedSection">
@@ -171,7 +170,7 @@ const VideoInfo = () => {
                         }
                     </div>
             </div>
-            <div className="recommendedSection">
+            <div className="commentSection">
                 <span className="AnimeTitle">Comments:</span>
                 <Comment animeId={id}/>
             </div>

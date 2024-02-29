@@ -226,7 +226,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .reactTrailerPlayer{
@@ -287,9 +287,19 @@
 .recommendedSection{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+    margin-left: 20rem;
+}
+
+.commentSection{
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 10rem;
+    margin-left: 10rem;
 }
 
 .characterTitle2{
@@ -313,6 +323,10 @@
 
     .characterCardAlign{
         padding-left: 8rem;
+    }
+
+    .commentSection{
+        margin-left: 5rem;
     }
 }
 
@@ -399,6 +413,11 @@
 
     .recommendedSection{
         display: none;
+    }
+
+    .commentSection{
+        margin-bottom: 2rem;
+        margin-left: 0rem;
     }
 
 }
