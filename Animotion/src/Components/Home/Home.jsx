@@ -13,7 +13,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Preloader from "../Preloader/Preloader.jsx";
 import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
 const Home = ({token}) =>{
@@ -22,7 +21,6 @@ const Home = ({token}) =>{
     const [trending, setTrending] = useState([]);
     const [movies, setMovies] = useState([]);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
     var settings = {}
 
     const handleResize = () => {
