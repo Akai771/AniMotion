@@ -59,22 +59,19 @@ const VideoMain = () => {
     }
 
     useEffect(()=>{
+        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/info/${id}`)
+        .then((res) => {
+            setAnimeData(res.data),
+            setEpisode(res.data.episodes)
+        });
+
         axios.get(`https://api.anify.tv/search/anime/${id}`)
-        .then((res) => setAddData(res.data.results[0]))
+        .then((res) => setAddData(res.data.results[0]));
+
     },[id])
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
-        .then((res) => setEpisode(res.data.episodes))
-    },[id])
-
-    useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
-        .then((res) => setAnimeData(res.data))
-    },[id])
-
-    useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/servers/${episodeId}`)
+        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/servers/${episodeId}`)
         .then((res) => {
             setServer(res.data[0])})
         .catch((err) => console.error("Error fetching server data:", err))

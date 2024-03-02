@@ -16,7 +16,8 @@ import "./Browse.css";
 const Browse = () => {
     const [browse, setBrowse] = useState([]);
     const [search, setSearch] = useState("");
-    const [searchTerm, setSearchTerm] = useState("popular");
+    const [searchTerm, setSearchTerm] = useState("anime-list");
+    const [displaySearch, setDisplaySearch] = useState("No Search Yet!");
     const [genres, setGenres] = useState([]);
     const [page, setPage] = useState(1);
     const [genreState, setGenreState] = useState(true);
@@ -50,16 +51,17 @@ const Browse = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSearchTerm(search);
+        setDisplaySearch(search);
         setPage(1);
     }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
+        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/genre/list`)
+        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/genre/list`)
         .then((res) => setGenres(res.data))
     },[])
 
@@ -80,7 +82,7 @@ const Browse = () => {
                         <div class="row">
                             <div>
                                 <div className="BrowseAnimeContainer">
-                                    <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{searchTerm}</span></span>
+                                    <span className="browseAnimeTitle">Search results for : <span className="browseAnimeTitle2">{displaySearch}</span></span>
                                     <div className="alignBrowseAnime">
                                         {browse.map((seasonal) => (
                                                 <BrowseCard key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>

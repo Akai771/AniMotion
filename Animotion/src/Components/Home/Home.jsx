@@ -38,24 +38,34 @@ const Home = ({token}) =>{
     let dataBasedOnScreenSize;
 
     useEffect(()=>{
-        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/recent-episodes")
+        axios.get("https://animotion-consumet-api.vercel-2.app/anime/gogoanime/recent-episodes")
         .then((res) => setRecentEp(res.data.results))
-    },[])
 
-    useEffect(()=>{
-        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/popular")
+        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular")
         .then((res) => setPopular(res.data.results))
-    },[])
 
-    useEffect(()=>{
-        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
+
+        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setTrending(res.data.results))
-    },[])
 
-    useEffect(()=>{
-        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
+        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
     },[])
+
+    // useEffect(()=>{
+    //     axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular")
+    //     .then((res) => setPopular(res.data.results))
+    // },[])
+
+    // useEffect(()=>{
+    //     axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/top-airing")
+    //     .then((res) => setTrending(res.data.results))
+    // },[])
+
+    // useEffect(()=>{
+    //     axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/movies")
+    //     .then((res) => setMovies(res.data.results))
+    // },[])
 
     if (screenWidth < 768) {
         settings = {

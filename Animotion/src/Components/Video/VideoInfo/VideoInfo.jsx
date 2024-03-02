@@ -23,9 +23,7 @@ const VideoInfo = () => {
     const [episodes, setEpisodes] = useState([]);
     const [recommendPop, setRecommendPop] = useState([]);
     const [recommendTitle, setRecommendTitle] = useState("");
-    const [recommendLength, setRecommendLength] = useState(0);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [animeStatus, setAnimeStatus] = useState();
 
     const {id} = useParams();
     const navigate = useNavigate();
@@ -52,30 +50,23 @@ const VideoInfo = () => {
 
     try{
         useEffect(()=>{
-            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
-            .then((res) => setAnimeData(res.data))
-        },[id])
-        
-        useEffect(()=>{
-            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
-            .then((res) => setEpisodes(res.data.episodes))
-        },[id])
+            axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/info/${id}`)
+            .then((res) => {
+                setAnimeData(res.data)
+                setEpisodes(res.data.episodes)
+            })
 
-        useEffect(()=>{
             axios.get(`https://api.anify.tv/search/anime/${id}`)
             .then((res) => setAddData(res.data.results[0]))
             setRecommendTitle(addData.title?addData.title.english:"popular");
-        },[id])
 
-        useEffect(()=>{
-            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${id.slice(0, 15)}`)
+            axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/${id.slice(0, 15)}`)
             .then((res) => setRecommend(res.data.results))
-        },[id])
 
-        useEffect(()=>{
-            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
+            axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular`)
             .then((res) => setRecommendPop(res.data.results))
-        },[])
+
+        },[id])
     }
     catch(err){
         console.log(err);
@@ -112,7 +103,7 @@ const VideoInfo = () => {
                     <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"} | {addData.title?addData.title.native:"No Title"}</span></span>
                     <div className="descBoxBtnDiv">
                         <span className="AnimeInfoTitle">Genres: 
-                        {addData.genres?addData.genres.map((genre) =>{
+                        {animeData.genres?animeData.genres.map((genre) =>{
                             return(
                                 <button key={genre} className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
                             )
@@ -133,7 +124,7 @@ const VideoInfo = () => {
                     <div className="AnimeDescSection">
                         <span className="AnimeDescTitle">Synopsis: </span>
                         <br/>   
-                        <span className="AnimeDesc">{addData.description}</span>
+                        <span className="AnimeDesc">{animeData.description}</span>
                     </div>
                     <br/>
                     <div className="characters">

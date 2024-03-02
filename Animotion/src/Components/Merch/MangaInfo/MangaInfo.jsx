@@ -13,7 +13,7 @@ const MangaInfo = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/info?id=${id}`)
+        axios.get(`https://animotion-consumet-api-2.vercel.app/manga/managreader/info?id=${id}`)
         .then((res) => setMangaData(res.data))
     },[])
 

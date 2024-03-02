@@ -44,7 +44,7 @@ const GenresPage = () => {
     }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/genre/${genreId}?page=${page}`)
+        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/genre/${genreId}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
 

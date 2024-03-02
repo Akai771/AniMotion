@@ -17,7 +17,7 @@ const MangaRead = () => {
     const [chapterData, setChapterData] = useState([]);
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/read?chapterId=${chapId}/${lang}/${chap}`)
+        axios.get(`https://animotion-consumet-api-2.vercel.app/manga/managreader/read?chapterId=${chapId}/${lang}/${chap}`)
         .then((res) => setChapterData(res.data))
     },[chapId])
 
@@ -25,7 +25,6 @@ const MangaRead = () => {
         axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/info?id=${chapId}`)
         .then((res) => setMangaData(res.data))
     },[])
-    console.log(mangaData);
 
     const chapters = [mangaData.chapters];
     const totalChapters = chapters?chapters[0]:"No Data";
