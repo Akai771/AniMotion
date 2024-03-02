@@ -66,20 +66,21 @@ function ProfileIcon() {
   });
 
   const [randomAnime, setRandomAnime] = React.useState([]);
+  const randomPage = Math.floor(Math.random()*95);
+  const randomIndex = Math.floor(Math.random()*randomAnime.length);
 
   React.useEffect(()=>{
-    axios.get("https://animotion-random-anime.up.railway.app/anime")
-    .then((res) => setRandomAnime(res.data))
+    axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/anime-list?page=${randomPage}`)
+    .then((res) => setRandomAnime(res.data.results))
   },[])
 
-  const randomNum = Math.floor(Math.random()*randomAnime.length);
-  const randomAnimeData = randomAnime[randomNum];
-  
+  const randomAnimeData = randomAnime[randomIndex];
+  console.log(randomAnimeData);
+
   const handleRandomAnime = () => {
     navigate(`/details/${randomAnimeData.id}`);
     window.location.reload();
   }
-
     return (
       <>
         <div className="ProfileIcon">
