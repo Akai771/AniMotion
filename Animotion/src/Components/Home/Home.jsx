@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Preloader from "../Preloader/Preloader.jsx";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
 const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
@@ -38,8 +39,8 @@ const Home = ({token}) =>{
     let dataBasedOnScreenSize;
 
     useEffect(()=>{
-        axios.get("https://animotion-consumet-api.vercel-2.app/anime/gogoanime/recent-episodes")
-        .then((res) => setRecentEp(res.data.results))
+        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/recent-episodes")
+        .then((res) => setRecentEp(res.data.results.slice(0, 16)))
 
         axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular")
         .then((res) => setPopular(res.data.results))
@@ -51,21 +52,6 @@ const Home = ({token}) =>{
         axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
     },[])
-
-    // useEffect(()=>{
-    //     axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular")
-    //     .then((res) => setPopular(res.data.results))
-    // },[])
-
-    // useEffect(()=>{
-    //     axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/top-airing")
-    //     .then((res) => setTrending(res.data.results))
-    // },[])
-
-    // useEffect(()=>{
-    //     axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/movies")
-    //     .then((res) => setMovies(res.data.results))
-    // },[])
 
     if (screenWidth < 768) {
         settings = {
@@ -115,7 +101,11 @@ const Home = ({token}) =>{
             </Slider>
         </div>
         <br/><br/> 
-        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
+        <div className="latest-episode-section">
+            <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
+            <Link exact to={`/latest-episodes`} ><button className="view-more-btn">View More<ChevronRightRoundedIcon id="arrow-Icon"/></button></Link>
+        </div>
+        
         <br/>
         <div className="alignCardMargin2">
             {recentEp.map((recentEp) => (

@@ -73,15 +73,47 @@ body{
     transform: scale(0.99);
 }
 
+.view-more-btn{
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6rem;
+    background-color: transparent;
+    border: none;
+    color: var(--textColor3);
+    font-size: .8rem;
+    padding-top: .5rem;
+}
 
-@media only screen and (max-width: 1366px){
+#arrow-Icon{
+    font-size: 1.2rem;
+    color: var(--textColor3);
+    padding-top: .2rem;
+}
+
+.view-more-btn:hover{
+    color: var(--primary-color);
+}
+
+.latest-episode-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.latest-episode-section a{
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1520px){
     .alignHomeItems{
         padding-left: 30px;
     }
 
     .alignCardMargin2{
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         overflow: hidden;
     }
 
@@ -114,6 +146,25 @@ body{
         width: 20rem;
         height: 7rem;
         border-radius: 10px;
+    }
+
+    .view-more-btn{
+        margin-right: 1rem;
+        font-size: .8rem;
+    }
+    .view-more-btn:hover{
+        color: var(--primary-color);
+    }
+
+    #arrow-Icon{
+        font-size: 1.2rem;
+    }
+
+    
+    .latest-episode-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     

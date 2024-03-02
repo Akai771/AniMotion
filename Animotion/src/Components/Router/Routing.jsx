@@ -27,6 +27,7 @@ import Manga from "../Merch/manga";
 import Watchlist from "../Watchlist/watchlist";
 import GenresPage from "../Browse/GenresPage/GenresPage";
 import History from "../History/history";
+import RecentEpisodes from "../Home/RecentEpisodes/recentEpisodes";
 
 
 const Routing = () => {
@@ -58,6 +59,7 @@ const Routing = () => {
           <Route exact path="/forgot-password" element={<ForgotPass/>} />
           <Route exact path="/update-password" element={<ResetPass/>} />
           {token?<Route exact path="/home" element={<Home token={token}/>} />:""}
+          {token?<Route exact path="/latest-episodes" element={<RecentEpisodes token={token}/>} />:""}
           {token?<Route exact path="/hiro" element={<Chatbot/>} />:""}
           {token?<Route exact path="/premium" element={<Premium/>} />:""}
           {token?<Route exact path="/news" element={<NewsBoard/>} />:""}

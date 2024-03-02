@@ -1,0 +1,96 @@
+.genresBtn{
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: var(--textColor2);
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: .9rem;
+    width: 10rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+    text-align: left;
+}
+
+.genresBtn:hover{
+    color: var(--secondary-color);
+}
+
+.browseTitle2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    padding-bottom: 1rem;;
+}
+
+.alignBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+.AddSubtractBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.quantity-input{
+    flex-grow: 2;
+    text-align: center;
+    width: 35px;
+    border: transparent;
+    border-radius: 0px;
+    padding: 10px 5px;
+    color: #ccc;
+    background-color: transparent;
+}
+
+.quantity-input:focus{
+    outline: none;
+}
+
+.add-button{
+    border-radius: 5px 0px 0px 5px; 
+    border: 1px solid #ccc;
+    background-color: var(--bgColor);
+    cursor: pointer;
+    padding: 0px 5px;
+    color: var(--textColor);
+    transition: all .2s ease-in-out;
+}
+.add-button:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: transparent;
+    border: var(--primary-color);
+}
+
+.subtract-button{
+    border-radius: 0px 5px 5px 0px ; 
+    border: 1px solid #ccc;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0px 5px;
+    color: var(--textColor);
+    transition: all .2s ease-in-out;
+}
+
+.subtract-button:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: var(--primary-color);
+}
+
+@media only screen and (max-width: 1368px) {
+    .genresBtn{
+        font-size: .6rem;
+    }
+  }
