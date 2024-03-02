@@ -8,7 +8,7 @@ import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import FlightIcon from '@mui/icons-material/Flight';
 import DevicesIcon from '@mui/icons-material/Devices';
 import TopRedirect from "../TopRedirectButton/TopRedirect";
-import VidCard2 from "../Home/VideoCard/VidCard2";
+import BrowseCard from "../Browse/BrowseCard/BrowseCard";
 import axios from "axios";
 import PremiumCard from "./PremiumCard/PremiumCard.jsx";
 import Slider from "react-slick";
@@ -20,9 +20,12 @@ const Premium = () => {
     const [ftw, setFtw] = useState([]);
 
     useEffect(()=>{
-        axios.get("https://api.anify.tv/seasonal/anime?fields=[id,title,coverImage,currentEpisode,season,duration,format]")
-        .then((res) => setFtw(res.data.trending))
+        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/top-airing")
+        .then((res) => setFtw(res.data.results.slice(0,6))
+        )
     },[])
+
+    console.log(ftw)
 
     return (<>
             <Preloader/>
@@ -50,7 +53,7 @@ const Premium = () => {
                 <br/>
                 <div className="PremiumTrendingAlign">
                         {ftw.slice(0,8).map((seasonal) => (
-                                <VidCard2 key={seasonal.id} title={seasonal.title.english} coverImage={seasonal.coverImage} currentEpisode={seasonal.currentEpisode} duration={seasonal.duration} format={seasonal.format}/>
+                                <BrowseCard key={seasonal.id} id={seasonal.id} title={seasonal.title} coverImage={seasonal.image}/>
                             ))
                         }
                 </div>

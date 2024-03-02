@@ -58,7 +58,7 @@
   overflow: visible;
 }
 
-.recentEpCardrecentEp:hover {
+.recentEpCard:hover {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -67,6 +67,23 @@
 .recentEp-info {
   padding-top: 5px;
   height: auto;
+}
+
+.recentEpTitle{
+  font-family: "montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.recentEpCardImage{
+  width: 12rem;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.recentEpImage{
+  width: 13rem;
+  height: 18rem;
+  object-fit: cover;
 }
   
 .recentEpInfo{
@@ -82,16 +99,48 @@
   color: var(--secondary-color);
 }
 
-.recentEpTitle{
-  font-family: "montserrat", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
+.playIcon{
+  color: var(--textColor);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -1rem;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
 }
 
-.recentEpImage{
-  width: 13rem;
-  height: 18rem;
-  object-fit: cover;
+#playIcon-home{
+  font-size: 2.8rem;
+}
+
+.recentEpCard:hover .playIcon{
+
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.recentEpCard:hover .recentEpImage{
+  text-align: center;
+  opacity: 0.5;
+  filter: blur(1px);
+  transition: 0.5s ease-in-out;
+}
+
+.VidCard1:hover .playIcon{
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.VidCard1:hover .VidImage1{
+  text-align: center;
+  opacity: 0.5;
+  filter: blur(1px);
+  transition: 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 768px){

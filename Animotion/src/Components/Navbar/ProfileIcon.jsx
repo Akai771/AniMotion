@@ -75,8 +75,6 @@ function ProfileIcon() {
   },[])
 
   const randomAnimeData = randomAnime[randomIndex];
-  console.log(randomAnimeData);
-
   const handleRandomAnime = () => {
     navigate(`/details/${randomAnimeData.id}`);
     window.location.reload();

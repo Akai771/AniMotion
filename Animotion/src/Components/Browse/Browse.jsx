@@ -91,6 +91,7 @@ const Browse = () => {
                                     </div>
                                     <div className="pageBtnGrp">
                                         <button className="pageBtn" onClick={handlePrevPage}><KeyboardDoubleArrowLeftIcon/>Prev Page</button>
+                                        <input class="quantity-input" type="text" value={page} disabled/>
                                         <button className="pageBtn" onClick={handleNextPage}>Next Page <KeyboardDoubleArrowRightIcon/></button>
                                     </div>
                                 </div>  
