@@ -1,7 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import {Link, useNavigate} from "react-router-dom";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./genres.css";
 
 const GenresBtn = ({id, title}) => {

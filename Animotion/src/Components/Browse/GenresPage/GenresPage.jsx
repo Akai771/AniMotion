@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import {Link, useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./genres.css";
 import NavBar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
@@ -8,15 +8,12 @@ import ChatbotButton from "../../Chatbot/ChatbotButton/ChatbotButton";
 import TopRedirect from "../../TopRedirectButton/TopRedirect";
 import axios from "axios";
 import BrowseCard from "../BrowseCard/BrowseCard";
-import SearchIcon from '@mui/icons-material/Search';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import Preloader from "../../Preloader/Preloader";
 
 const GenresPage = () => {
     const [browse, setBrowse] = useState([]);
-    const [search, setSearch] = useState("");
-    const [searchTerm, setSearchTerm] = useState("popular");
     const [page, setPage] = useState(1);
     const {genreId} = useParams();
     
@@ -33,20 +30,10 @@ const GenresPage = () => {
         }
     }
 
-    const handleChange = (e) => {
-        setSearch(e.target.value.toLowerCase());
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSearchTerm(search);
-        setPage(1);
-    }
-
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/genre/${genreId}?page=${page}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/genre/${genreId}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
-    },[searchTerm, page])
+    },[genreId, page])
 
     return(<>
         <div>

@@ -7,7 +7,6 @@ import TopRedirect from "../TopRedirectButton/TopRedirect";
 import Preloader from "../Preloader/Preloader";
 import HistoryCard from "./historyCard/historyCard";
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
-import axios from "axios";
 
 
 function History() {

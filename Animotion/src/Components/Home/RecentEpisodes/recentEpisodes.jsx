@@ -31,21 +31,9 @@ const RecentEpisodes = () => {
             setPage(page-1);
         }
     }
-    const [count, setCount] = useState(1);
-    
-
-    function handleChange1() {
-        setCount(count + 1);
-    }
-
-    function handleChange2() {
-        if (count > 1){
-            setCount(count - 1);
-        }
-    }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/recent-episodes?page=${page}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/recent-episodes?page=${page}`)
         .then((res) => setRecentEp(res.data.results))
     },[page])
 

@@ -56,12 +56,12 @@ const Browse = () => {
     }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm, page])
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/genre/list`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/genre/list`)
         .then((res) => setGenres(res.data))
     },[])
 

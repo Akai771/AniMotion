@@ -47,7 +47,6 @@ const VideoInfo = () => {
         const newGenre = genreArray.join("-").toLowerCase();
         navigate(`/genre/${newGenre}`);
     }
-
     try{
         useEffect(()=>{
             axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/info/${id}`)
@@ -90,7 +89,6 @@ const VideoInfo = () => {
             slidesToScroll: 2
         };
     }
-
     return(<>
         <Preloader/>
         <Navbar />
@@ -115,7 +113,6 @@ const VideoInfo = () => {
                     <span className="AnimeInfoTitle">Total Episodes: <span className="AnimeInfo">{animeData.totalEpisodes}</span></span>
                     <span className="AnimeInfoTitle">Rating: <span className="AnimeInfo">{addData?addData.averageRating:"No Data"}</span></span>
                     <span className="AnimeInfoTitle">Season: <span className="AnimeInfo">{addData?addData.season:"No Data"}</span></span>
-                    <span className="AnimeInfoTitle">Country of Origin: <span className="AnimeInfo">{addData?addData.countryOfOrigin:"No Data"}</span></span>
                     <div className="episodeBtnGrp2">
                         <WatchNowButton animeId={animeData.id} animeTitle={animeData.title} animeImage={animeData.image}/>
                         <WatchlistButton animeId={animeData.id} animeTitle={animeData.title} animeImage={animeData.image}/>

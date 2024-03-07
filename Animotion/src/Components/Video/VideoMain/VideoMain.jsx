@@ -71,13 +71,11 @@ const VideoMain = () => {
     },[id])
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/servers/${episodeId}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/servers/${episodeId}`)
         .then((res) => {
             setServer(res.data[0])})
         .catch((err) => console.error("Error fetching server data:", err))
     },[episodeId, id])
-
-    console.log("Server Data:", server)
 
     var specificAnimeID = JSON.parse(localStorage.getItem('history'))
     if (Array.isArray(specificAnimeID)) {

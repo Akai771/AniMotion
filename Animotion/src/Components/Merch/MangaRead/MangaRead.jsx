@@ -17,7 +17,7 @@ const MangaRead = () => {
     const [chapterData, setChapterData] = useState([]);
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/manga/managreader/read?chapterId=${chapId}/${lang}/${chap}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/read?chapterId=${chapId}/${lang}/${chap}`)
         .then((res) => setChapterData(res.data))
     },[chapId])
 

@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 
 const Home = ({token}) =>{
+
     const [recentEp, setRecentEp] = useState([]);
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
@@ -37,17 +38,17 @@ const Home = ({token}) =>{
     let dataBasedOnScreenSize;
 
     useEffect(()=>{
-        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/recent-episodes")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/recent-episodes")
         .then((res) => setRecentEp(res.data.results.slice(0, 16)))
 
-        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/popular")
         .then((res) => setPopular(res.data.results))
 
 
-        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/top-airing")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setTrending(res.data.results))
 
-        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/movies")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
     },[])
 
@@ -103,7 +104,6 @@ const Home = ({token}) =>{
             <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
             <Link exact to={`/latest-episodes`} ><button className="view-more-btn">View More<ChevronRightRoundedIcon id="arrow-Icon"/></button></Link>
         </div>
-        
         <br/>
         <div className="alignCardMargin2">
             {recentEp.map((recentEp) => (

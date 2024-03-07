@@ -20,7 +20,7 @@ const Premium = () => {
     const [ftw, setFtw] = useState([]);
 
     useEffect(()=>{
-        axios.get("https://animotion-consumet-api-2.vercel.app/anime/gogoanime/top-airing")
+        axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setFtw(res.data.results.slice(0,6))
         )
     },[])

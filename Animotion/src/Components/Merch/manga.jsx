@@ -25,7 +25,7 @@ const Manga = () => {
     }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/manga/managreader/${searchTerm}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/${searchTerm}`)
         .then((res) => setBrowse(res.data.results))
     },[searchTerm])
 

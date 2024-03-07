@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import "./Chatbotbutton.css";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ class ChatbotButton extends React.Component {
   render() {
     return (
       <>
-        <Link to="/hiro">
+        <Link to="/hiro" >
             <div className="ChatAlnBtn">
                 <button class="ChatBtn">
                     <span class="material-symbols-outlined robotLgo" style={{color:"white"}}>
