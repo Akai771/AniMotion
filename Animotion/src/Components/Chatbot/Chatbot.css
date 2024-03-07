@@ -47,10 +47,12 @@
     color: white;
     position: relative;
     padding-top: 5rem;
-    height: 75rem;
-    max-height: 75rem;
+    min-height: 72rem;
+    /* max-height: 75rem; */
+    height:72rem;
     width: 90rem;
     max-width: 90rem ;
+    overflow: hidden;
   }
 
   .ChatDesc{

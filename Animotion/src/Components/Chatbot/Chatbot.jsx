@@ -1,22 +1,37 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import './Chatbot.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import NavBar from '../Navbar/Navbar';
 import Preloader from '../Preloader/Preloader';
-
-const watchlist = localStorage.getItem("watchlist");
-const watchlistArray = JSON.parse(watchlist)
-const displayedWatchlist = watchlistArray?watchlistArray.map((item) => {
-  return item.animeTitle
-}).join(" ,"):"No Anime in Watchlist";
-
-const API_KEY = import.meta.env.VITE_OPENAI_API;
-const systemMessage = {
-  "role": "system", "content": `You are Hiro - AI Chatbot hosted on Animotion (an Anime Streaming Platform). You can ask me anything about Anime and Manga. This website is made by Akai as his final year project and is still in its development phase. On this website, you can read Manga, check Anime schedules, and watch Anime by adding them to your watchlist. For your watchlist, you currently have: ${displayedWatchlist}. There is also a fun feature of Random PFP Generator. For the source code, you can check 'https://github.com/Akai771/AniMotion'. I will try my best to answer your questions. Answer only questions related to anime and manga please. Thank you!`
-}
+import { supabase } from '../Signing/supabaseClient';
 
 function Chatbot() {
+  const [watchlist, setWatchlist] = useState([]);
+  const token = localStorage.getItem('token');
+  const tokenData = JSON.parse(token);
+  const userId = tokenData.user.id
+
+  // Fetches the watchlist from the database
+  useEffect(() => {
+    getWatchlist();
+  }, []);
+
+  async function getWatchlist() {
+    const { data } = await supabase.from("watchlistAnimotion").select();
+    const userData = data.filter((data) => data.userID === userId);
+    setWatchlist(userData);
+  }
+  
+  const displayedWatchlist = watchlist?watchlist.map((item) => {
+    return item.animeTitle
+  }).join(" ,"):"No Anime in Watchlist";
+
+  const API_KEY = import.meta.env.VITE_OPENAI_API;
+  const systemMessage = {
+    "role": "system", "content": `You are Hiro - AI Chatbot hosted on Animotion (an Anime Streaming Platform). You can ask me anything about Anime and Manga. This website is made by Akai as his final year project and is still in its development phase. On this website, you can read Manga, check Anime schedules, and watch Anime by adding them to your watchlist. For your watchlist, you currently have: ${displayedWatchlist} . There is also a fun feature of Random PFP Generator. For the source code, you can check 'https://github.com/Akai771/AniMotion'. I will try my best to answer your questions. Answer only questions related to anime and manga please. Thank you!`
+  }
+
   const [messages, setMessages] = useState([
     {
       message: "Hello, I'm Hiro!",
