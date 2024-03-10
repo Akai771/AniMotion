@@ -59,10 +59,10 @@ const VideoInfo = () => {
             .then((res) => setAddData(res.data.results[0]))
             setRecommendTitle(addData.title?addData.title.english:"popular");
 
-            axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/${id.slice(0, 15)}`)
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${id.slice(0, 15)}`)
             .then((res) => setRecommend(res.data.results))
 
-            axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/popular`)
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
             .then((res) => setRecommendPop(res.data.results))
 
         },[id])

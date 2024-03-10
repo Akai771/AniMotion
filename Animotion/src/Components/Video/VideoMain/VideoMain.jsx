@@ -59,7 +59,7 @@ const VideoMain = () => {
     }
 
     useEffect(()=>{
-        axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/info/${id}`)
+        axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
         .then((res) => {
             setAnimeData(res.data),
             setEpisode(res.data.episodes)
