@@ -7,7 +7,7 @@ import axios from "axios";
 const MangaCard = ({id, title, coverImage, vidUrl}) => {
   const [mangaTitle, setMangaTitle] = React.useState([]);
   useEffect(()=>{
-    axios.get(`https://animotion-consumet-api-2.vercel.app/manga/managreader/${title}`)
+    axios.get(`https://animotion-consumet-api.vercel.app/manga/managreader/${title}`)
       .then((res) => setMangaTitle(res.data.results))
     },[title])
     const mangaImage = mangaTitle[0];

@@ -49,7 +49,7 @@ const VideoInfo = () => {
     }
     try{
         useEffect(()=>{
-            axios.get(`https://animotion-consumet-api-2.vercel.app/anime/gogoanime/info/${id}`)
+            axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/info/${id}`)
             .then((res) => {
                 setAnimeData(res.data)
                 setEpisodes(res.data.episodes)
@@ -96,56 +96,57 @@ const VideoInfo = () => {
             <div className="video-info-container">
                 <img src={animeData.image?animeData.image:"https://via.placeholder.com/150x190"} alt="Anime Cover Image" className="video-info-cover-image" id="animeImage"/>
                 <div className="alignVidInfo">
-                    <span className="AnimeTitle">{animeData.title}</span>
+                    <div className="animeDetails">
+                        <div className="animeDetailsDiv">
+                        <span className="AnimeTitle">{animeData.title}</span>
                     <span className="AnimeTags2"><span className="AnimeTags">{addData?addData.format:"No Data"}</span> | <span className="AnimeTags">{addData?addData.type:"No Data"}</span> | <span className="AnimeTags">{addData?addData.duration:"No Data"}m</span></span>
                     <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"} | {addData.title?addData.title.native:"No Title"}</span></span>
-                    <div className="descBoxBtnDiv">
-                        <span className="AnimeInfoTitle">Genres: 
-                        {animeData.genres?animeData.genres.map((genre) =>{
-                            return(
-                                <button key={genre} className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
-                            )
-                        }):"No Data"} </span>
-                    </div>
-                    <span className="AnimeInfoTitle">Format: <span className="AnimeInfo">{animeData.subOrDub}</span></span>
-                    <span className="AnimeInfoTitle">Release Date: <span className="AnimeInfo">{animeData.releaseDate}</span></span>
-                    <span className="AnimeInfoTitle">Status: <span className="AnimeInfo">{animeData.status}</span></span>
-                    <span className="AnimeInfoTitle">Total Episodes: <span className="AnimeInfo">{animeData.totalEpisodes}</span></span>
-                    <span className="AnimeInfoTitle">Rating: <span className="AnimeInfo">{addData?addData.averageRating:"No Data"}</span></span>
-                    <span className="AnimeInfoTitle">Season: <span className="AnimeInfo">{addData?addData.season:"No Data"}</span></span>
-                    <div className="episodeBtnGrp2">
+                            <div className="descBoxBtnDiv">
+                                <span className="AnimeInfoTitle">Genres: 
+                                {animeData.genres?animeData.genres.map((genre) =>{
+                                    return(
+                                        <button key={genre} className="descBoxBtn" onClick={()=>handleGenreRedirect(genre)}>{genre}</button>
+                                    )
+                                }):"No Data"} </span>
+                            </div>
+                            <span className="AnimeInfoTitle">Format: <span className="AnimeInfo">{animeData.subOrDub}</span></span>
+                            <span className="AnimeInfoTitle">Release Date: <span className="AnimeInfo">{animeData.releaseDate}</span></span>
+                            <span className="AnimeInfoTitle">Status: <span className="AnimeInfo">{animeData.status}</span></span>
+                            <span className="AnimeInfoTitle">Total Episodes: <span className="AnimeInfo">{animeData.totalEpisodes}</span></span>
+                            <span className="AnimeInfoTitle">Rating: <span className="AnimeInfo">{addData?addData.averageRating:"No Data"}</span></span>
+                            <span className="AnimeInfoTitle">Season: <span className="AnimeInfo">{addData?addData.season:"No Data"}</span></span>
+                            <br/>
+                            <div className="episodeBtnGrp2">
                         <WatchNowButton animeId={animeData.id} animeTitle={animeData.title} animeImage={animeData.image}/>
                         <WatchlistButton animeId={animeData.id} animeTitle={animeData.title} animeImage={animeData.image}/>
                     </div>
-                    <br/>
+                        </div>
+                        <div className="trailerSection">
+                            <ReactPlayer width="400px" height="225px" url={addData.trailer?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
+                        </div>
+                    </div>
                     <div className="AnimeDescSection">
                         <span className="AnimeDescTitle">Synopsis: </span>
                         <br/>   
                         <span className="AnimeDesc">{animeData.description}</span>
                     </div>
-                    <br/>
-                    <div className="characters">
-                        <span className="characterTitle2">Characters:</span>
-                        <div className="characterCardAlign">
-                            {addData.characters?
-                            <>
-                                <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[0].name:"No Data"}/>
-                                <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[1].name:"No Data"}/>
-                                <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[2].name:"No Data"}/>
-                                <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[3].name:"No Data"}/>
-                                <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[4].name:"No Data"}/>
-                                <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[5].name:"No Data"}/>
-                            </>
-                            :"No Data"}
+                        <div className="characters">
+                            <span className="characterTitle2">Characters:</span>
+                            <div className="characterCardAlign">
+                                {addData.characters?
+                                <>
+                                    <CharacterCard image={addData.characters?addData.characters[0].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[0].name:"No Data"}/>
+                                    <CharacterCard image={addData.characters?addData.characters[1].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[1].name:"No Data"}/>
+                                    <CharacterCard image={addData.characters?addData.characters[2].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[2].name:"No Data"}/>
+                                    <CharacterCard image={addData.characters?addData.characters[3].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[3].name:"No Data"}/>
+                                    <CharacterCard image={addData.characters?addData.characters[4].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[4].name:"No Data"}/>
+                                    <CharacterCard image={addData.characters?addData.characters[5].image:"https://via.placeholder.com/150x190"} c_name={addData.characters?addData.characters[5].name:"No Data"}/>
+                                </>
+                                :"No Data"}
+                            </div>
                         </div>
                     </div>
-                    <br/><br/>
-                    <div className="trailerSection">
-                        <span className="characterTitle2">Trailer:</span>
-                        <ReactPlayer className="reactTrailerPlayer" url={addData.trailer?addData.trailer:"https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran"} title="YouTube video player" />
-                    </div>
                 </div>
-            </div>
             <div className="recommendedSection">
                 <span className="AnimeTitle">You may also like:</span>
                     <div className="alignRecommendAnime">
