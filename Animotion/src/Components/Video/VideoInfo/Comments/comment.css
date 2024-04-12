@@ -5,7 +5,7 @@
     height: auto;
     margin: 10px 0;
     padding: 10px;
-    width: 90rem;
+    width: 97rem;
     border-radius: 5px;
     background-color: #242428;
     margin-bottom: 5rem;
@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: column;
     margin: 8px 0;
-    padding: 20px 20px 10px 20px;
-    width: 85rem;
+    padding: 10px 10px 10px 20px;
+    width: 92rem;
     border-radius: .7rem;
     background-color: #3A3A3E;
 }
@@ -57,7 +57,7 @@
     align-items: flex-start;
     gap: .5rem;
     margin: 1rem 0rem 1rem 1rem;
-    width: 85rem;
+    width: 92rem;
     border-radius: 5px;
 }
 
@@ -68,7 +68,7 @@
     font-weight: 600;
     border: none;
     padding: 1rem;
-    width: 85rem;
+    width: 92rem;
     height: 8rem;
     border-radius: .7rem;
     outline: none;
@@ -117,13 +117,34 @@
     color: #949494;
 }
 
-@media screen and (max-width: 1368px){
+.CommentsDisplaySec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    max-height: 30rem;
+    margin: 0;
+    box-sizing: border-box;
+    --sb-track-color: #242428;
+    --sb-thumb-color: #86ff84;
+    --sb-size: 14px;
+
+    scrollbar-color: var(--sb-thumb-color) 
+                     var(--sb-track-color);
+
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+}
+
+@media screen and (max-width: 1600px){
     .comment{
-        width: 70rem;
+        width: 83rem;
     }
 
     .commentCard{
-        width: 65rem;
+        width: 80rem;
+        min-height: 5rem;
+        height: auto;
     }
 
     .commentUser{
@@ -141,7 +162,7 @@
     }
 
     .commentPara{
-        width: 65rem;
+        width: 79.5rem;
         font-size: .8rem;
     }
 
@@ -154,19 +175,24 @@
     }
 
     .dateFont{
-        font-size: .7rem;
+        font-size: .6rem;
     }
 
     .userFont{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .commentFont{
-        font-size: 1rem;
+        font-size: .8rem;
+    }
+
+    .CommentsDisplaySec{
+        padding-left: 2.5rem;
+        padding-right: 1rem;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 950px){
     .comment{
         width: 23rem;
         padding: 1.5rem;
@@ -224,5 +250,8 @@
         font-size: .8rem;
     }
 
-    
+    .CommentsDisplaySec{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

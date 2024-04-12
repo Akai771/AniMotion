@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
 }
 
@@ -219,8 +219,9 @@
     background-color: #232323;
     border-radius: 1rem;
     padding: 2rem;
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
     margin-bottom: 2rem;
+    width: 90rem;
 }
 
 .descBoxBtnDiv{
@@ -278,8 +279,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 5rem;
-    margin-left: 20rem;
+    margin: 2rem 0 5rem 24rem;
 }
 
 .commentSection{
@@ -287,8 +287,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 10rem;
-    margin-left: 10rem;
+    margin-top: 2rem;
 }
 
 .characterTitle2{

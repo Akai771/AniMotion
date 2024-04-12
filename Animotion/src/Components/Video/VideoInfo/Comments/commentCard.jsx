@@ -4,11 +4,18 @@ import Avatar from '@mui/material/Avatar';
 import { supabase } from "../../../Signing/supabaseClient";
 import { DeleteForeverOutlined } from "@mui/icons-material";
 
-function CommentCard({comment, user, userID, date, onCommentDelete}) {
+function CommentCard({comment, user, userID, date, onCommentDelete, pfp}) {
     const token = localStorage.getItem('token');
     const tokenData = JSON.parse(token);
     const userId = tokenData.user.id
     const [commentDisplay, setCommentDisplay] = useState(false);
+
+    if (user === "undefined undefined"){
+        user = "Anonymous";
+    }
+    else{
+        user = user;
+    }
 
     // Check if the user is the same as the comment user
     useEffect(() => {
@@ -35,7 +42,7 @@ function CommentCard({comment, user, userID, date, onCommentDelete}) {
     return (
         <div key={userID} className="commentCard">
             <div className="commentUser">
-                <Avatar alt="Pfp" src="https://via.placeholder.com/150x190" />
+                <Avatar alt="Pfp" src={pfp} />
                 <span className="userFont" >{user}</span>
                 <span className="dateFont">{date}</span>
             </div>

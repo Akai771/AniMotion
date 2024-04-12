@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
@@ -30,12 +30,23 @@ function ProfileIcon() {
       'X-RapidAPI-Host': 'any-anime.p.rapidapi.com'
     }
   };
-  const [pfp, setPfp] = React.useState("https://res.cloudinary.com/anyanime/image/upload/anime-icegif-11Kurizu9.gif");
+  const [pfp, setPfp] = useState("https://via.placeholder.com/150");
+
+  useEffect(() => {
+    if(localStorage.getItem("pfp")){
+      setPfp(localStorage.getItem("pfp"));
+    }
+    else{
+      getGif();
+    }
+  },[])
+
 
   async function getGif(){
     try {
       const response = await axios.request(options);
       setPfp(response.data.images[0]);
+      localStorage.setItem("pfp", response.data.images[0]);
     } catch (error) {
       console.error(error);
     }
@@ -49,7 +60,7 @@ function ProfileIcon() {
 		navigate("/signin");
 	}
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleOpenUserMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -74,6 +85,7 @@ function ProfileIcon() {
     .then((res) => setRandomAnime(res.data.results))
   },[])
 
+  
   const randomAnimeData = randomAnime[randomIndex];
   const handleRandomAnime = () => {
     navigate(`/details/${randomAnimeData.id}`);

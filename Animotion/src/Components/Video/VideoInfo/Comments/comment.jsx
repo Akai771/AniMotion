@@ -12,6 +12,7 @@ function Comment({animeId}) {
     const userId = tokenData.user.id
     const userNameCont = tokenData.user.user_metadata;
     const userName = userNameCont.fname + " " + userNameCont.lname;
+    const userPfp = localStorage.getItem("pfp");
 
     const currentDate = moment();
     const formattedDate = currentDate.format('YYYY/MM/DD');
@@ -27,7 +28,7 @@ function Comment({animeId}) {
     //Post comment to the database
     async function postComment(comment){
         const { data, error } = await supabase.from('comments').insert([
-            { animeID: animeId, userId: userId, userName: userName, comment: comment, created_date: formattedDate}
+            { animeID: animeId, userId: userId, userName: userName, comment: comment, created_date: formattedDate, userPfp: userPfp}
         ]);
         if (error) {
             console.log("Error posting comment: ", error);
@@ -54,10 +55,11 @@ function Comment({animeId}) {
                 <textarea className="commentPara" placeholder="Add a public comment..."></textarea>
                 <button className="commentsBtn" type="submit">Comment</button>
             </form>
-
-            {comments?comments.map((anime) => (
-                <CommentCard key={anime.userId} user = {anime.userName} comment = {anime.comment} date={anime.created_date} userID={anime.userId} onCommentDelete={getComments}/>
+            <div className="CommentsDisplaySec">
+                {comments?comments.map((anime) => (
+                    <CommentCard key={anime.id} user = {anime.userName} comment = {anime.comment} date={anime.created_date} userID={anime.userId} onCommentDelete={getComments} pfp={anime.userPfp}/>
                 )):null}
+            </div>
         </div>
     );
 }

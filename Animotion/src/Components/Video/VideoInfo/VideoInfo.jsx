@@ -100,7 +100,7 @@ const VideoInfo = () => {
                         <div className="animeDetailsDiv">
                         <span className="AnimeTitle">{animeData.title}</span>
                     <span className="AnimeTags2"><span className="AnimeTags">{addData?addData.format:"No Data"}</span> | <span className="AnimeTags">{addData?addData.type:"No Data"}</span> | <span className="AnimeTags">{addData?addData.duration:"No Data"}m</span></span>
-                    <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"} | {addData.title?addData.title.native:"No Title"}</span></span>
+                    <span className="AnimeInfoTitle">Other Titles: <span className="AnimeInfo2"> {addData.title?addData.title.english:"No Title"} | {addData.title?addData.title.romaji:"No Title"}</span></span>
                             <div className="descBoxBtnDiv">
                                 <span className="AnimeInfoTitle">Genres: 
                                 {animeData.genres?animeData.genres.map((genre) =>{
@@ -130,8 +130,8 @@ const VideoInfo = () => {
                         <br/>   
                         <span className="AnimeDesc">{animeData.description}</span>
                     </div>
-                        <div className="characters">
-                            <span className="characterTitle2">Characters:</span>
+                    <div className="characters">
+                        <span className="characterTitle2">Characters:</span>
                             <div className="characterCardAlign">
                                 {addData.characters?
                                 <>
@@ -149,19 +149,19 @@ const VideoInfo = () => {
                 </div>
             <div className="recommendedSection">
                 <span className="AnimeTitle">You may also like:</span>
-                    <div className="alignRecommendAnime">
-                        {recommend?recommend.slice(0,14).map((recom) => (
-                            <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
-                                )): 
-                            recommendPop.map((recom) => (
-                            <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
-                                ))
-                        }
-                    </div>
-            </div>
-            <div className="commentSection">
-                <span className="AnimeTitle">Comments:</span>
-                <Comment animeId={id}/>
+                <div className="alignRecommendAnime">
+                    {recommend?recommend.slice(0,14).map((recom) => (
+                        <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
+                            )): 
+                        recommendPop.map((recom) => (
+                        <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
+                            ))
+                    }
+                </div>
+                <div className="commentSection">
+                    <span className="AnimeTitle">Comments:</span>
+                    <Comment animeId={id}/>
+                </div>
             </div>
         </div>
         <Footer />

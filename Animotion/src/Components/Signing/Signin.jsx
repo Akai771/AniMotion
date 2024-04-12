@@ -98,11 +98,11 @@ function Signin({setToken}) {
           </div>
           <button type='submit' className='signUpButton'>Login</button>
         </form>
-        <div className='loginButtonGrp'>
+        {/* <div className='loginButtonGrp'>
           <button className='OptionalLoginButton' onClick={handleGoogleLogin}><img src="https://i.postimg.cc/85YqH1P0/white-google-logo.png" disabled/></button>
           <button className='OptionalLoginButton' onClick={handleFacebookLogin}><img src="https://i.postimg.cc/DzTpdxkL/facebook-icon-white-png.png" disabled/></button>
           <button className='OptionalLoginButton' onClick={handleDiscordLogin}><img src="https://i.postimg.cc/bwFBX5Lk/discord-white-icon.webp" disabled/></button>
-        </div>
+        </div> */}
           <span className='signLink'>Don't have a account? <Link exact to="/signup">Sign Up</Link></span>
           <span className='signLink'><Link exact to="/forgot-password">Forgot Password?</Link></span>
       </div>
