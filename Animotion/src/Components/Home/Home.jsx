@@ -56,7 +56,6 @@ const Home = ({token}) =>{
 
 
     const contWatching = JSON.parse(localStorage.getItem("history_alt"));
-    console.log(contWatching.reverse());
 
 
     if (screenWidth < 768) {
@@ -149,7 +148,7 @@ const Home = ({token}) =>{
         <div className="alignCardMargin3">
             {contWatching?contWatching.slice(0,5).map((cont) => (
                 <ContWatchingCard key={cont.animeId} id={cont.animeId} title={cont.animeTitle} coverImage={cont.animeImage} currentEpisode={cont.animeEpisodeId}/>
-                )): "Start Watching to see your history here!"
+                )): <span className="contWatchingAlert">Start Watching to see your history here!</span>
             }
         </div>
 
