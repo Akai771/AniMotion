@@ -82,6 +82,7 @@
     align-items: flex-start;
     margin: 1rem 10rem 1rem 10rem;
     background-color: #0f0f0f;
+    transition: all 0.2s ease-in-out;
 }
 
 .ScheduleCard:hover{

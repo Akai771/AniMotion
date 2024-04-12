@@ -14,14 +14,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Preloader from "../Preloader/Preloader.jsx";
 import { Link } from "react-router-dom";
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
+import TrendingCard from "./VideoCard/TrendingCard/TrendingCard";
 
 const Home = ({token}) =>{
-
     const [recentEp, setRecentEp] = useState([]);
     const [popular, setPopular] = useState([]);
     const [trending, setTrending] = useState([]);
     const [movies, setMovies] = useState([]);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    var count
     var settings = {}
 
     const handleResize = () => {
@@ -79,6 +80,38 @@ const Home = ({token}) =>{
             slidesToScroll: 2
         };
     }
+
+    let settings2
+    if (screenWidth < 960) {
+        settings2 = {
+            dots: true,
+            infinite: false,
+            speed: 400,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+        };
+    }
+    else if (screenWidth < 1600) {
+        settings2 = {
+            dots: true,
+            infinite: false,
+            speed: 400,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            swipeToSlide: true,
+        };
+    } 
+    else {
+        settings2 = {
+            dots: false,
+            infinite: false,
+            speed: 400,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+        };
+    }
     
     return(<>
 
@@ -89,17 +122,20 @@ const Home = ({token}) =>{
     </div>
     <section className="alignHomeItems1 popSect">
         <br/>
-        <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Trending</h3></div>
-        <br/>
+        <div class="vl"><h3 className="SectionTitle">Trending</h3></div>
         <div className="alignCardMargin"> 
-            <Slider {...settings}>
-                {popular.map((popular) => (
-                    <VidCard2 key={popular.id} id={popular.id} title={popular.title} coverImage={popular.image} />
+            <Slider {...settings2}>
+                {trending.slice(0,10).map((trend, index) => (
+                    count = index + 1,
+                    console.log(count),
+                    <TrendingCard key={trend.id} id={trend.id} title={trend.title} coverImage={trend.image} type={count} />
                     ))
                 }
             </Slider>
         </div>
-        <br/><br/> 
+
+        <div className="horizontal-Line1" />
+
         <div className="latest-episode-section">
             <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Latest Episodes</h3></div>
             <Link exact to={`/latest-episodes`} ><button className="view-more-btn">View More<ChevronRightRoundedIcon id="arrow-Icon"/></button></Link>
@@ -111,7 +147,9 @@ const Home = ({token}) =>{
                 ))
             }
         </div>
-        <br/><br/>
+
+        <div className="horizontal-Line1" />
+
         <div className="AnimePromotion">
             <Link to="/details/ore-dake-level-up-na-ken">
                 <img
@@ -121,7 +159,9 @@ const Home = ({token}) =>{
                 />
             </Link>
         </div>
-        <br/><br/>
+
+        <div className="horizontal-Line1" />
+
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>New on Animotion</h3></div>
         <br/>
         <div className="alignCardMargin">
@@ -132,7 +172,9 @@ const Home = ({token}) =>{
                 }
         </Slider>
         </div>
-        <br/><br/>
+        
+        <div className="horizontal-Line1" />
+
         <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Movies</h3></div>
         <br/>
         <div className="alignCardMargin">

@@ -1,0 +1,124 @@
+.trendingCard {
+    display: flex;
+    flex-direction: row;
+    width: 17rem;
+    height: 24rem;
+    background: var(--bgColor2);
+    color: #ffffff  ;
+    position: relative;
+    overflow: visible;
+    /* border: 1px solid red; */
+  }
+
+  .trendingLink{
+    text-decoration: none;
+  }
+
+.trendingCard:hover {
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.trendingCard-Info {
+    padding-top: 5px;
+    height: auto;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.trendingTitleAlign{
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trendingCardImage {
+    width: 13rem;
+    object-fit: cover;
+}
+
+.trendingTitle{
+    font-family: "montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--textColor);
+}
+
+.trendingCardRank{
+    font-family: "montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+}
+
+.trendingImage{
+    width: 17rem;
+    height: 24rem;
+    object-fit: cover;
+}
+  
+  .playIcon2{
+    color: var(--textColor);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 3.5rem;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  #playIcon2-home{
+    font-size: 2.8rem;
+  }
+  
+  .trendingCard:hover .playIcon2{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .trendingCard:hover .trendingImage{
+    text-align: center;
+    opacity: 0.5;
+    /* filter: blur(2px); */
+    filter: saturate(.5);
+    transition: 0.5s ease-in-out;
+  }
+
+@media only screen and (max-width: 950px){
+    .trendingCard{
+        width: 15rem;
+        height: 20rem;
+    }
+
+    .trendingCard-Info{
+        width: 3rem;
+    }
+
+    .trendingCardImage{
+        width: 11rem;
+    }
+
+    .trendingTitle{
+        font-size: 1.2rem;
+    }
+
+    .trendingCardRank{
+        font-size: 2.5rem;
+    }
+
+    .trendingImage{
+        width: 15rem;
+        height: 20rem;
+    }
+    
+}

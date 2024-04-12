@@ -1,6 +1,7 @@
 .newsBG{
     background-color: var(--bgColor2);
     min-height: 100vh;
+    height: auto;
 }
 
 .alignNewsBoard{
@@ -70,13 +71,13 @@
     margin: 0 0 1rem 0;
 }
 
-@media only screen and (max-width:1366px){
+@media only screen and (max-width:1600px){
     .newsCardAlign{
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:950px){
     .newsCardAlign{
         grid-template-columns: repeat(1, 1fr);
         padding: 1rem;

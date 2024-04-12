@@ -150,7 +150,7 @@ const VideoInfo = () => {
             <div className="recommendedSection">
                 <span className="AnimeTitle">You may also like:</span>
                     <div className="alignRecommendAnime">
-                        {recommend?recommend.map((recom) => (
+                        {recommend?recommend.slice(0,14).map((recom) => (
                             <RecommendCard key={recom.id} id={recom.id} title={recom.title} image={recom.image}/>
                                 )): 
                             recommendPop.map((recom) => (

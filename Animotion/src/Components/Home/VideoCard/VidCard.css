@@ -11,7 +11,7 @@
 }
 
 .VidCard1:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -59,7 +59,7 @@
 }
 
 .recentEpCard:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -127,7 +127,7 @@
 .recentEpCard:hover .recentEpImage{
   text-align: center;
   opacity: 0.5;
-  filter: blur(1px);
+  filter: blur(2px);
   transition: 0.5s ease-in-out;
 }
 
@@ -139,7 +139,7 @@
 .VidCard1:hover .VidImage1{
   text-align: center;
   opacity: 0.5;
-  filter: blur(1px);
+  filter: blur(2px);
   transition: 0.5s ease-in-out;
 }
 
