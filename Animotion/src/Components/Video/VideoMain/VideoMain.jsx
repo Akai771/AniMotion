@@ -77,7 +77,7 @@ const VideoMain = () => {
         .catch((err) => console.error("Error fetching server data:", err))
     },[episodeId, id])
 
-    var specificAnimeID = JSON.parse(localStorage.getItem('history'))
+    var specificAnimeID = JSON.parse(localStorage.getItem('history_alt'))
     if (Array.isArray(specificAnimeID)) {
         var targetAnimeId = id;
         var targetIndex = specificAnimeID.findIndex(function(anime) {
@@ -88,7 +88,7 @@ const VideoMain = () => {
         } else {
           console.error("AnimeId not found in 'history'");
         }
-        localStorage.setItem('history', JSON.stringify(specificAnimeID));
+        localStorage.setItem('history_alt', JSON.stringify(specificAnimeID));
     } 
     else {
         console.error("Invalid data format in 'history'");

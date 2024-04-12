@@ -8,7 +8,7 @@ function WatchNowButton({animeId, animeTitle, animeImage}) {
     const navigate = useNavigate();
     const [history, setHistory] = useState([]);
   useEffect(() => {
-    const storedHistory = localStorage.getItem("history");
+    const storedHistory = localStorage.getItem("history_alt");
     if (storedHistory) {
       setHistory(JSON.parse(storedHistory));
     }
@@ -26,7 +26,7 @@ function WatchNowButton({animeId, animeTitle, animeImage}) {
 
       const updatedHistory = [...history, { animeId, animeTitle, animeImage }];
       setHistory(updatedHistory);
-      localStorage.setItem("history", JSON.stringify(updatedHistory));
+      localStorage.setItem("history_alt", JSON.stringify(updatedHistory));
     }
     navigate(`/watch/${animeId}?epId=${animeId}-episode-1`);
 }

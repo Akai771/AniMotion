@@ -34,6 +34,12 @@
   color: var(--secondary-color);
 }
 
+.VidCard-info1{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .VidCardTitle1{
   font-family: "montserrat", sans-serif;
   font-size: 0.8rem;
@@ -92,6 +98,12 @@
   gap: 0.4rem;
 }
 
+.recentEpTitleAlign{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .recentEpInfoCont{
   font-size: 0.6rem;
   font-family: "montserrat", sans-serif;
@@ -127,7 +139,7 @@
 .recentEpCard:hover .recentEpImage{
   text-align: center;
   opacity: 0.5;
-  filter: blur(2px);
+  filter: blur(1.2px);
   transition: 0.5s ease-in-out;
 }
 
@@ -139,7 +151,7 @@
 .VidCard1:hover .VidImage1{
   text-align: center;
   opacity: 0.5;
-  filter: blur(2px);
+  filter: blur(1.2px);
   transition: 0.5s ease-in-out;
 }
 
@@ -153,6 +165,7 @@
   .VidCard-info1 {
     padding-top: 1px;
     height: auto;
+    white-space: nowrap;
   }
     
   .vidInfo1{

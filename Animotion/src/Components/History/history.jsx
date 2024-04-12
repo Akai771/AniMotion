@@ -13,12 +13,12 @@ function History() {
     const [history, setHistory] = useState([]);
 
     useEffect(()=>{
-        localStorage.getItem('history');
-        setHistory(JSON.parse(localStorage.getItem('history')));
+        localStorage.getItem('history_alt');
+        setHistory(JSON.parse(localStorage.getItem('history_alt')));
     },[])
 
     const handleHistoryClick = () =>{
-        localStorage.removeItem('history')
+        localStorage.removeItem('history_alt')
         window.location.reload();
     }
 

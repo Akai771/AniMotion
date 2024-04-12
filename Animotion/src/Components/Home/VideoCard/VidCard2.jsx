@@ -16,7 +16,7 @@ const VidCard2 = ({id, title, coverImage}) => {
               </Link>
             </div>
             <div class="VidCard-info1">
-              <span class="VidCardTitle">{title?title.slice(0,20):"No Title"}...</span>
+              <span class="VidCardTitle">{title?title:"No Title"}</span>
             </div>
         </div>
       </>
