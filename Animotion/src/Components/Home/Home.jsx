@@ -15,6 +15,7 @@ import Preloader from "../Preloader/Preloader.jsx";
 import { Link } from "react-router-dom";
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import TrendingCard from "./VideoCard/TrendingCard/TrendingCard";
+import ContWatchingCard from "./VideoCard/ContinueWatching/contWatchCard";
 
 const Home = ({token}) =>{
     const [recentEp, setRecentEp] = useState([]);
@@ -52,6 +53,11 @@ const Home = ({token}) =>{
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
     },[])
+
+
+    const contWatching = JSON.parse(localStorage.getItem("history_alt"));
+    console.log(contWatching.reverse());
+
 
     if (screenWidth < 768) {
         settings = {
@@ -127,11 +133,24 @@ const Home = ({token}) =>{
             <Slider {...settings2}>
                 {trending.slice(0,10).map((trend, index) => (
                     count = index + 1,
-                    console.log(count),
                     <TrendingCard key={trend.id} id={trend.id} title={trend.title} coverImage={trend.image} type={count} />
                     ))
                 }
             </Slider>
+        </div>
+
+        <div className="horizontal-Line1" />
+
+        <div className="latest-episode-section">
+            <div class="vl"><h3 className="Mont600" style={{color:"#fff", paddingLeft:"10px"}}>Continue Watching</h3></div>
+            <Link exact to={`/history`} ><button className="view-more-btn">View More<ChevronRightRoundedIcon id="arrow-Icon"/></button></Link>
+        </div>
+        <br/>
+        <div className="alignCardMargin3">
+            {contWatching?contWatching.slice(0,5).map((cont) => (
+                <ContWatchingCard key={cont.animeId} id={cont.animeId} title={cont.animeTitle} coverImage={cont.animeImage} currentEpisode={cont.animeEpisodeId}/>
+                )): "Start Watching to see your history here!"
+            }
         </div>
 
         <div className="horizontal-Line1" />
