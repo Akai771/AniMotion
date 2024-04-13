@@ -117,7 +117,7 @@
     text-decoration: none;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:950px) {
     .alignContactContent{
         padding-top: 7rem;
         min-height: 100vh;

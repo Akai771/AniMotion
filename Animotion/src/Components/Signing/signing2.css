@@ -262,7 +262,7 @@
     height: 2rem;
   }
 
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 950px){
     .signUpTitle{
         color: var(--textColor);
         font-family: "Montserrat", sans-serif;

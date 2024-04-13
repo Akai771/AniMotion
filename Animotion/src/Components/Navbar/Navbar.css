@@ -127,7 +127,7 @@ nav {
     align-items: center;
   }
   
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 950px) {
 	header {
 	  height: 4rem;
 	}

@@ -185,7 +185,34 @@
   color: var(--textColor2);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1600px) {
+  .browsePageDivide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .genreBtnBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0rem 5rem;
+  }
+
+  .genreButtonGrp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+    background-color: var(--bgColor3);
+    padding: 1rem 1rem;
+
+  }
+}
+
+@media only screen and (max-width: 950px) {
   .browseContent{
     overflow: hidden;
   }
@@ -216,31 +243,4 @@
     margin-right: .8rem;
   }
 
-}
-
-@media only screen and (max-width: 1368px) {
-  .browsePageDivide{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .genreBtnBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0rem 5rem;
-  }
-
-  .genreButtonGrp{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: .5rem;
-    background-color: var(--bgColor3);
-    padding: 1rem 1rem;
-
-  }
 }

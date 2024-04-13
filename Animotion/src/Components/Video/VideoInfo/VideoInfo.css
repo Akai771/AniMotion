@@ -323,7 +323,7 @@
 
 
 
-@media only screen and (max-width: 1366px){
+@media only screen and (max-width: 1600px){
     .alignRecommendAnime{
         width: 85rem;
         max-width: 85rem;
@@ -338,7 +338,7 @@
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 950px){
     .videoInfoPage{
         overflow: hidden;
     }

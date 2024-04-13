@@ -89,7 +89,7 @@
     border: var(--primary-color);
 }
 
-@media only screen and (max-width: 1368px) {
+@media only screen and (max-width: 1600px) {
     .genresBtn{
         font-size: .6rem;
     }

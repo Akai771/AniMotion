@@ -297,7 +297,7 @@
     color: var(--textColor);
 }
 
-@media only screen and (max-width:1366px) {
+@media only screen and (max-width:1600px) {
     .optionsBox{
         width: 20rem;
         max-width: 20rem;
@@ -307,7 +307,7 @@
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:950px) {
     .settingContBox{
         padding: 2rem;
         margin-top: 8rem;

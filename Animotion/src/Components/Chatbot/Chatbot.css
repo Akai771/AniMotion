@@ -85,7 +85,7 @@
     display: flex;
   }
 
-  @media only screen and (max-width:1368px){
+  @media only screen and (max-width:1600px){
     .Chatbox{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -108,7 +108,7 @@
     }
   }
 
-  @media only screen and (max-width:768px) {
+  @media only screen and (max-width:950px) {
     .Chatbox{
       padding-top: 10rem;
       display: flex;

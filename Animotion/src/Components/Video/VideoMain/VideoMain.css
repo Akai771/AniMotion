@@ -276,7 +276,7 @@
     margin-right: 1rem;
 }
 
-@media only screen and (max-width:1366px){
+@media only screen and (max-width:1600px){
     .AnimeVideoPlayer{
         width: 1024px;
         height: 576px;
@@ -326,7 +326,7 @@
     }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:950px){
 
     .video-main-container{
         padding: 8rem 0 0 0;

@@ -32,7 +32,7 @@
     color: var(--textColor2);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
     .mangaImageAlign{
         width: 150rem;
     }
