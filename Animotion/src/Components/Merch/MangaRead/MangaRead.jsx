@@ -40,7 +40,7 @@ const MangaRead = () => {
             <div className="mangaImageAlign">
                 {chapterData.map((manga) => {
                     return(
-                        <img src={manga.img} alt="Manga Cover Image" className="video-info-cover-image" id="animeImage"/>
+                        <img src={manga.img} alt="Manga Cover Image" className="mangaPanels" id="animeImage"/>
                     )
                 })}
             </div>
