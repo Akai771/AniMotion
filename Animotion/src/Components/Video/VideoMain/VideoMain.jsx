@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useParams, useSearchParams, useNavigate} from 'react-router-dom';
+import { useParams, useSearchParams, useNavigate, Link} from 'react-router-dom';
 import axios from "axios";
 import "./VideoMain.css";
 import NavBar from "../../Navbar/Navbar";
@@ -135,7 +135,9 @@ const VideoMain = () => {
             </div>
             <br/>
             <div className="alignVidMain">
-                <img src={animeData.image} alt="Anime Cover Image" className="video-info-cover-image"/>
+                <Link to={`/anime/${id}`}>
+                    <img src={animeData.image} alt="Anime Cover Image" className="video-info-cover-image"/>
+                </Link>
                 <div className="VidDescSection">
                     <span className="AnimeTitle">{animeData.title}</span>
                     <br/>
