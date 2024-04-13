@@ -65,6 +65,8 @@ const VideoInfo = () => {
             axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/popular`)
             .then((res) => setRecommendPop(res.data.results))
 
+            window.scrollTo(0, 0);
+
         },[id])
     }
     catch(err){

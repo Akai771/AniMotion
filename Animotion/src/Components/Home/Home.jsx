@@ -52,6 +52,8 @@ const Home = ({token}) =>{
 
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/movies")
         .then((res) => setMovies(res.data.results))
+
+        window.scrollTo(0, 0);
     },[])
 
 

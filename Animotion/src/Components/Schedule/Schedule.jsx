@@ -22,6 +22,8 @@ const Schedule = () => {
         axios.get("https://api.anify.tv/schedule?type=anime&fields=[id,title,coverImage,airingEpisode]")
         .then((res) => setSchedule(res.data))
         setDefaultSchedule(schedule[day] || []); 
+
+        window.scrollTo(0, 0);
     },[day, schedule])
 
     return (

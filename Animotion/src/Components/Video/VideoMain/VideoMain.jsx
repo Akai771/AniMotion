@@ -68,6 +68,8 @@ const VideoMain = () => {
         axios.get(`https://api.anify.tv/search/anime/${id}`)
         .then((res) => setAddData(res.data.results[0]));
 
+        window.scrollTo(0, 0);
+
     },[id])
 
     useEffect(()=>{

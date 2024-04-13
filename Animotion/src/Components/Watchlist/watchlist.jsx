@@ -19,6 +19,8 @@ function Watchlist() {
     // Fetches the watchlist from the database
     useEffect(() => {
       getWatchlist2();
+
+      window.scrollTo(0, 0);
     }, []);
 
     async function getWatchlist2() {

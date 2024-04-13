@@ -15,6 +15,8 @@ function History() {
     useEffect(()=>{
         localStorage.getItem('history_alt');
         setHistory(JSON.parse(localStorage.getItem('history_alt')));
+
+        window.scrollTo(0, 0);
     },[])
 
     const handleHistoryClick = () =>{

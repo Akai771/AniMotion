@@ -23,6 +23,8 @@ const Premium = () => {
         axios.get("https://animotion-consumet-api.vercel.app/anime/gogoanime/top-airing")
         .then((res) => setFtw(res.data.results.slice(0,6))
         )
+
+        window.scrollTo(0, 0);
     },[])
 
     console.log(ftw)

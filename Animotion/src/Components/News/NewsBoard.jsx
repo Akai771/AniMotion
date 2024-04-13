@@ -13,6 +13,8 @@ function NewsBoard() {
         useEffect(() => {
             axios.get(`https://animotion-consumet-api.vercel.app/news/ann/recent-feeds`)
             .then((res)=> setArticles(res.data))
+
+            window.scrollTo(0, 0);
         }, []);
 
     return(

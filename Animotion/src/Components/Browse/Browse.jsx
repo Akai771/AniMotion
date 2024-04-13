@@ -58,6 +58,8 @@ const Browse = () => {
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/${searchTerm}?page=${page}`)
         .then((res) => setBrowse(res.data.results))
+
+        window.scrollTo(0, 0);
     },[searchTerm, page])
 
     useEffect(()=>{
