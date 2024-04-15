@@ -35,6 +35,8 @@ const RecentEpisodes = () => {
     useEffect(()=>{
         axios.get(`https://animotion-consumet-api.vercel.app/anime/gogoanime/recent-episodes?page=${page}`)
         .then((res) => setRecentEp(res.data.results))
+
+        window.scrollTo(0,0);
     },[page])
 
     return(<>
