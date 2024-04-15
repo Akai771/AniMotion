@@ -88,7 +88,7 @@ function Signup() {
             placeholder='Email'
             type="email"
             name="email"
-            // value={preEmail}
+            value={preEmail}
             onChange={handleChange}
             onFocus={handlePreEmail}
             />
