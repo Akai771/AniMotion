@@ -197,5 +197,7 @@
         justify-content: space-between;
     }
 
-    
+    .contWatchingSect{
+        display: none;
+    }  
 }
